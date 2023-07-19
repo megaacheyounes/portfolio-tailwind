@@ -1,6 +1,6 @@
 import { LucideIcon } from 'lucide-react';
 import * as React from 'react';
-import { IconType } from 'react-icons';
+import IconType from 'react-icons';
 
 import { cn } from '@/lib/utils';
 
@@ -27,14 +27,7 @@ type IconLinkProps = {
 
 const IconLink = React.forwardRef<HTMLAnchorElement, IconLinkProps>(
   (
-    {
-      className,
-      icon: Icon,
-      variant = 'outline',
-      isDarkBg = false,
-      classNames,
-      ...rest
-    },
+    { className, icon: Icon, variant = 'outline', classNames, ...rest },
     ref
   ) => {
     return (
@@ -60,15 +53,11 @@ const IconLink = React.forwardRef<HTMLAnchorElement, IconLinkProps>(
               'text-primary-500',
               'border-primary-500 border',
               'hover:bg-primary-50 active:bg-primary-100 disabled:bg-primary-100',
-              isDarkBg &&
-                'hover:bg-gray-900 active:bg-gray-800 disabled:bg-gray-800',
             ],
             variant === 'ghost' && [
               'text-primary-500',
               'shadow-none',
               'hover:bg-primary-50 active:bg-primary-100 disabled:bg-primary-100',
-              isDarkBg &&
-                'hover:bg-gray-900 active:bg-gray-800 disabled:bg-gray-800',
             ],
             variant === 'light' && [
               'bg-white text-gray-700',

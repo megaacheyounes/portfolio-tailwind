@@ -25,37 +25,20 @@ import Skeleton from '@/components/Skeleton';
 type Color = (typeof colorList)[number];
 
 export default function ComponentPage() {
-  const [mode, setMode] = React.useState<'dark' | 'light'>('light');
   const [color, setColor] = React.useState<Color>('sky');
-  function toggleMode() {
-    return mode === 'dark' ? setMode('light') : setMode('dark');
-  }
 
-  const textColor = mode === 'dark' ? 'text-gray-300' : 'text-gray-600';
+  const textColor = 'text-gray-600';
 
   return (
     <main>
-      <section
-        className={clsx(mode === 'dark' ? 'bg-dark' : 'bg-white', color)}
-      >
-        <div
-          className={clsx(
-            'layout min-h-screen py-20',
-            mode === 'dark' ? 'text-white' : 'text-black'
-          )}
-        >
+      <section className={clsx('bg-white', color)}>
+        <div className={clsx('layout min-h-screen py-20', 'text-black')}>
           <h1>Built-in Components</h1>
           <ArrowLink direction='left' className='mt-2' href='/'>
             Back to Home
           </ArrowLink>
 
           <div className='mt-8 flex flex-wrap gap-2'>
-            <Button
-              onClick={toggleMode}
-              variant={mode === 'dark' ? 'light' : 'dark'}
-            >
-              Set to {mode === 'dark' ? 'light' : 'dark'}
-            </Button>
             {/* <Button onClick={randomize}>Randomize CSS Variable</Button> */}
           </div>
 
@@ -73,9 +56,7 @@ export default function ComponentPage() {
                   value={color}
                   className={clsx(
                     'block max-w-xs rounded',
-                    mode === 'dark'
-                      ? 'bg-dark border border-gray-600'
-                      : 'border-gray-300 bg-white',
+                    'border-gray-300 bg-white',
                     'focus:border-primary-400 focus:ring-primary-400 focus:outline-none focus:ring'
                   )}
                   onChange={(e) => setColor(e.target.value as Color)}
@@ -207,16 +188,11 @@ export default function ComponentPage() {
                 </ButtonLink>
                 <ButtonLink
                   variant='outline'
-                  isDarkBg={mode === 'dark'}
                   href='https://younes-megaache.com'
                 >
                   Outline Variant
                 </ButtonLink>
-                <ButtonLink
-                  variant='ghost'
-                  isDarkBg={mode === 'dark'}
-                  href='https://younes-megaache.com'
-                >
+                <ButtonLink variant='ghost' href='https://younes-megaache.com'>
                   Ghost Variant
                 </ButtonLink>
                 <ButtonLink variant='dark' href='https://younes-megaache.com'>
@@ -234,12 +210,8 @@ export default function ComponentPage() {
               </p>
               <div className='flex flex-wrap gap-2'>
                 <Button variant='primary'>Primary Variant</Button>
-                <Button variant='outline' isDarkBg={mode === 'dark'}>
-                  Outline Variant
-                </Button>
-                <Button variant='ghost' isDarkBg={mode === 'dark'}>
-                  Ghost Variant
-                </Button>
+                <Button variant='outline'>Outline Variants</Button>
+                <Button variant='ghost'>Ghost Variant</Button>
                 <Button variant='dark'>Dark Variant</Button>
                 <Button variant='light'>Light Variant</Button>
               </div>
@@ -255,16 +227,10 @@ export default function ComponentPage() {
                   variant='outline'
                   leftIcon={Plus}
                   rightIcon={ArrowRight}
-                  isDarkBg={mode === 'dark'}
                 >
                   Icon
                 </Button>
-                <Button
-                  variant='ghost'
-                  leftIcon={Plus}
-                  rightIcon={ArrowRight}
-                  isDarkBg={mode === 'dark'}
-                >
+                <Button variant='ghost' leftIcon={Plus} rightIcon={ArrowRight}>
                   Icon
                 </Button>
                 <Button variant='dark' leftIcon={Plus} rightIcon={ArrowRight}>
@@ -278,10 +244,10 @@ export default function ComponentPage() {
                 <Button size='sm' variant='primary'>
                   Small Size
                 </Button>
-                <Button size='sm' variant='outline' isDarkBg={mode === 'dark'}>
+                <Button size='sm' variant='outline'>
                   Small Size
                 </Button>
-                <Button size='sm' variant='ghost' isDarkBg={mode === 'dark'}>
+                <Button size='sm' variant='ghost'>
                   Small Size
                 </Button>
                 <Button size='sm' variant='dark'>
@@ -305,7 +271,6 @@ export default function ComponentPage() {
                   variant='outline'
                   leftIcon={Plus}
                   rightIcon={ArrowRight}
-                  isDarkBg={mode === 'dark'}
                 >
                   Icon
                 </Button>
@@ -314,7 +279,6 @@ export default function ComponentPage() {
                   variant='ghost'
                   leftIcon={Plus}
                   rightIcon={ArrowRight}
-                  isDarkBg={mode === 'dark'}
                 >
                   Icon
                 </Button>
@@ -341,10 +305,10 @@ export default function ComponentPage() {
                 <Button disabled variant='primary'>
                   Disabled
                 </Button>
-                <Button disabled variant='outline' isDarkBg={mode === 'dark'}>
+                <Button disabled variant='outline'>
                   Disabled
                 </Button>
-                <Button disabled variant='ghost' isDarkBg={mode === 'dark'}>
+                <Button disabled variant='ghost'>
                   Disabled
                 </Button>
                 <Button disabled variant='dark'>
@@ -358,10 +322,10 @@ export default function ComponentPage() {
                 <Button isLoading variant='primary'>
                   Disabled
                 </Button>
-                <Button isLoading variant='outline' isDarkBg={mode === 'dark'}>
+                <Button isLoading variant='outline'>
                   Disabled
                 </Button>
-                <Button isLoading variant='ghost' isDarkBg={mode === 'dark'}>
+                <Button isLoading variant='ghost'>
                   Disabled
                 </Button>
                 <Button isLoading variant='dark'>

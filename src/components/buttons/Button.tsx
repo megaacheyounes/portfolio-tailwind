@@ -1,6 +1,6 @@
 import { LucideIcon } from 'lucide-react';
 import * as React from 'react';
-import { IconType } from 'react-icons';
+import IconType from 'react-icons';
 import { ImSpinner2 } from 'react-icons/im';
 
 import { cn } from '@/lib/utils';
@@ -10,7 +10,7 @@ const ButtonSize = ['sm', 'base'] as const;
 
 type ButtonProps = {
   isLoading?: boolean;
-  isDarkBg?: boolean;
+
   variant?: (typeof ButtonVariant)[number];
   size?: (typeof ButtonSize)[number];
   leftIcon?: IconType | LucideIcon;
