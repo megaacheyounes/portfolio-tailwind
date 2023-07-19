@@ -16,12 +16,14 @@
   },
   "dependencies": {
     "@types/react-icons": "^3.0.0",
+    "@types/swiper": "^6.0.0",
     "clsx": "^1.2.1",
     "lucide-react": "^0.260.0",
     "next": "^13.4.10",
     "react": "^18.2.0",
     "react-dom": "^18.2.0",
     "react-icons": "^4.10.1",
+    "swiper": "^10.0.4",
     "tailwind-merge": "^1.13.2"
   },
   "devDependencies": {
