@@ -1,48 +1,39 @@
 'use client';
 
 import clsx from 'clsx';
-import {
-  ArrowRight,
-  CreditCard,
-  Laptop,
-  Phone,
-  Plus,
-  Shield,
-} from 'lucide-react';
 import React from 'react';
 
-import Button from '@/components/buttons/Button';
-import IconButton from '@/components/buttons/IconButton';
-import TextButton from '@/components/buttons/TextButton';
-import ArrowLink from '@/components/links/ArrowLink';
-import ButtonLink from '@/components/links/ButtonLink';
-import PrimaryLink from '@/components/links/PrimaryLink';
-import UnderlineLink from '@/components/links/UnderlineLink';
-import UnstyledLink from '@/components/links/UnstyledLink';
-import NextImage from '@/components/NextImage';
-import Skeleton from '@/components/Skeleton';
+import ProjectCard from '@/components/Project';
 
 type Color = (typeof colorList)[number];
 
 export default function ComponentPage() {
-  const [color, setColor] = React.useState<Color>('sky');
+  const [color, setColor] = React.useState<Color>('lime');
 
-  const textColor = 'text-gray-600';
+  const textColor = 'text-gray-200';
 
   return (
     <main>
-      <section className={clsx('bg-white', color)}>
-        <div className={clsx('layout min-h-screen py-20', 'text-black')}>
-          <h1>Built-in Components</h1>
+      <section className={clsx('bg-dark', color)}>
+        <div className={clsx('layout min-h-screen py-20', 'text-white')}>
+          {/* <h1>components</h1>
           <ArrowLink direction='left' className='mt-2' href='/'>
             Back to Home
-          </ArrowLink>
+          </ArrowLink> */}
+
+          <div className='m-4  '>
+            <h1>AppGallery </h1>
+            <h6>lorem ipsum dolor sit amet</h6>
+            <div className='mt-4'>
+              <ProjectCard />
+            </div>
+          </div>
 
           <div className='mt-8 flex flex-wrap gap-2'>
             {/* <Button onClick={randomize}>Randomize CSS Variable</Button> */}
           </div>
 
-          <ol className='mt-8 space-y-6'>
+          {/* <ol className='mt-8 space-y-6'>
             <li className='space-y-2'>
               <h2 className='text-lg md:text-xl'>Customize Colors</h2>
               <p className={clsx('!mt-1 text-sm', textColor)}>
@@ -389,7 +380,7 @@ export default function ComponentPage() {
               </p>
               <Skeleton className='h-72 w-72' />
             </li>
-          </ol>
+          </ol> */}
         </div>
       </section>
     </main>
