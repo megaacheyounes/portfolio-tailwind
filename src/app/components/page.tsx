@@ -134,7 +134,7 @@ export default function ComponentPage() {
               </p>
               <div className='space-x-2'>
                 <UnstyledLink href='/'>Internal Links</UnstyledLink>
-                <UnstyledLink href='https://theodorusclarence.com'>
+                <UnstyledLink href='https://younes-megaache.com'>
                   Outside Links
                 </UnstyledLink>
               </div>
@@ -147,7 +147,7 @@ export default function ComponentPage() {
               </p>
               <div className='space-x-2'>
                 <PrimaryLink href='/'>Internal Links</PrimaryLink>
-                <PrimaryLink href='https://theodorusclarence.com'>
+                <PrimaryLink href='https://younes-megaache.com'>
                   Outside Links
                 </PrimaryLink>
               </div>
@@ -160,7 +160,7 @@ export default function ComponentPage() {
               </p>
               <div className='space-x-2'>
                 <UnderlineLink href='/'>Internal Links</UnderlineLink>
-                <UnderlineLink href='https://theodorusclarence.com'>
+                <UnderlineLink href='https://younes-megaache.com'>
                   Outside Links
                 </UnderlineLink>
               </div>
@@ -201,31 +201,28 @@ export default function ComponentPage() {
               <div className='flex flex-wrap gap-2'>
                 <ButtonLink
                   variant='primary'
-                  href='https://theodorusclarence.com'
+                  href='https://younes-megaache.com'
                 >
                   Primary Variant
                 </ButtonLink>
                 <ButtonLink
                   variant='outline'
                   isDarkBg={mode === 'dark'}
-                  href='https://theodorusclarence.com'
+                  href='https://younes-megaache.com'
                 >
                   Outline Variant
                 </ButtonLink>
                 <ButtonLink
                   variant='ghost'
                   isDarkBg={mode === 'dark'}
-                  href='https://theodorusclarence.com'
+                  href='https://younes-megaache.com'
                 >
                   Ghost Variant
                 </ButtonLink>
-                <ButtonLink variant='dark' href='https://theodorusclarence.com'>
+                <ButtonLink variant='dark' href='https://younes-megaache.com'>
                   Dark Variant
                 </ButtonLink>
-                <ButtonLink
-                  variant='light'
-                  href='https://theodorusclarence.com'
-                >
+                <ButtonLink variant='light' href='https://younes-megaache.com'>
                   Light Variant
                 </ButtonLink>
               </div>
