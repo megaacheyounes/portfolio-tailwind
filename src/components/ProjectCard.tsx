@@ -21,17 +21,16 @@ type Props = any;
 
 export default function ProjectCard(props: Props) {
   const skillSize = 30;
+  const hover =
+    'transition-all duration-200 ease-out hover:scale-105 hover:cursor-pointer ';
   return (
     <div>
-      <div
-        data-te-ripple-init
-        className='max-w-xs rounded-xl px-6 py-4 transition-all duration-200 ease-out hover:scale-105 hover:cursor-pointer  '
-      >
+      <div data-te-ripple-init className='max-w-xs rounded-xl px-6 py-4  '>
         <img alt='huawei' className='w-32  object-contain' src='/huawei.png' />
         <Chip type='android' title='Android' />
-        <Chip type='web' title='Android' />
+        <Chip type='web' title='Web' />
 
-        <h1 className='mt-1 text-lg'>Huawei AppGallery Newsletter</h1>
+        <h1 className='mt-1 text-lg'>{props.title}</h1>
         <a
           href='https://appgallerymea.com'
           className='group mt-2 inline-flex items-center gap-1 text-sm font-medium text-blue-600 hover:underline'

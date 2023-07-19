@@ -15,9 +15,22 @@ type Props = any;
 
 export default function ProjectSwiper(props: Props) {
   const skillSize = 30;
+  const SwiperFuck = Swiper as any;
   return (
     <div>
-      <div className=' flex w-full flex-row  place-items-end justify-end'>
+      <SwiperFuck
+        modules={[Navigation, Pagination, Autoplay]}
+        slidesPerView={3}
+        allowTouchMove={true}
+        loop={true}
+      >
+        {[1, 2, 3, 4, 5, 6, 7].map((num) => (
+          <SwiperSlide key={num + ''}>
+            <ProjectCard title={'demo  ' + num} />
+          </SwiperSlide>
+        ))}
+      </SwiperFuck>
+      <div className=' flex w-full flex-row place-items-end justify-center gap-5 text-gray-300'>
         <a className='inline-flex w-auto cursor-pointer   hover:scale-110 '>
           <LiaLongArrowAltLeftSolid size={30} />
         </a>
@@ -25,30 +38,6 @@ export default function ProjectSwiper(props: Props) {
           <LiaLongArrowAltRightSolid size={30} />
         </a>
       </div>
-      <Swiper
-        modules={[Navigation, Pagination, Autoplay]}
-        slidesPerView={3}
-        allowTouchMove={true}
-        loop={true}
-        autoPlay={true}
-        autoplay={true}
-      >
-        <SwiperSlide>
-          <ProjectCard title='demo 1' />
-        </SwiperSlide>
-
-        <SwiperSlide>
-          <ProjectCard title='demo 2' />
-        </SwiperSlide>
-
-        <SwiperSlide>
-          <ProjectCard title='demo3' />
-        </SwiperSlide>
-
-        <SwiperSlide>
-          <ProjectCard title='demo4' />
-        </SwiperSlide>
-      </Swiper>
     </div>
   );
 }
