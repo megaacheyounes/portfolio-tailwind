@@ -16,13 +16,13 @@ export default function Chip(props: Props) {
     <>
       <div
         className={cn(
-          ' inline-flex  w-auto items-center rounded-full border py-1  ',
+          ' inline-flex  w-auto items-center rounded-full border py-0.5  ',
           type == 'android' && android,
           type == 'web' && web
         )}
       >
-        {type == 'android' && <SiAndroid size={20} />}
-        {type == 'web' && <SiGooglechrome size={20} />}
+        {type == 'android' && <SiAndroid size={18} />}
+        {type == 'web' && <SiGooglechrome size={18} />}
 
         <p className=' ml-2  rounded-full text-xs font-medium '>{title}</p>
       </div>

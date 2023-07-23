@@ -4,6 +4,11 @@ import { SiGmail, SiLinkedin } from 'react-icons/si';
 import ArrowLink from '@/components/ArrowLink';
 import IconButton from '@/components/IconButton';
 import Section from '@/container/Section';
+import Brands from '@/components/Brands';
+import BrandsSwiper from '@/components/BrandsSwiper';
+import { MdEmail } from 'react-icons/md';
+import SkillsIcons from '@/components/SkillsIcons';
+import SkillsSwiper from '@/components/SkillsSwiper';
 
 type Props = any;
 
@@ -14,7 +19,7 @@ I am a proficient Android and Web Developer with a profound interest in software
 
 const LINKS = [
   {
-    icon: SiGmail,
+    icon: MdEmail,
     href: 'emailto:younes.megaache@gmail.com',
   },
   {
@@ -23,12 +28,13 @@ const LINKS = [
   },
 ];
 
+
+
 export default function About(props: Props) {
   return (
-    <Section title='About'>
-      <div className='flex flex-col place-items-start justify-items-start '>
-        <h5 className='max-w-screen-sm  text-justify text-xl '>{about}</h5>
-
+    <Section title='About' className="bg-b-dark " hideOverflowX={false}>
+      <div className=' w-full'>
+        <h5 className=' text-justify text-md '>{about}</h5>
         <div className='my-4 gap-4 '>
           {LINKS.map((link) => {
             const Icon = link.icon;
@@ -43,8 +49,25 @@ export default function About(props: Props) {
             );
           })}
         </div>
+
+        <div className="pt-4 mt-12   ">
+          <h2 className="text-xl text-center font-medium    ">Campanies I'm proud to have collaborated with  </h2>
+          <div className=" mt-10  ">
+            <BrandsSwiper />
+          </div>
+        </div>
+
+        <div className="pt-4 mb-10 mt-16     ">
+          <h2 className="text-xl  text-center font-medium    ">Technologies I have used  </h2>
+          <div className=" mt-10    ">
+            <SkillsSwiper />
+          </div>
+        </div>
+
         <ArrowLink href='/about' title='More about me' />
+
+
       </div>
     </Section>
   );
-}
+} 

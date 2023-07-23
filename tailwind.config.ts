@@ -1,12 +1,21 @@
 import type { Config } from 'tailwindcss';
 import defaultTheme from 'tailwindcss/defaultTheme';
+import colors from 'tailwindcss/colors';
+import preline from 'preline/plugin.js';
 
 export default {
-  content: ['./src/**/*.{js,jsx,ts,tsx}'],
+  content: [
+    './src/**/*.{js,jsx,ts,tsx}',
+    'node_modules/preline/dist/*.js',
+  ],
+
   theme: {
+    container: {
+      center: true
+    },
     extend: {
       fontFamily: {
-        primary: ['Inter', ...defaultTheme.fontFamily.sans],
+        primary: ['FiraCode', 'Inter', ...defaultTheme.fontFamily.sans],
       },
       colors: {
         primary: {
@@ -23,9 +32,14 @@ export default {
           900: 'rgb(var(--tw-color-primary-900) / <alpha-value>)',
           950: 'rgb(var(--tw-color-primary-950) / <alpha-value>)',
         },
-        dark: '#222222',
+        b: {
+          dark: "#101010",
+          light: "#161616"
+        }
       },
+
       keyframes: {
+
         flicker: {
           '0%, 19.999%, 22%, 62.999%, 64%, 64.999%, 70%, 100%': {
             opacity: '0.99',
@@ -47,10 +61,14 @@ export default {
         },
       },
       animation: {
+
         flicker: 'flicker 3s linear infinite',
         shimmer: 'shimmer 1.3s linear infinite',
       },
     },
   },
-  plugins: [require('@tailwindcss/forms')],
+  plugins: [
+    require('@tailwindcss/forms'),
+    preline,
+  ],
 } satisfies Config;

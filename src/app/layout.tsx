@@ -18,7 +18,7 @@ export const metadata: Metadata = {
   //  https://realfavicongenerator.net/
 
   icons: {
-    icon: '/favicon/favicon.ico',
+    icon: '/favicon.ico',
     // shortcut: '/favicon/favicon-16x16.png',
     // apple: '/favicon/apple-touch-icon.png',
   },
@@ -47,10 +47,10 @@ export default function RootLayout({
 }) {
   return (
     <html>
-      <body className='bg-dark pb-5 '>
-        <div className='layout min-h-screen'>
+      <body className='  '>
+        <div className=' min-h-screen'>
           <Header />
-          <div className='  text-white'>{children}</div>
+          <div className='  '>{children}</div>
           <Footer />
         </div>
       </body>

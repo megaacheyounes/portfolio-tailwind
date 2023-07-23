@@ -43,6 +43,15 @@
       U+2215, U+FEFF, U+FFFD;
   }
 
+  @font-face {
+    font-family: 'FiraCode';
+    src: url('/fonts/FiraCode.ttf') format("truetype");
+  }
+ 
+  .cont-swiper .swiper-wrapper{
+    transition-timing-function: linear;
+}
+
   .cursor-newtab {
     cursor: url('/images/new-tab.png') 10 10, pointer;
   }

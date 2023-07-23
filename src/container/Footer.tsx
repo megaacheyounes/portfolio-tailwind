@@ -6,7 +6,7 @@ type Props = any;
 
 export default function Footer(props: Props) {
   return (
-    <footer className='body-font flex justify-center py-10 text-white'>
+    <footer className='bg-b-light body-font flex justify-center py-10 text-white'>
       <div className='  border-t-3 border-dashed border-lime-500'>
         <div className='  flex  flex-col items-center   '>
           {/* <a href='/' className='title-font cursor-pointer  font-medium    '>
