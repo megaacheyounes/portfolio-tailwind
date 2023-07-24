@@ -13,7 +13,7 @@ export default function HomePage() {
   }, [])
 
   return (
-    <div>
+    <div  >
       <Hero />
       <About />
       <Projects />

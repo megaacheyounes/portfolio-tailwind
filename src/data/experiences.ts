@@ -76,7 +76,6 @@ export const EXPERIENCES: Experience[] = [
 			"Animate.css",
 			"NativeScript",
 			"React",
-
 		],
 		achievements: [
 			"Saved the team 4 weeks of work by creating NodeJs scripts to automate creating Angular projects and maximise code sharing between our projects.",

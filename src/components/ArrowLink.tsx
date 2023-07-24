@@ -15,12 +15,12 @@ export default function ArrowLink(props: Props) {
       href={props.href}
       target="_blank"
       className={cn(
-        ' group ml-2 inline-flex items-center gap-1 text-xl font-medium text-lime-500 hover:text-lime-400 ',
+        'relative group ml-2 inline-flex items-center text-md font-medium text-lime-500 hover:text-lime-400 ',
         props.className
       )}
     >
       {props.title}
-      <span className='block text-xl pt-1 transition-all group-hover:ms-2  '>
+      <span className='block absolute -right-6 text-lg  transition-all group-hover:-right-8 '>
         <CgArrowLongRight />
       </span>
     </a>

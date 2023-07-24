@@ -1,29 +1,51 @@
-import * as React from 'react';
 
-import Socials from '@/components/socials';
+import Socials from '@/components/Socialss';
 
 type Props = any;
 
 export default function Footer(props: Props) {
   return (
-    <footer className='bg-b-light body-font flex justify-center py-10 text-white'>
+    <footer className='  z-0 bg-b-light body-font flex justify-center py-10 text-white'>
       <div className='  border-t-3 border-dashed border-lime-500'>
         <div className='  flex  flex-col items-center   '>
-          {/* <a href='/' className='title-font cursor-pointer  font-medium    '>
-          <img src='/favicon.ico' className='w-12' />
-        </a> */}
+          <a href='/' className='title-font cursor-pointer  font-medium    '>
+            <img src='/favicon.ico' className='w-12' />
+          </a>
 
-          <span className='mt-4 inline-flex justify-center  '>
-            <Socials />
-          </span>
-
-          <p className=' max-w-md   text-center text-lg '>
-            Designed loosely in Figma and coded in VS Code by yours very truly,
-            built using Next.js and MUI, deployed as static website to Firebase
-            hosting. Text is in the FiraCode typeface
+          <p className='max-w-sm md:max-w-lg text-center text-xs '>
+            Designed loosely in{" "}
+            <a className="text-lime-500" href="https://www.figma.com/" target="_blank">
+              Figma
+            </a>{" "}
+            and coded in{" "}
+            <a className="text-lime-500" href="https://code.visualstudio.com/" target="_blank">
+              VS Code
+            </a>{" "}
+            by yours very truly,built using{" "}
+            <a className="text-lime-500" href="https://nextjs.org/" target="_blank">
+              Next.js
+            </a>{" "}
+            and{" "}
+            <a className="text-lime-500" href="https://mui.com/" target="_blank">
+              MUI
+            </a>
+            , deployed to{" "}
+            <a className="text-lime-500"
+              href="https://firebase.google.com/products/hosting"
+              target="_blank"
+            >
+              Firebase hosting
+            </a>
+            .
+            <br />
+            Text is in the{" "}
+            <a className="text-lime-500" href="https://github.com/tonsky/FiraCode" target="_blank">
+              FiraCode
+            </a>{" "}
+            typeface
           </p>
-          <p className='mt-4 text-lg font-bold '>
-            © {new Date().getFullYear()} Younes Megaache
+          <p className='mt-4 text-sm font-bold '>
+            &copy;  {new Date().getFullYear()} Younes Megaache
           </p>
         </div>
       </div>

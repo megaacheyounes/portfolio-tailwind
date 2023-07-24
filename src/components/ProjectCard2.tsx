@@ -6,6 +6,7 @@ import ArrowLink from '@/components/ArrowLink';
 import Skills from '@/components/Skills';
 import { PROJECTS_HIGHLIGHT } from '@/data/projects';
 import { BrandType } from '@/models/project';
+import { cn } from '@/lib/utils';
 
 type Props = {
   project: typeof PROJECTS_HIGHLIGHT[0]
@@ -24,10 +25,10 @@ const BrandMapping: { [key in BrandType]: string } = {
   "Visit Abudhabi": "/brands/visit-abudhabi.png"
 }
 
-export default function ProjectCard(props: Props) {
+export default function ProjectCard2(props: Props) {
   const skillSize = 30;
   const hover =
-    'transition-all duration-200 ease-out hover:scale-105 hover:cursor-pointer ';
+    'transition-all duration-200 ease-out  hover:-translate-y-2 transition-all duration-300 ease-out hover:cursor-pointer ';
   const { project } = props
   const isAndroid = project.type == "mobile"
   const isWeb = project.type == "web"
@@ -38,7 +39,7 @@ export default function ProjectCard(props: Props) {
   }
   return (
 
-    <div data-te-ripple-init className='w-full   flex flex-col place-items-start  rounded-xl p-6   '>
+    <div data-te-ripple-init className={cn('w-full lg:w-80 bg-b-dark  dark flex flex-col place-items-start  rounded-xl p-6   ', hover)}>
       <img alt='huawei' className='h-6 mb-2  object-contain'
         src={getImage(project.client!, project.image)} />
       {/* {isAndroid && <Chip type='android' title='Android' />}
@@ -47,9 +48,9 @@ export default function ProjectCard(props: Props) {
       <h1 className='mt-1 line-clamp-2 text-sm'>{project.name}</h1>
       {!isConfidential && <a
         href='https://appgallerymea.com'
-        className='group mt-2 inline-flex items-center gap-1 text-md font-medium text-blue-500 hover:underline'
+        className='group mt-2 inline-flex items-center gap-1 text-sm font-medium text-blue-500 hover:underline'
       >
-        <Link size={15} />
+        <Link size={10} />
         {getDomain(project.link!)}
       </a>}
       {isConfidential && <a
@@ -60,14 +61,14 @@ export default function ProjectCard(props: Props) {
         confidential
       </a>}
 
-      <p className='mt-2 line-clamp-3 text-sm text-gray-300'>
+      <p className='mt-2 line-clamp-4 text-sm text-gray-300'>
         {project.description}
       </p>
       <div>
         <Skills skills={project.technologies} />
       </div>
 
-      <ArrowLink className='text-xs mt-2' title='learn more' href={'/project/' + project.name} />
+      {/* <ArrowLink className='text-sm mt-2' title='learn more' href={'/project/' + project.name} /> */}
 
     </div>
   );

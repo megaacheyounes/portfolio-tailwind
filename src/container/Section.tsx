@@ -12,8 +12,9 @@ export default function Section(props: Props) {
   const { title } = props;
   return (
     <section
-      className={twMerge(' overflow-x-hidden ', props.className)}
+      className={twMerge(' rounded-xl overflow-x-hidden ', props.className)}
     >
+
       <div className='container p-10  max-w-screen-lg  mx-auto '>
 
         <h2 className='text-xl font-medium text-lime-400'>

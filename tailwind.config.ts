@@ -33,8 +33,8 @@ export default {
           950: 'rgb(var(--tw-color-primary-950) / <alpha-value>)',
         },
         b: {
-          dark: "#101010",
-          light: "#161616"
+          dark: "#101410",
+          light: "#161916"
         }
       },
 

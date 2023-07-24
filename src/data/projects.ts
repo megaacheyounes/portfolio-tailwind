@@ -142,6 +142,15 @@ export const APPS: Project[] = [
     company: "HUAWEI Technologies",
     client: 'Huawei'
 
+  }, {
+    type: 'mobile',
+    name: "Emirates smartwatch app",
+    description: `Developed 70% of Emirates HarmonyOS wearable app for Huawei smartwatches using Java and HarmonyOS SDK,`,
+    image: "/mobile/emirates.png",
+    link: "https://appgallery.huawei.com/app/C101772055",
+    technologies: ["HarmonyOS", "Java"],
+    company: "HUAWEI Technologies",
+    client: 'Emirates'
   },
   {
     type: 'mobile',
@@ -153,17 +162,7 @@ export const APPS: Project[] = [
     company: "HUAWEI Technologies",
     client: 'Steppi'
   },
-  {
-    type: 'mobile',
-    name: "Emirates wearable app",
-    description: `Developed 70% of Emirates HarmonyOS wearable app for Huawei smartwatches using Java and HarmonyOS SDK,`,
-    image: "/mobile/emirates.png",
-    link: "https://appgallery.huawei.com/app/C101772055",
-    technologies: ["HarmonyOS", "Java"],
-    company: "HUAWEI Technologies",
-    client: 'Emirates'
 
-  },
   {
     type: 'mobile',
     name: "Dubai Police",
@@ -275,5 +274,5 @@ export const APPS: Project[] = [
 
 
 export const PROJECTS_HIGHLIGHT = [
-  APPS[0], APPS[1], WEBSITES[0], APPS[3], WEBSITES[3], WEBSITES[4], APPS[5]
+  APPS[0], APPS[1], WEBSITES[0], APPS[3]
 ]

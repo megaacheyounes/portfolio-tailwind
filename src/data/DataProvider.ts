@@ -1,13 +1,12 @@
 
+import { APPS, WEBSITES } from "@/data/projects";
 import { parseMonthYear } from "@/lib/date";
 import { CERTIFICATES } from "./certificates";
 import { EDUCATION } from "./education";
 import { Experience, EXPERIENCES, PRESENT } from "./experiences";
 import { PersonalInfo, PERSONAL_INFO, SOCIAL_LINKS } from "./info";
 import { INTERESTS } from "./interests";
-import { APPS, WEBSITES } from "./projectsDummy";
 import { SKILLS } from "./skills";
-
 
 class DataProvider {
   constructor() { }
