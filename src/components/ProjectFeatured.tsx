@@ -8,7 +8,7 @@ import { PROJECTS_HIGHLIGHT } from '@/data/projects';
 import ProjectCard2 from '@/components/ProjectCard2';
 type Props = any;
 
-export default function ProjectBlocks2(props: Props) {
+export default function ProjectFeatured(props: Props) {
 
   return (
     <div className="my-2 mx-auto">

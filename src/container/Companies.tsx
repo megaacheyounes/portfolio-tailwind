@@ -32,7 +32,7 @@ const LINKS = [
 
 export default function Companies(props: Props) {
   return (
-    <Section title=' Brands I have collaborated with:  ' className="bg-b-dark overflow-x-hidden">
+    <Section elevated={true} title=' Brands I have collaborated with:  ' className="bg-b-dark overflow-x-hidden">
       <div className='flex  flex-col place-items-start justify-items-start '>
 
         <div className="pt-4 mx-auto max-w-screen-xl  ">

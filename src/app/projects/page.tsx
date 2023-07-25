@@ -1,12 +1,11 @@
 'use client';
 
-import Projects from '@/container/Projects';
+import ProjectsAll from '@/container/ProjectsAll';
 
 export default function HomePage() {
   return (
     <div>
-      <h1>projects</h1>
-      <Projects />
+      <ProjectsAll full={true} />
     </div>
   );
 }

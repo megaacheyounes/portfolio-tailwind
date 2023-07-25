@@ -11,7 +11,7 @@ export default function Experience() {
 
   if (true) {
     return (
-      <Section title='Experience' className='bg-b-dark'>
+      <Section elevated={true} title='Experience' className='bg-b-dark'>
         <div className="flex flex-wrap max-w-screen-xl ">
           <div className="border-r ">
             <nav className="flex flex-col space-y-2" aria-label="Tabs" role="tablist" data-hs-tabs-vertical="true">

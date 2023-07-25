@@ -7,6 +7,7 @@ import Skills from '@/components/Skills';
 import { PROJECTS_HIGHLIGHT } from '@/data/projects';
 import { BrandType } from '@/models/project';
 import { cn } from '@/lib/utils';
+import { HiExternalLink, HiOutlineExternalLink } from 'react-icons/Hi';
 
 type Props = {
   project: typeof PROJECTS_HIGHLIGHT[0]
@@ -25,10 +26,10 @@ const BrandMapping: { [key in BrandType]: string } = {
   "Visit Abudhabi": "/brands/visit-abudhabi.png"
 }
 
-export default function ProjectCard2(props: Props) {
+export default function ProjectCard3(props: Props) {
   const skillSize = 30;
   const hover =
-    'transition-all duration-200 ease-out  hover:-translate-y-2 transition-all duration-300 ease-out hover:cursor-pointer hover:shadow-lg hover:shadow-lime-500/5';
+    'transition-all duration-200 ease-out  hover:-translate-y-2 transition-all duration-300 ease-out hover:cursor-pointer ';
   const { project } = props
   const isAndroid = project.type == "mobile"
   const isWeb = project.type == "web"
@@ -39,27 +40,38 @@ export default function ProjectCard2(props: Props) {
   }
   return (
 
-    <div data-te-ripple-init className={cn('w-full lg:w-96 bg-b-dark  dark flex flex-col place-items-start pattern-2 shadow-md shadow-lime-500/5 rounded-xl p-6   ', hover)}>
-      <img alt='huawei' className='h-6 mb-2  object-contain'
-        src={getImage(project.client!, project.image)} />
-      {/* {isAndroid && <Chip type='android' title='Android' />}
-        {isWeb && <Chip type='web' title='Web' />} */}
+    <div data-te-ripple-init className={cn('w-full     dark flex flex-col place-items-start  rounded-xl py-4   ')}>
+      <div className="flex flex-row gap-4  w-full  place-items-center ">
 
-      <h1 className='mt-1 line-clamp-2 text-sm'>{project.name}</h1>
-      {!isConfidential && <a
-        href='https://appgallerymea.com'
-        className='group mt-2 inline-flex items-center gap-1 text-sm font-medium text-blue-500 hover:underline'
-      >
-        <Link size={10} />
-        {getDomain(project.link!)}
-      </a>}
-      {isConfidential && <a
-        href='#'
-        className='group mt-2 inline-flex  items-center gap-1 text-sm font-medium text-red-700'
-      >
-        <LockIcon size={15} />
-        confidential
-      </a>}
+        <img alt='huawei' className='h-8  object-contain'
+          src={project.image} />
+        {/* {isAndroid && <Chip type='android' title='Android' />}
+        {isWeb && <Chip type='web' title='Web' />} */}
+        <h1 className='text-xs m-0 p-0 '>{project.name}</h1>
+        <div className="flex-1"></div>
+        {!isConfidential && <a
+          href={project.link}
+          target="_blank"
+          className='group   inline-flex items-center gap-1 text-sm font-medium text-blue-500 hover:underline'
+        >
+          <span className='collapse md:visible'>
+
+            {getDomain(project.link!)}
+            <HiOutlineExternalLink size={14} className="inline-flex ml-1" /></span>
+          <HiOutlineExternalLink size={20} className='md:collapse' />
+
+        </a>}
+        {isConfidential && <a
+          className='group  inline-flex  items-center gap-1 text-sm font-medium text-red-700'
+        >
+          <span className='collapse md:visible'>
+            confidential<LockIcon size={14} className="inline-flex ml-1" />
+          </span>
+          <LockIcon size={20} className='md:collapse' />
+
+        </a>}
+
+      </div>
 
       <p className='mt-2 line-clamp-4 text-sm text-gray-300'>
         {project.description}

@@ -32,7 +32,7 @@ const LINKS = [
 
 export default function About(props: Props) {
   return (
-    <Section title='About' className="bg-b-dark " hideOverflowX={false}>
+    <Section elevated={true} title='About' className="bg-b-dark " hideOverflowX={false}>
       <div className=' w-full'>
         <h5 className=' text-justify text-md '>{about}</h5>
         <div className='my-4 gap-4 '>

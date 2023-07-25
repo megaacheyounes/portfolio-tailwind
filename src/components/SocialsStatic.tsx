@@ -31,16 +31,21 @@ const LINKS = [
 export default function SocialsStatic() {
   return (
 
-    <div className={' w-10 gap-1 text-white flex flex-col justify-center place-items-center  '}>
+    <div className={' w-10 gap-1  text-white flex flex-col justify-center place-items-center  '}>
       {LINKS.map((link, index) => {
         const Icon = link.icon;
         return (
+
           <IconButton
+            className='hover:-translate-y-1  p-1 transition-all duration-300 hover:shadow-xl   shadow-lime-500/50'
             key={link.href}
             href={link.href}
+
           >
             <Icon size={20} />
           </IconButton>
+
+
         );
       })}
       <span className="h-20 w-[2px] bg-white "></span>

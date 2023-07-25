@@ -26,8 +26,8 @@ export default function Footer(props: Props) {
               Next.js
             </a>{" "}
             and{" "}
-            <a className="text-lime-500" href="https://mui.com/" target="_blank">
-              MUI
+            <a className="text-lime-500" href="https://tailwindcss.com/" target="_blank">
+              tailwindcss
             </a>
             , deployed to{" "}
             <a className="text-lime-500"
