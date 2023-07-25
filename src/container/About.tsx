@@ -32,9 +32,14 @@ const LINKS = [
 
 export default function About(props: Props) {
   return (
-    <Section elevated={true} title='About' className="bg-b-dark " hideOverflowX={false}>
+    <Section indentation={false} elevated={true} title='About' className="bg-b-dark " hideOverflowX={false}>
       <div className=' w-full'>
         <h5 className=' text-justify text-md '>{about}</h5>
+
+        <a className='' href="https://www.codewars.com/users/YounesMegaache/" target="_blank">
+          <img className='mt-4' src="https://www.codewars.com/users/YounesMegaache/badges/large" />
+        </a>
+
         <div className='my-4 gap-4 '>
           {LINKS.map((link) => {
             const Icon = link.icon;
@@ -65,7 +70,6 @@ export default function About(props: Props) {
         </div>
 
         <ArrowLink href='/about' title='More about me' />
-
 
       </div>
     </Section>

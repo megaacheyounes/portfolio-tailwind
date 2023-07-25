@@ -12,7 +12,7 @@ export default function ProjectFeatured(props: Props) {
 
   return (
     <div className="my-2 mx-auto">
-      <div className="flex flex-wrap gap-4   place-items-center justify-center">
+      <div className="flex flex-wrap gap-6   place-items-center justify-center">
 
         {PROJECTS_HIGHLIGHT.map((project) => (
 

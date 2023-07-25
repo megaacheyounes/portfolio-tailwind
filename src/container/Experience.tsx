@@ -11,7 +11,7 @@ export default function Experience() {
 
   if (true) {
     return (
-      <Section elevated={true} title='Experience' className='bg-b-dark'>
+      <Section elevated={true} title='Experience' className='bg-b-dark    '>
         <div className="flex flex-wrap max-w-screen-xl ">
           <div className="border-r ">
             <nav className="flex flex-col space-y-2" aria-label="Tabs" role="tablist" data-hs-tabs-vertical="true">
@@ -37,7 +37,7 @@ export default function Experience() {
 
                 <ul className="pl-5 list-disc" >
                   {exp.achievements.map(x => (
-                    <li className="text-xs" >{x}</li>
+                    <li key={x} className="text-xs" >{x}</li>
                   ))}
                 </ul>
               </div>

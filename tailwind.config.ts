@@ -59,9 +59,20 @@ export default {
             backgroundPosition: '700px 0',
           },
         },
+        tilt: {
+          '0%, 50%, 100%': {
+            transform: 'rotate(0deg)',
+          },
+          '25%': {
+            transform: 'rotate(4deg)',
+          },
+          '75%': {
+            transform: 'rotate(-4deg)',
+          },
+        },
       },
       animation: {
-
+        tilt: 'tilt 10s infinite linear',
         flicker: 'flicker 3s linear infinite',
         shimmer: 'shimmer 1.3s linear infinite',
       },

@@ -40,7 +40,7 @@ export default function ProjectCard3(props: Props) {
   }
   return (
 
-    <div data-te-ripple-init className={cn('w-full     dark flex flex-col place-items-start  rounded-xl py-4   ')}>
+    <div data-te-ripple-init className={'w-full     dark flex flex-col place-items-start  rounded-xl py-4   '}>
       <div className="flex flex-row gap-4  w-full  place-items-center ">
 
         <img alt='huawei' className='h-8  object-contain'

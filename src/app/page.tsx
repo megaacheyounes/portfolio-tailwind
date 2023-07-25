@@ -17,6 +17,7 @@ export default function HomePage() {
       <Hero />
       <About />
       <Projects />
+      <div className="bg-b-light h-20 w-full" >  </div>
       <Experience />
     </div>
   );

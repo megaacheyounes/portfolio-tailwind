@@ -33,10 +33,17 @@ export default function BrandsSwiper(props: Props) {
   const count = BRANDS.length;
   const offest = 3;
   const displayBrands = [...BRANDS.slice(count - offest, count), ...BRANDS, ...BRANDS.slice(0, offest)]
-  const items = BRANDS.map(brand => <img className=" h-8 object-center object-contain  " src={brand} />)
-  if (true) {
-    return (
-      <ContSwiper width={200} items={items}  > </ContSwiper>)
-  }
+  const items = BRANDS.map(brand => <img className="   h-8   md:h-10 object-center object-contain  " src={brand} />)
+
+  return (
+    <>
+      <div className='relative '>
+
+        <ContSwiper duration={2000} itemWidth={300} items={items}  > </ContSwiper>
+
+      </div>
+    </>
+  )
+
 
 }
