@@ -1,7 +1,7 @@
 # portfolio tailwind
 
 https://codepen.io/collection/DqLkab
-
+https://www.sololearn.com/compiler-playground/WpFa2Yz9WP8g
 //Jan 2020 - present
 fun fullStackMobileDeveloper(Huawei: String) {
     -> lorem ipsum dolor sit amet.
