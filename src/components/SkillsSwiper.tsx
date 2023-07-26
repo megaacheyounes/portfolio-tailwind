@@ -19,8 +19,12 @@ type Props = any;
 
 export default function SkillsSwiper(props: Props) {
   return (
-    <ContSwiper reversed duration={1000} items={SKILLS_ICONS} itemWidth={150} >
-    </ContSwiper>
+    <>
+      <ContSwiper className='sm:hidden' reversed duration={1000} items={SKILLS_ICONS("36")} itemWidth={120} >
+      </ContSwiper>
+      <ContSwiper className='hidden sm:block' reversed duration={1000} items={SKILLS_ICONS("50")} itemWidth={120} >
+      </ContSwiper>
+    </>
   )
 
 }

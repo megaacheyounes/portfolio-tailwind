@@ -80,6 +80,7 @@ export default function ProjectCard3(props: Props) {
         <Skills skills={project.technologies} />
       </div>
 
+      <div className='h-[1px] w-full    mt-10 bg-lime-500/20' ></div>
       {/* <ArrowLink className='text-sm mt-2' title='learn more' href={'/project/' + project.name} /> */}
 
     </div>

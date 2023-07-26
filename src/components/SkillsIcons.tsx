@@ -1,6 +1,6 @@
 
 import React from "react";
-const size = "50";
+
 const viewBox = `0 0 256 256`;
 const margin = 0;
 
@@ -13,7 +13,7 @@ class SkillsIcons extends React.Component<Props> {
   render() {
     return (
       <div className="flex flex-row flex-wrap justify-center"  >
-        {SKILLS_ICONS.map((icon) => {
+        {SKILLS_ICONS("50").map((icon) => {
           return (
             <div className="m-1" >
               {icon}
@@ -27,7 +27,7 @@ class SkillsIcons extends React.Component<Props> {
 
 export default SkillsIcons;
 
-export const SKILLS_ICONS = [
+export const SKILLS_ICONS = (size: string) => [
   <g xlinkTitle="Android" style={{ margin }} transform="translate(0, 0)">
     <svg
       width={size}
@@ -64,7 +64,7 @@ export const SKILLS_ICONS = [
       />
     </svg>
   </g>,
-
+  // fixme
   <g xlinkTitle="Kotlin" style={{ margin }} transform="translate(300, 0)">
     <svg
       width={size}

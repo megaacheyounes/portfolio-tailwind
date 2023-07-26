@@ -33,7 +33,7 @@ export default function BrandsSwiper(props: Props) {
   const count = BRANDS.length;
   const offest = 3;
   const displayBrands = [...BRANDS.slice(count - offest, count), ...BRANDS, ...BRANDS.slice(0, offest)]
-  const items = BRANDS.map(brand => <img className="   h-8   md:h-10 object-center object-contain  " src={brand} />)
+  const items = BRANDS.map(brand => <img className="   h-10 w-full   md:h-10 object-center object-contain  " src={brand} />)
 
   return (
     <>

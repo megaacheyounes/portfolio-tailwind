@@ -15,6 +15,7 @@ import { SKILLS_ICONS } from '@/components/SkillsIcons';
 import { cn } from '@/lib/utils';
 import { TbH1 } from 'react-icons/tb';
 type Props = {
+  className?: string
   items: any[]
   itemWidth: number
   reversed?: boolean
@@ -24,14 +25,14 @@ type Props = {
 
 export default function ContSwiper(props: Props) {
 
-  const { reversed, items } = props
+  const { reversed, items, className } = props
   const count = items.length;
   const offest = 10;
   const displayItems = [...items.slice(count - offest, count), ...items, ...items.slice(0, offest)]
   const FuckSwiper = Swiper as any;
   const slidesNum = 1000 / props.itemWidth
   return (
-    <div className=' overflow-x-clip cont-swiper relative '>
+    <div className={cn(' overflow-x-clip cont-swiper relative ', className)}>
       <span className={cn("absolute py-1    z-50 left-0 h-full blur  w-1      bg-orange-600", reversed && " bg-cyan-600")} />
 
       <FuckSwiper
@@ -50,7 +51,7 @@ export default function ContSwiper(props: Props) {
       >
         {displayItems.map((el, index) =>
           <SwiperSlide key={'ii_tt_' + index} >
-            <li key={'ii_tt_' + index} className={` w-[${props.itemWidth}px]  `}>
+            <li key={'ii_tt_' + index} className={`mx-auto w-[${props.itemWidth} px]  `}>
               {el}
             </li>
           </SwiperSlide >)

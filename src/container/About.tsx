@@ -9,6 +9,7 @@ import BrandsSwiper from '@/components/BrandsSwiper';
 import { MdEmail } from 'react-icons/md';
 import SkillsIcons from '@/components/SkillsIcons';
 import SkillsSwiper from '@/components/SkillsSwiper';
+import Socialss from '@/components/Socialss';
 
 type Props = any;
 
@@ -33,43 +34,30 @@ const LINKS = [
 export default function About(props: Props) {
   return (
     <Section indentation={false} elevated={true} title='About' className="bg-b-dark " hideOverflowX={false}>
-      <div className=' w-full'>
-        <h5 className=' text-justify text-md '>{about}</h5>
+      <div className=' w-full    '>
+        <div className='  flex flex-col justify-center mx-4'>
+          <h5 className='mx-auto text-justify text-md '>{about}</h5>
 
-        <a className='' href="https://www.codewars.com/users/YounesMegaache/" target="_blank">
-          <img className='mt-4' src="https://www.codewars.com/users/YounesMegaache/badges/large" />
-        </a>
+          <a className='mx-auto mt-4' href="https://www.codewars.com/users/YounesMegaache/" target="_blank">
+            <img className='mt-4 flex-inline max-w-xs' src="https://www.codewars.com/users/YounesMegaache/badges/large" />
+          </a>
 
-        <div className='my-4 gap-4 '>
-          {LINKS.map((link) => {
-            const Icon = link.icon;
-            return (
-              <IconButton
-                className='inline-flex'
-                key={link.href}
-                href={link.href}
-              >
-                <Icon size={30} />
-              </IconButton>
-            );
-          })}
-        </div>
-
-        <div className="pt-4 mt-12   ">
-          <h2 className="text-xl text-center font-medium    ">Campanies I'm proud to have collaborated with  </h2>
-          <div className=" mt-10  ">
-            <BrandsSwiper />
+          <div className='mx-auto my-4 mt-8 gap-4 '>
+            <Socialss large={true} />
           </div>
         </div>
 
-        <div className="pt-4 mb-10 mt-16     ">
-          <h2 className="text-xl  text-center font-medium    ">Technologies I have used  </h2>
-          <div className=" mt-10    ">
-            <SkillsSwiper />
-          </div>
+
+        <h2 className="text-lg text-center font-medium  mt-8   ">Campanies I'm proud to have collaborated with  </h2>
+        <div className=" mt-8  ">
+          <BrandsSwiper />
         </div>
 
-        <ArrowLink href='/about' title='More about me' />
+
+        <h2 className="text-lg  text-center font-medium  mt-16   ">Technologies I have used  </h2>
+        <div className=" mt-8   mb-8   ">
+          <SkillsSwiper />
+        </div>
 
       </div>
     </Section>

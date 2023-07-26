@@ -7,7 +7,9 @@ import { cn } from '@/lib/utils';
 import { twMerge } from 'tailwind-merge';
 
 
-
+type Props = {
+  large?: boolean
+}
 
 const LINKS = [
   {
@@ -28,11 +30,13 @@ const LINKS = [
   },
 ];
 
-export default function Socialss() {
+export default function Socialss(props: Props) {
+
+  const { large = false } = props;
 
   return (
 
-    <div className={'  gap-1 text-white flex flex-row  mx-4'}>
+    <div className={twMerge('  gap-1 text-white flex flex-row  mx-1', large && "mx-2")}>
       {LINKS.map((link, index) => {
         const Icon = link.icon;
         return (
@@ -40,7 +44,7 @@ export default function Socialss() {
             key={link.href}
             href={link.href}
           >
-            <Icon size={20} />
+            <Icon size={large ? 30 : 18} />
           </IconButton>
         );
       })}
