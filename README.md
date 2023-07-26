@@ -2,6 +2,24 @@
 
 https://codepen.io/collection/DqLkab
 
+//Jan 2020 - present
+fun fullStackMobileDeveloper(Huawei: String) {
+    -> lorem ipsum dolor sit amet.
+    -> lorem ipsum dolor sit amet.
+    -> lorem ipsum dolor sit amet.
+    -> lorem ipsum dolor sit amet.
+}
+//Jan 2020 - present
+fun fullStackWebDeveloper(Huawei: String) {
+    -> lorem ipsum dolor sit amet.
+    -> lorem ipsum dolor sit amet.
+    -> lorem ipsum dolor sit amet.
+    -> lorem ipsum dolor sit amet.
+}
+//Jan 2020 - present
+fun AndroidDeveloper(Huawei: String) {...}
+
+
 todo:
 https://play.tailwindcss.com/fNKKyOG2Yv
 
