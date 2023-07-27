@@ -15,7 +15,7 @@ export default function Section(props: Props) {
   const { title, elevated, indentation = true, contentClassName } = props;
   return (
     <section
-      className={twMerge('relative rounded-xl max-w-screen-lg z-30 mx-auto overflow-x-hidden ', elevated && 'z-40 shadow-2xl shadow-lime-400/5  bg-b-light pattern-2', props.className)}
+      className={twMerge('relative rounded-xl max-w-screen-lg z-30 mx-auto overflow-x-hidden ', elevated && 'z-40 shadow-2xl shadow-lime-400/10  bg-b-light pattern-2', props.className)}
     >
 
       <div className={'container   max-w-screen-lg  mx-auto '}>
@@ -27,9 +27,9 @@ export default function Section(props: Props) {
           )}
         </h2>
 
-        <div className={cn('py-4 text-white flex flex-col place-items-center  ', indentation && ' p-4 md:p-10 ml-2', props.hideOverflowX && "overflow-x-hidden", contentClassName)}> {props.children}</div>
+        <div className={cn('py-4 text-white flex flex-col place-items-center  ', indentation && ' p-4 md:px-10 md:ml-4 ml-2', props.hideOverflowX && "overflow-x-hidden", contentClassName)}> {props.children}</div>
 
-        <h2 className='text-xl font-medium text-white p-4 md:p-10'> {title && '}'}</h2>
+        <h2 className='text-xl font-medium text-white pt-4 pb-2 md:pt-10 md:px-10'> {title && '}'}</h2>
       </div>
 
     </section>

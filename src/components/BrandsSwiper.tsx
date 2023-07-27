@@ -39,7 +39,9 @@ export default function BrandsSwiper(props: Props) {
     <>
       <div className='relative '>
 
-        <ContSwiper duration={2000} itemWidth={300} items={items}  > </ContSwiper>
+        <ContSwiper duration={2000} itemWidth={300} items={items}  >
+
+        </ContSwiper>
 
       </div>
     </>

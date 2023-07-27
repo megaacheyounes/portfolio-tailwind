@@ -47,18 +47,20 @@ export default function ContSwiper(props: Props) {
         loop={true}
         slidesPerView={slidesNum}
         spaceBetween={20}
-
       >
-        {displayItems.map((el, index) =>
-          <SwiperSlide key={'ii_tt_' + index} >
-            <li key={'ii_tt_' + index} className={`mx-auto w-[${props.itemWidth} px]  `}>
-              {el}
-            </li>
-          </SwiperSlide >)
+
+        {
+          displayItems.map((el, index) =>
+            <SwiperSlide key={'ii_tt_' + index} >
+              <li key={'ii_tt_' + index} className={`mx-auto w-[${props.itemWidth} px]  `}>
+                {el}
+              </li>
+            </SwiperSlide >
+          )
         }
 
       </FuckSwiper >
-      <span className={cn("absolute blur py-2  top-0 z-50 right-0 h-full  w-1    bg-cyan-600 ", reversed && "bg-orange-600 ")} />
+      <span className={cn("absolute blur py-2 top-0 z-50 right-0 h-full  w-1  bg-cyan-600 ", reversed && "bg-orange-600 ")} />
 
     </div >
   )

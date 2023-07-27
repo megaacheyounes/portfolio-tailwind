@@ -81,7 +81,7 @@ export default function RootLayout({
 
           <Header />
 
-          <div className=' relative z-30 '>{children}</div>
+          <div className=' relative z-30  place-items-center '>{children}</div>
 
           <div className='md:sticky z-10 bottom-0 px-1 lg:px-20 '>
             <Footer />

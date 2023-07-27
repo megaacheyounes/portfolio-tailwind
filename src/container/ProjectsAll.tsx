@@ -20,16 +20,14 @@ export default function ProjectsAll(props: Props) {
 
       <div className='my-4  mx-auto'>
         <div className="flex flex-wrap gap-4   place-items-center justify-center">
+
           {WEBSITES.map((project) => (
-
             <ProjectCard3 key={project.name} project={project} />
-
           ))}
           {APPS.map((project) => (
-
             <ProjectCard3 key={project.name} project={project} />
-
           ))}
+
         </div>
 
       </div>

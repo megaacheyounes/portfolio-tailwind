@@ -6,11 +6,11 @@ import ArrowLink from '@/components/ArrowLink';
 import Skills from '@/components/Skills';
 import { PROJECTS_HIGHLIGHT } from '@/data/projects';
 import { BrandType } from '@/models/project';
-import { cn } from '@/lib/utils';
+import { cn, getDomain } from '@/lib/utils';
 import { useRouter } from 'next/navigation';
 
 type Props = {
-  project: typeof PROJECTS_HIGHLIGHT[0]
+  project: typeof PROJECTS_HIGHLIGHT[0],
 };
 
 const BrandMapping: { [key in BrandType]: string } = {
@@ -36,7 +36,6 @@ export default function ProjectCard2(props: Props) {
   const isWeb = project.type == "web"
   const isConfidential = !project.link
 
-  const getDomain = (link: string) => new URL(link).hostname
   const getImage = (brand: BrandType, img?: string) => {
     return BrandMapping[brand] || img
   }

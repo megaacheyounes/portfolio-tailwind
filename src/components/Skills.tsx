@@ -80,7 +80,7 @@ export default function Skills(props: Props) {
         {props.skills.map((skill) => {
           const Icon = MAPPING[skill]
           return (
-            <div key={skill} className=" rounded-full bg-lime-400/10  text-lime-300 text-xs py-1 px-3 mt-2  mr-2 ">
+            <div key={skill} className=" rounded-full bg-lime-400/10  text-lime-300 text-xs pt-1 px-3 mt-2  mr-2 ">
               {skill}
             </div>
           )

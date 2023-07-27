@@ -33,25 +33,25 @@ const LINKS = [
 
 export default function About(props: Props) {
   return (
-    <Section indentation={false} elevated={true} title='About' className="bg-b-dark " hideOverflowX={false}>
+    <Section indentation={true} elevated={true} title='About' className="bg-b-dark " hideOverflowX={false}>
       <div className=' w-full    '>
-        <div className='  flex flex-col justify-center mx-4'>
+        <div className='  flex flex-col   mx-4'>
           <h5 className='mx-auto text-justify text-md '>{about}</h5>
 
-          <a className='mx-auto mt-4' href="https://www.codewars.com/users/YounesMegaache/" target="_blank">
+          <a className='mx-auto mt-104' href="https://www.codewars.com/users/YounesMegaache/" target="_blank">
             <img className='mt-4 flex-inline max-w-xs' src="https://www.codewars.com/users/YounesMegaache/badges/large" />
           </a>
 
-          <div className='mx-auto my-4 mt-8 gap-4 '>
+          <div className='mx-auto my-4 mt-20 gap-4 '>
             <Socialss large={true} />
           </div>
         </div>
 
 
-        <h2 className="text-lg text-center font-medium  mt-8   ">Campanies I'm proud to have collaborated with  </h2>
+        {/* <h2 className="text-lg text-center font-medium  mt-8   ">Campanies I'm proud to have collaborated with  </h2>
         <div className=" mt-8  ">
           <BrandsSwiper />
-        </div>
+        </div> */}
 
 
         <h2 className="text-lg  text-center font-medium  mt-16   ">Technologies I have used  </h2>

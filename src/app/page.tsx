@@ -3,8 +3,11 @@
 import BrandsSwiper from '@/components/BrandsSwiper';
 import About from '@/container/About';
 import Experience from '@/container/Experience';
+import Experience2 from '@/container/Experience2';
+import Experience3 from '@/container/Experience3';
 import Hero from '@/container/Hero';
 import Projects from '@/container/Projects';
+import Section from '@/container/Section';
 import Testimonials from '@/container/Testimonials';
 import { useEffect } from 'react';
 
@@ -23,17 +26,22 @@ export default function HomePage() {
         <Projects />
         {/* <Testimonials /> */}
 
-        <div className='py-5 md:py-20 bg-b-light'>
-          <h2 className="text-lg text-center text-white font-medium  mt-8   ">Campanies I'm proud to have collaborated with  </h2>
-          <div className=" mt-8  ">
+
+        <Section contentClassName=' px-0 md:px-0 mx-0 md:mx-0' elevated={true} className="   mx-auto">
+
+          <div className=' mt-5 block relative  w-full '>
+            <h2 className="text-md text-center   text-white font-medium   mb-10 ">Campanies I'm proud to have collaborated with  </h2>
             <BrandsSwiper />
           </div>
-        </div>
 
+        </Section>
 
-        <div className="bg-b-light h-20 w-full" >  </div>
-        <Experience />
+        <div className=" bg-b-light h-20 w-full" >  </div>
+
+        <Experience3 />
       </div>
     </>
   );
 }
+
+

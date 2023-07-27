@@ -1,3 +1,5 @@
+import { SkillType } from "@/models/project";
+
 export const PRESENT = "present";
 export const EXP_DIVIDER = "●";
 
@@ -12,7 +14,7 @@ export interface Experience {
 	};
 	location: string;
 	achievements: string[];
-	technologies: string[];
+	technologies: SkillType[];
 	//will be calculated by DataProvider.tsx
 	duration?: string;
 }
@@ -38,13 +40,14 @@ export const EXPERIENCES: Experience[] = [
 			"React-Native",
 			"Huawei Mobile Services (HMS)",
 			"Firebase",
-			"Javascript",
+			"JavaScript",
 			"CSS",
 			"HTML",
 			"Laravel",
 			"PHP",
-			"NoteJs",
-			"NextJs"
+			"Node.js",
+			"Next.js",
+			// "Figma"
 		],
 		achievements: [
 			"Deliver Robost production code for a diverse array of Android projects for companies including Dubai Police, Carrefour, Virgin Mobile, Visit Abudhabi and many more ",
@@ -64,17 +67,18 @@ export const EXPERIENCES: Experience[] = [
 		location: "Constantine, Algeria",
 		technologies: [
 			"Angular",
-			"NodeJS",
-			"ExpressJs",
-			"Typescript",
+			"Node.js",
+			"Express.js",
+			"TypeScript",
 			"Laravel",
 			"PHP",
-			"jQuery",
-			"Swagger-ui",
-			"Angular Material",
-			"Bootstrap",
-			"Animate.css",
-			"NativeScript",
+			// fixme: add logos
+			// "jQuery",
+			// "Swagger-ui",
+			// "Angular Material",
+			// "Bootstrap",
+			// "Animate.css",
+			// "NativeScript",
 			"React",
 		],
 		achievements: [
@@ -102,11 +106,9 @@ export const EXPERIENCES: Experience[] = [
 			"Java",
 			"Google Play Services",
 			"Firebase",
-			"LibGDX",
 			"Laravel",
 			"PHP",
-			"NodeJS",
-			"Photoshop",
+			"Node.js"
 		],
 		achievements: [
 			"Created 25+ android apps for different purposes.",

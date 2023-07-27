@@ -12,7 +12,7 @@ export default function Experience() {
 
   if (true) {
     return (
-      <Section elevated={true} title='Experience' className='bg-b-dark    '>
+      <Section elevated={false} title='Experience' className='     '>
         <div className="flex flex-wrap lg:flex-row flex-col place-items-center w-full ">
 
           <div className="border-r hidden lg:block  ">
