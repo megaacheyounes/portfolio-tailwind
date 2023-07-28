@@ -20,12 +20,12 @@ export default function Section(props: Props) {
 
       <div className={'container   max-w-screen-lg  mx-auto '}>
 
-        <h2 className='text-xl p-4 md:p-10 font-medium text-lime-400'>
-          {title}{' '}
-          {title && (
+        {title && (
+          <h2 className='text-xl p-4 md:p-10 font-medium text-lime-400'>
+            {title}{' '}
             <span className={' text-white'}> {'( ) {'} </span>
-          )}
-        </h2>
+          </h2>
+        )}
 
         <div className={cn('py-4 text-white flex flex-col place-items-center  ', indentation && ' p-4 md:px-10 md:ml-4 ml-2', props.hideOverflowX && "overflow-x-hidden", contentClassName)}> {props.children}</div>
 

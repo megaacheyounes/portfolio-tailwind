@@ -66,10 +66,8 @@ export default function RootLayout({
 
   return (
     <html>
-      <body   >
-
-
-        <div className='  bg-b-light   relative min-h-screen'>
+      <body className='bg-b-light  ' >
+        <div className='   relative min-h-screen'>
 
           <span className='opacity-0 sm:opacity-100  transition-opacity  duration-500 fixed z-50 bottom-2 left-2    '>
             <SocialsStatic />

@@ -1,12 +1,13 @@
 
 import Socials from '@/components/Socialss';
+import Section from '@/container/Section';
 
 type Props = any;
 
 export default function Footer(props: Props) {
   return (
-    <footer className='   z-0 bg-b-light body-font flex 
-    justify-center py-10 pb-2 text-white'>
+    <Section elevated={false} className='   z-0    body-font flex 
+    justify-center py-10   text-white'>
       <div className='  border-t-3 border-dashed border-lime-500'>
         <div className='  flex  flex-col items-center   '>
           <a href='/' className='title-font cursor-pointer  font-medium    '>
@@ -50,6 +51,6 @@ export default function Footer(props: Props) {
           </p>
         </div>
       </div>
-    </footer>
+    </Section>
   );
 }
