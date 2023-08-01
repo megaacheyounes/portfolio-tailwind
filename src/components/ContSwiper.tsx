@@ -1,68 +1,70 @@
 /* eslint-disable @next/next/no-img-element */
 import * as React from 'react';
-import {
-  LiaLongArrowAltLeftSolid,
-  LiaLongArrowAltRightSolid,
-} from 'react-icons/lia';
-import { Autoplay, Navigation, Pagination } from 'swiper/modules';
+import { Autoplay, Navigation } from 'swiper/modules';
 // Import Swiper React components
-import { Swiper, SwiperSlide, useSwiper } from 'swiper/react';
+import { Swiper, SwiperSlide } from 'swiper/react';
 // Import Swiper styles
 import 'swiper/css';
 
-import ProjectCard from '@/components/ProjectCard';
-import { SKILLS_ICONS } from '@/components/SkillsIcons';
 import { cn } from '@/lib/utils';
-import { TbH1 } from 'react-icons/tb';
 type Props = {
-  className?: string
-  items: any[]
-  itemWidth: number
-  reversed?: boolean
-  duration?: number
-} & React.PropsWithChildren
-
+  className?: string;
+  items: any[];
+  itemWidth: number;
+  reversed?: boolean;
+  duration?: number;
+} & React.PropsWithChildren;
 
 export default function ContSwiper(props: Props) {
-
-  const { reversed, items, className } = props
+  const { reversed, items, className } = props;
   const count = items.length;
   const offest = 10;
-  const displayItems = [...items.slice(count - offest, count), ...items, ...items.slice(0, offest)]
+  const displayItems = [
+    ...items.slice(count - offest, count),
+    ...items,
+    ...items.slice(0, offest),
+  ];
   const FuckSwiper = Swiper as any;
-  const slidesNum = 1000 / props.itemWidth
+  const slidesNum = 1000 / props.itemWidth;
   return (
-    <div className={cn(' overflow-x-clip cont-swiper relative ', className)}>
-      <span className={cn("absolute py-1    z-50 left-0 h-full blur  w-1      bg-orange-600", reversed && " bg-cyan-600")} />
+    <div className={cn(' cont-swiper relative overflow-x-clip ', className)}>
+      <span
+        className={cn(
+          'absolute left-0    z-50 h-full w-1 bg-orange-600  py-1      blur',
+          reversed && ' bg-cyan-600'
+        )}
+      />
 
       <FuckSwiper
         autoplay={{
           delay: 0,
           disableOnInteraction: false,
-          reverseDirection: reversed || false
+          reverseDirection: reversed || false,
         }}
         speed={props.duration || 20000}
-        modules={[Navigation, Pagination, Autoplay]}
+        modules={[Navigation, Autoplay]}
         allowTouchMove={true}
         loop={true}
         slidesPerView={slidesNum}
         spaceBetween={20}
       >
-
-        {
-          displayItems.map((el, index) =>
-            <SwiperSlide key={'ii_tt_' + index} >
-              <li key={'ii_tt_' + index} className={`mx-auto w-[${props.itemWidth} px]  `}>
-                {el}
-              </li>
-            </SwiperSlide >
-          )
-        }
-
-      </FuckSwiper >
-      <span className={cn("absolute blur py-2 top-0 z-50 right-0 h-full  w-1  bg-cyan-600 ", reversed && "bg-orange-600 ")} />
-
-    </div >
-  )
-
+        {displayItems.map((el, index) => (
+          <SwiperSlide key={'ii_tt_' + index}>
+            <li
+              key={'ii_tt_' + index}
+              className={`mx-auto w-[${props.itemWidth} px]  `}
+            >
+              {el}
+            </li>
+          </SwiperSlide>
+        ))}
+      </FuckSwiper>
+      <span
+        className={cn(
+          'absolute right-0 top-0 z-50 h-full w-1 bg-cyan-600  py-2  blur ',
+          reversed && 'bg-orange-600 '
+        )}
+      />
+    </div>
+  );
 }

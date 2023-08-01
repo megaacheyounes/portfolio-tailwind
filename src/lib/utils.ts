@@ -5,4 +5,7 @@ import { twMerge } from 'tailwind-merge';
 export function cn(...inputs: ClassValue[]) {
   return twMerge(clsx(inputs));
 }
-export const getDomain = (link: string) => new URL(link).hostname
+export const getDomain = (link: string) => new URL(link).hostname;
+
+export const delay = (millis: number) =>
+  new Promise((r) => setTimeout(r, 2000));

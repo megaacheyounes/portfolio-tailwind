@@ -3,24 +3,18 @@
 // Import Swiper styles
 import 'swiper/css';
 
-import ProjectCard from '@/components/ProjectCard';
-import { PROJECTS_HIGHLIGHT } from '@/data/projects';
 import ProjectCard2 from '@/components/ProjectCard2';
+import { PROJECTS_HIGHLIGHT } from '@/data/projects';
 type Props = any;
 
 export default function ProjectFeatured(props: Props) {
-
   return (
-    <div className="my-2 mx-auto">
-      <div className="flex flex-wrap gap-6   place-items-center justify-center">
-
+    <div className='mx-auto my-2'>
+      <div className='flex flex-wrap place-items-center   justify-center gap-6'>
         {PROJECTS_HIGHLIGHT.map((project) => (
-
-          <ProjectCard2 project={project} />
-
+          <ProjectCard2 key={project.name} project={project} />
         ))}
       </div>
-
     </div>
   );
 }

@@ -1,7 +1,7 @@
 /* eslint-disable @next/next/no-img-element */
 import {
   LiaLongArrowAltLeftSolid,
-  LiaLongArrowAltRightSolid
+  LiaLongArrowAltRightSolid,
 } from 'react-icons/lia';
 import { Autoplay, Navigation, Pagination } from 'swiper/modules';
 // Import Swiper React components
@@ -21,7 +21,6 @@ export default function ProjectSwiper(props: Props) {
     <div>
       <SwiperFuck
         modules={[Navigation, Pagination, Autoplay]}
-
         allowTouchMove={true}
         loop={true}
         breakpoints={{
@@ -37,7 +36,7 @@ export default function ProjectSwiper(props: Props) {
           },
           1280: {
             slidesPerView: 4,
-          }
+          },
         }}
         autoplay={{
           delay: 2000,
@@ -51,10 +50,13 @@ export default function ProjectSwiper(props: Props) {
         ))}
       </SwiperFuck>
       <div className=' flex w-full flex-row place-items-end justify-center gap-5 text-gray-300'>
-        <a className='inline-flex w-auto cursor-pointer   hover:scale-110 ' >
+        <a className='inline-flex w-auto cursor-pointer   hover:scale-110 '>
           <LiaLongArrowAltLeftSolid size={30} />
         </a>
-        <a onClick={() => !swiperC && swiperC.slideNext()} className='inline-flex w-auto cursor-pointer   hover:scale-110'>
+        <a
+          onClick={() => !swiperC && swiperC.slideNext()}
+          className='inline-flex w-auto cursor-pointer   hover:scale-110'
+        >
           <LiaLongArrowAltRightSolid size={30} />
         </a>
       </div>

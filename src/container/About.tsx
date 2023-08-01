@@ -1,15 +1,8 @@
-import * as React from 'react';
-import { SiGmail, SiLinkedin } from 'react-icons/si';
+import { SiLinkedin } from 'react-icons/si';
 
-import ArrowLink from '@/components/ArrowLink';
-import IconButton from '@/components/IconButton';
-import Section from '@/container/Section';
-import Brands from '@/components/Brands';
-import BrandsSwiper from '@/components/BrandsSwiper';
-import { MdEmail } from 'react-icons/md';
-import SkillsIcons from '@/components/SkillsIcons';
-import SkillsSwiper from '@/components/SkillsSwiper';
 import Socialss from '@/components/Socialss';
+import Section from '@/container/Section';
+import { MdEmail } from 'react-icons/md';
 
 type Props = any;
 
@@ -25,41 +18,40 @@ const LINKS = [
   },
   {
     icon: SiLinkedin,
-    href: ' ',
+    href: '',
   },
 ];
 
-
-
 export default function About(props: Props) {
   return (
-    <Section indentation={true} elevated={true} title='About' className="bg-b-dark " hideOverflowX={false}>
+    <Section
+      indentation={true}
+      elevated={true}
+      title='About'
+      className='bg-b-dark  fade-in  mx-4 py-4 sm:container sm:mx-auto  '
+      contentClassName='pb-0  '
+      hideOverflowX={false}
+    >
       <div className=' w-full    '>
-        <div className='  flex flex-col   mx-4'>
-          <h5 className='mx-auto text-justify text-md '>{about}</h5>
+        <div className=' flex   flex-col'>
+          <h5 className='text-md mx-auto text-justify '>{about}</h5>
 
-          <a className='mx-auto mt-104' href="https://www.codewars.com/users/YounesMegaache/" target="_blank">
-            <img className='mt-4 flex-inline max-w-xs' src="https://www.codewars.com/users/YounesMegaache/badges/large" />
+          <a
+            className='mx-auto mt-10'
+            href='https://www.codewars.com/users/YounesMegaache/'
+            target='_blank'
+          >
+            <img
+              className='flex-inline  max-w-xs'
+              src='https://www.codewars.com/users/YounesMegaache/badges/large'
+            />
           </a>
 
-          <div className='mx-auto my-4 mt-20 gap-4 '>
+          <div className='mx-auto  mt-5 gap-4 '>
             <Socialss large={true} />
           </div>
         </div>
-
-
-        {/* <h2 className="text-lg text-center font-medium  mt-8   ">Campanies I'm proud to have collaborated with  </h2>
-        <div className=" mt-8  ">
-          <BrandsSwiper />
-        </div> */}
-
-
-        <h2 className="text-lg  text-center font-medium  mt-16   ">Technologies I have used  </h2>
-        <div className=" mt-8   mb-8   ">
-          <SkillsSwiper />
-        </div>
-
       </div>
     </Section>
   );
-} 
+}

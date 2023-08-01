@@ -1,60 +1,63 @@
-
 import Skills from '@/components/Skills';
 import Section from '@/container/Section';
 import DataProvider from '@/data/DataProvider';
-import { cn } from '@/lib/utils';
-import { HiOutlineExternalLink } from 'react-icons/Hi';
-import { twMerge } from 'tailwind-merge';
-
-
 
 export default function Experience3() {
+  const data = new DataProvider();
 
-  const data = new DataProvider()
+  return (
+    <Section
+      elevated={false}
+      title='Experience'
+      indentation={true}
+      className=' bg-b-light mb-0 mt-10 pb-0'
+    >
+      {data.experiences.map((exp, i) => (
+        <div
+          key={exp.company.name}
+          data-te-ripple-init
+          className={
+            'bg-b-dark dark mt-4 flex w-full flex-col place-items-start rounded-xl px-8 py-8  shadow-md shadow-lime-500/5 '
+          }
+        >
+          <div className='flex w-full flex-row  place-items-center  gap-4 '>
+            <a
+              target={'_blank'}
+              href={exp.company.website}
+              className='transition-all  duration-300 hover:scale-125 '
+            >
+              <img
+                alt='huawei'
+                className='h-8 object-contain'
+                src={exp.company.logo}
+              />
+            </a>
 
-  if (true) {
-    return (
-      <Section elevated={false} title='Experience' className=' mb-0 pb-0  '>
-        {
-          data.experiences.map(
-            (exp, i) => (
-              <div data-te-ripple-init className={'bg-b-dark px-8 py-8 mb-4 w-full dark flex flex-col place-items-start  rounded-xl '}>
-                <div className="flex flex-row gap-4  w-full  place-items-center ">
+            <div>
+              <p className='m-0 p-0  text-xs text-white/80   '>
+                {exp.start}
+                {' - '}
+                {exp.end}
+              </p>
 
-                  <a target={"_blank"} href={exp.company.website} className="hover:scale-125  duration-300 transition-all " >
-                    <img alt='huawei' className='h-8 object-contain'
-                      src={exp.company.logo} />
-                  </a>
+              <p className='text-md m-0 mt-1 p-0 '>{exp.title}</p>
+            </div>
+          </div>
+          <ul className='mt-2 list-disc pl-5'>
+            {exp.achievements.map((x) => (
+              <li key={x} className='mt-1 text-xs md:text-sm'>
+                {x}
+              </li>
+            ))}
+          </ul>
 
+          <div className='mt-2'>
+            <Skills skills={exp.technologies} />
+          </div>
 
-                  <div>
-                    <p className='text-xs text-white/80  m-0 p-0   '>{exp.start}{' - '}{exp.end}</p>
-
-                    <p className='text-md m-0 p-0 mt-1 '>{exp.title}</p>
-                  </div>
-
-                </div>
-                <ul className="pl-5 list-disc mt-2" >
-                  {exp.achievements.map(x => (
-                    <li key={x} className="mt-1 text-sm" >{x}</li>
-                  ))}
-                </ul>
-
-                <div>
-                  <Skills skills={exp.technologies} />
-                </div>
-
-                {/* <ArrowLink className='text-sm mt-2' title='learn more' href={'/project/' + project.name} /> */}
-
-              </div>
-            )
-          )
-        }
-
-      </Section>
-    )
-  }
-
-
-
+          {/* <ArrowLink className='text-sm mt-2' title='learn more' href={'/project/' + project.name} /> */}
+        </div>
+      ))}
+    </Section>
+  );
 }

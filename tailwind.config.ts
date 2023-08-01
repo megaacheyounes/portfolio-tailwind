@@ -1,21 +1,17 @@
 import type { Config } from 'tailwindcss';
 import defaultTheme from 'tailwindcss/defaultTheme';
-import colors from 'tailwindcss/colors';
-import preline from 'preline/plugin.js';
 
 export default {
-  content: [
-    './src/**/*.{js,jsx,ts,tsx}',
-    'node_modules/preline/dist/*.js',
-  ],
+  content: ['./src/**/*.{js,jsx,ts,tsx}', 'node_modules/preline/dist/*.js'],
 
   theme: {
     container: {
-      center: true
+      center: true,
     },
     extend: {
       fontFamily: {
         primary: ['FiraCode', 'Inter', ...defaultTheme.fontFamily.sans],
+        Minecraft: ['Minecraft'],
       },
       colors: {
         primary: {
@@ -33,13 +29,12 @@ export default {
           950: 'rgb(var(--tw-color-primary-950) / <alpha-value>)',
         },
         b: {
-          dark: "#101410",
-          light: "#161916"
-        }
+          dark: '#101410',
+          light: '#161916',
+        },
       },
 
       keyframes: {
-
         flicker: {
           '0%, 19.999%, 22%, 62.999%, 64%, 64.999%, 70%, 100%': {
             opacity: '0.99',
@@ -80,6 +75,7 @@ export default {
   },
   plugins: [
     require('@tailwindcss/forms'),
-    preline,
+    require('preline/plugin.js'),
+    require('tailwindcss-animate'),
   ],
 } satisfies Config;

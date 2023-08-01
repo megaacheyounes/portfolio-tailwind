@@ -1,0 +1,45 @@
+@keyframes fade-in {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+$prevDelay: 1ms;
+$itemDelay: 55ms;
+$itemCount: 19;
+
+$totalDelay: 10451ms;
+/*
+s = delay * n + (delay * n-1)
+~10 seconds
+*/
+
+.svg-loader-container {
+  rect {
+    @for $i from 1 through $itemCount {
+      opacity: 0;
+      animation: fade-in 200ms forwards;
+      &:nth-child(#{$i}) {
+        $stagger: $itemDelay * $i;
+        $delay: $prevDelay + $stagger;
+        $prevDelay: $delay !global;
+        animation-delay: $delay;
+      }
+    }
+  }
+}
+
+.loading-message {
+  opacity: 0;
+  animation: fade-in 200ms forwards;
+  animation-delay: $totalDelay * 0.5;
+}
+
+.ahhh-message {
+  opacity: 0;
+  animation: fade-in 200ms forwards;
+  animation-delay: $totalDelay;
+}
