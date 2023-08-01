@@ -1,5 +1,6 @@
 import { SiLinkedin } from 'react-icons/si';
 
+import ArrowLink from '@/components/ArrowLink';
 import Socialss from '@/components/Socialss';
 import Section from '@/container/Section';
 import { MdEmail } from 'react-icons/md';
@@ -28,7 +29,7 @@ export default function About(props: Props) {
       indentation={true}
       elevated={true}
       title='About'
-      className='bg-b-dark  fade-in  mx-4 py-4 sm:container sm:mx-auto  '
+      className='bg-b-dark  fade-in  mx-4 my-2 sm:container   sm:mx-auto  '
       contentClassName='pb-0  '
       hideOverflowX={false}
     >
@@ -36,8 +37,15 @@ export default function About(props: Props) {
         <div className=' flex   flex-col'>
           <h5 className='text-md mx-auto text-justify '>{about}</h5>
 
+          <ArrowLink
+            className='mx-auto mt-5 sm:mt-10'
+            title='more about me'
+            href={'/Younes_Megaache.cv.pdf'}
+            newTab={true}
+          ></ArrowLink>
+
           <a
-            className='mx-auto mt-10'
+            className='mx-auto mt-5 sm:mt-10'
             href='https://www.codewars.com/users/YounesMegaache/'
             target='_blank'
           >
@@ -47,7 +55,7 @@ export default function About(props: Props) {
             />
           </a>
 
-          <div className='mx-auto  mt-5 gap-4 '>
+          <div className='mx-auto mt-5 gap-4 sm:mt-10 '>
             <Socialss large={true} />
           </div>
         </div>

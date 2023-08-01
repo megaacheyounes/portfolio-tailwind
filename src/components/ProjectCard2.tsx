@@ -5,7 +5,6 @@ import Skills from '@/components/Skills';
 import { PROJECTS_HIGHLIGHT } from '@/data/projects';
 import { cn, getDomain } from '@/lib/utils';
 import { BrandType } from '@/models/project';
-import { useRouter } from 'next/navigation';
 
 type Props = {
   project: (typeof PROJECTS_HIGHLIGHT)[0];
@@ -25,8 +24,6 @@ const BrandMapping: { [key in BrandType]: string } = {
 };
 
 export default function ProjectCard2(props: Props) {
-  const router = useRouter();
-
   const hover =
     'transition-all duration-200 ease-out  hover:-translate-y-2 transition-all duration-300 ease-out hover:cursor-pointer hover:shadow-lg hover:shadow-lime-500/5';
   const { project } = props;
@@ -39,41 +36,39 @@ export default function ProjectCard2(props: Props) {
   };
 
   return (
-    <div
-      data-te-ripple-init
-      className={cn(
-        'bg-b-dark pattern-2 dark  flex w-full flex-col place-items-start rounded-xl p-6 shadow-md shadow-lime-500/5 lg:w-96   '
-        // hover
-      )}
-    >
-      <img
-        alt='huawei'
-        className='mb-2 h-6  object-contain'
-        src={getImage(project.client!, project.image)}
-      />
-      {/* {isAndroid && <Chip type='android' title='Android' />}
+    <a href={project.link} target={'_blank'}>
+      <div
+        data-te-ripple-init
+        className={cn(
+          'bg-b-dark pattern-2 dark  flex w-full flex-col place-items-start rounded-xl p-6 shadow-md shadow-lime-500/5 lg:w-96   ',
+          hover
+        )}
+      >
+        <img
+          alt='huawei'
+          className='mb-2 h-6  object-contain'
+          src={getImage(project.client!, project.image)}
+        />
+        {/* {isAndroid && <Chip type='android' title='Android' />}
         {isWeb && <Chip type='web' title='Web' />} */}
 
-      <h1 className='mt-1 line-clamp-2 text-sm'>{project.name}</h1>
-      {!isConfidential && (
-        <a
-          href={project.link}
-          className='group mt-2 inline-flex items-center gap-1 text-sm font-medium text-blue-500 hover:underline'
-          target={'_blank'}
-        >
-          <Link size={10} />
-          {getDomain(project.link!)}
-        </a>
-      )}
+        <h1 className='mt-1 line-clamp-2 text-sm'>{project.name}</h1>
+        {!isConfidential && (
+          <span className='group mt-2 inline-flex items-center gap-1 text-sm font-medium text-blue-500 hover:underline'>
+            <Link size={10} />
+            {getDomain(project.link!)}
+          </span>
+        )}
 
-      <p className='mt-2 line-clamp-3 text-sm text-gray-300'>
-        {project.description}
-      </p>
-      <div>
-        <Skills skills={project.technologies} />
+        <p className='mt-2 line-clamp-3 text-sm text-gray-300'>
+          {project.description}
+        </p>
+        <div>
+          <Skills skills={project.technologies} />
+        </div>
+
+        {/* <ArrowLink className='text-sm mt-2' title='learn more' href={'/project/' + project.name} /> */}
       </div>
-
-      {/* <ArrowLink className='text-sm mt-2' title='learn more' href={'/project/' + project.name} /> */}
-    </div>
+    </a>
   );
 }

@@ -96,7 +96,7 @@ export default function RootLayout({
 
   return (
     <html>
-      <body className='bg-b-light  '>
+      <body className='bg-b-light     '>
         <div className='   relative min-h-screen'>
           <span className='fixed bottom-2  left-2  z-50 opacity-0 transition-opacity duration-500 sm:opacity-100    '>
             <SocialsStatic />
@@ -108,7 +108,7 @@ export default function RootLayout({
 
           <Header />
 
-          <div className='relative z-30  mx-auto h-full max-w-screen-lg place-items-center  '>
+          <div className='relative z-30 mx-auto h-full  max-w-screen-lg place-items-center  '>
             {children}
           </div>
 

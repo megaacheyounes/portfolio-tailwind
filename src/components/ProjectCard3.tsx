@@ -8,6 +8,7 @@ import { HiOutlineExternalLink } from 'react-icons/Hi';
 
 type Props = {
   project: (typeof PROJECTS_HIGHLIGHT)[0];
+  isLastItem: boolean;
 };
 
 const BrandMapping: { [key in BrandType]: string } = {
@@ -24,17 +25,14 @@ const BrandMapping: { [key in BrandType]: string } = {
 };
 
 export default function ProjectCard3(props: Props) {
-  const skillSize = 30;
-  const hover =
-    'transition-all duration-200 ease-out  hover:-translate-y-2 transition-all duration-300 ease-out hover:cursor-pointer ';
   const { project } = props;
-  const isAndroid = project.type == 'mobile';
-  const isWeb = project.type == 'web';
+
   const isConfidential = !project.link;
   const getDomain = (link: string) => new URL(link).hostname;
   const getImage = (brand: BrandType, img?: string) => {
     return BrandMapping[brand] || img;
   };
+
   return (
     <div
       data-te-ripple-init
@@ -46,29 +44,29 @@ export default function ProjectCard3(props: Props) {
         <img alt='huawei' className='h-8  object-contain' src={project.image} />
         {/* {isAndroid && <Chip type='android' title='Android' />}
         {isWeb && <Chip type='web' title='Web' />} */}
-        <h1 className='m-0 p-0 text-xs '>{project.name}</h1>
-        <div className='flex-1'></div>
+        <h1 className='m-0 flex-1 p-0 text-xs '>{project.name}</h1>
+
         {!isConfidential && (
           <a
             href={project.link}
             target='_blank'
             className='group   inline-flex items-center gap-1 text-sm font-medium text-blue-500 hover:underline'
           >
-            <span className='collapse md:visible'>
+            <span className='hidden sm:inline-flex'>
               {getDomain(project.link!)}
-              <HiOutlineExternalLink size={14} className='ml-1 inline-flex' />
+              <HiOutlineExternalLink size={16} className='ml-1 inline-flex' />
             </span>
-            <HiOutlineExternalLink size={20} className='md:collapse' />
+            <HiOutlineExternalLink size={24} className='sm:hidden' />
           </a>
         )}
 
         {isConfidential && (
-          <a className='group  inline-flex  items-center gap-1 text-sm font-medium text-red-700'>
-            <span className='collapse md:visible'>
+          <a className='group    inline-flex  place-items-center items-center gap-1 text-sm font-medium text-red-700'>
+            <span className='hidden sm:inline-flex'>
               confidential
               <LockIcon size={14} className='ml-1 inline-flex' />
             </span>
-            <LockIcon size={20} className='md:collapse' />
+            <LockIcon size={20} className='sm:hidden' />
           </a>
         )}
       </div>
@@ -80,7 +78,9 @@ export default function ProjectCard3(props: Props) {
         <Skills skills={project.technologies} />
       </div>
 
-      <div className='mt-10 h-[1px]    w-full bg-lime-500/20'></div>
+      {!props.isLastItem && (
+        <div className='mt-10 h-[1px]    w-full bg-lime-500/20'></div>
+      )}
       {/* <ArrowLink className='text-sm mt-2' title='learn more' href={'/project/' + project.name} /> */}
     </div>
   );

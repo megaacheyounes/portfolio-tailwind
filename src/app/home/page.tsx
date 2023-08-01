@@ -25,7 +25,7 @@ export default function Page() {
           elevated={false}
         >
           <div className=' relative mt-5 block w-full py-1  md:py-2 '>
-            <h2 className='md:text-md mb-10 text-center   text-sm font-medium   text-white '>
+            <h2 className='mb-10 text-center text-sm   font-medium text-white   md:text-lg '>
               Technologies I have used{' '}
             </h2>
             <SkillsSwiper />
@@ -36,11 +36,11 @@ export default function Page() {
 
         <Section
           className='mt-10'
-          contentClassName=' px-0 mx-0 md:px-0 mx-0 md:mx-0'
+          contentClassName='animate-in fade-in px-0 mx-0 md:px-0 mx-0 md:mx-0'
           elevated={false}
         >
           <div className=' relative mt-5 block w-full py-1  md:py-2 '>
-            <h2 className='md:text-md mb-10 text-center   text-sm font-medium   text-white '>
+            <h2 className='mb-10 text-center text-sm   font-medium text-white   md:text-lg '>
               Campanies I'm proud to have collaborated with{' '}
             </h2>
             <BrandsSwiper />

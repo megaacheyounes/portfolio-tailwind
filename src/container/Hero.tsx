@@ -7,8 +7,10 @@ import {
   SiNodedotjs,
   SiReact,
 } from 'react-icons/si';
+import { TypeAnimation } from 'react-type-animation';
 
 type Props = any;
+const TYPING_DELAY = 1600;
 
 export default function Hero(props: Props) {
   return (
@@ -16,10 +18,23 @@ export default function Hero(props: Props) {
       <div className='mt-5 grid grid-cols-1  justify-items-center  '>
         <div className='flex flex-col items-center text-center  '>
           <h1 className='title-font  text-2xl  font-medium'>Hello 👋 I'm</h1>
-          <h1 className=' mt-4 text-3xl text-lime-500 '>{'< Younes'}</h1>
-          <h1 className=' mt-4 text-3xl text-lime-500 '>{'Megaache />'}</h1>
-          <h1 className='mt-4 max-w-md text-xl font-normal'>
-            A passionate Android and Full Stack Web Developer
+          <h1 className=' mt-4 text-3xl text-lime-400 '>{'< Younes'}</h1>
+          <h1 className=' mt-4 text-3xl text-lime-400 '>{'Megaache />'}</h1>
+          <h1 className='mt-4  max-w-md  text-xl font-normal sm:text-2xl'>
+            <br /> Full Stack{' '}
+            <TypeAnimation
+              sequence={[
+                'Android Developer',
+                TYPING_DELAY,
+                500,
+                'Web Developer',
+                TYPING_DELAY,
+                500,
+              ]}
+              wrapper='span'
+              cursor={true}
+              repeat={Infinity}
+            />
           </h1>
         </div>
         <div className='   max-w-lg '>

@@ -45,8 +45,8 @@ export default function Experience3() {
           </div>
           <ul className='mt-2 list-disc pl-5'>
             {exp.achievements.map((x) => (
-              <li key={x} className='mt-1 text-xs md:text-sm'>
-                {x}
+              <li key={x} className='mt-1 text-xs text-lime-500 md:text-sm'>
+                <span className='text-white'> {x}</span>
               </li>
             ))}
           </ul>

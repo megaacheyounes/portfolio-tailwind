@@ -5,16 +5,22 @@ import 'swiper/css';
 
 import ProjectCard2 from '@/components/ProjectCard2';
 import { PROJECTS_HIGHLIGHT } from '@/data/projects';
+import { motion } from 'framer-motion';
 type Props = any;
 
 export default function ProjectFeatured(props: Props) {
   return (
-    <div className='mx-auto my-2'>
+    <motion.div
+      initial={{ opacity: 0 }}
+      animate={{ opacity: 1 }}
+      className='mx-auto my-2'
+      transition={{ delay: 1 }}
+    >
       <div className='flex flex-wrap place-items-center   justify-center gap-6'>
         {PROJECTS_HIGHLIGHT.map((project) => (
           <ProjectCard2 key={project.name} project={project} />
         ))}
       </div>
-    </div>
+    </motion.div>
   );
 }
