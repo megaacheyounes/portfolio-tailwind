@@ -1,3 +1,4 @@
+'use client';
 import ArrowLink from '@/components/ArrowLink';
 import ProjectFeatured from '@/components/ProjectFeatured';
 import Section from '@/container/Section';
@@ -24,7 +25,7 @@ export default function Projects(props: Props) {
       <ArrowLink
         className='text-md ml-0 mt-10 pl-0  '
         title={'View all projects'}
-        href='/home/projects'
+        href='/projects'
       />
     </Section>
   );

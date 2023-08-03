@@ -1,3 +1,4 @@
+'use client';
 /* eslint-disable @next/next/no-img-element */
 
 import {
@@ -47,7 +48,7 @@ export default function Hero(props: Props) {
             src='/me.png'
           />
           <motion.ul
-            variants={containerVariants}
+            variants={containerVariants(0)}
             initial='hidden'
             animate='show'
           >

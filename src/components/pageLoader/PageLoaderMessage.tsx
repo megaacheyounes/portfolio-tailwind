@@ -9,7 +9,7 @@ const MESSAGES = [
   'Your time is very important, please wait while I ignore you',
   'Is this Windows?',
   "Let's hope it's worth the wait",
-  'Dowloading more RAM',
+  'Downloading more RAM',
   // 'Do you like my loading animation? I made it myself',
   'The bits are breeding, please wait',
   'I am testing your patience',
@@ -28,7 +28,7 @@ export default function PageLoaderMessage() {
         'loading-message mx-2 mt-2 overflow-hidden text-center text-sm  text-lime-500'
       }
     >
-      {message} {':)'}
+      {message || "Let's hope it's worth the wait"} {':)'}
     </p>
   );
 }

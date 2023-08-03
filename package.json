@@ -7,7 +7,8 @@
     "build": "next build",
     "lint": "next lint",
     "export": "next build",
-    "start": "firebase emulators:start  ",
+    "start": "",
+    "deploy:start": "firebase emulators:start  ",
     "deploy:prod": "firebase deploy --only hosting",
     "deploy:preview": "firebase hosting:channel:deploy v5"
   },
@@ -17,7 +18,7 @@
     "clsx": "^1.2.1",
     "framer-motion": "^10.15.0",
     "lucide-react": "^0.260.0",
-    "next": "^13.4.10",
+    "next": "^13.4.12",
     "preline": "^1.9.0",
     "react": "^18.2.0",
     "react-dom": "^18.2.0",

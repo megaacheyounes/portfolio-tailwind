@@ -5,10 +5,16 @@ import PageWrapper from '@/container/PageWrapper';
 import Section from '@/container/Section';
 import DataProvider from '@/data/DataProvider';
 import { containerVariants, itemVariants } from '@/lib/animation';
+import { delay } from '@/lib/utils';
 import { Project } from '@/models/project';
 import { motion } from 'framer-motion';
+import { useEffect } from 'react';
 
 export default function ProjectsPage() {
+  useEffect(() => {
+    window.scrollTo({ top: 0, behavior: 'smooth' });
+  }, []);
+
   const data = new DataProvider();
   const projectsByYear = data.projectsByYear;
   const projectsYears = data.projectYears;
@@ -23,7 +29,7 @@ export default function ProjectsPage() {
         <div className='mx-auto  '>
           <div className='flex flex-wrap place-items-center justify-center gap-4'>
             <motion.ul
-              variants={containerVariants}
+              variants={containerVariants(0.3)}
               initial='hidden'
               animate='show'
             >
