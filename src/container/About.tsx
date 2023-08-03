@@ -20,7 +20,7 @@ export default function About(props: Props) {
     >
       <div className=' flex w-full flex-col  place-items-center     '>
         <h5
-          className='text-md mx-auto  text-justify '
+          className='text-md mx-auto  text-start '
           dangerouslySetInnerHTML={{ __html: about.introduction }}
         ></h5>
         <ArrowLink

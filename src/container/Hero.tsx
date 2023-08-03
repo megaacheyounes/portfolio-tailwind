@@ -51,6 +51,7 @@ export default function Hero(props: Props) {
             variants={containerVariants(0)}
             initial='hidden'
             animate='show'
+            transition={{ delay: 0.3 }}
           >
             <motion.li variants={itemVariants}>
               <div className=' bg-b-dark text-dark absolute inline-flex -translate-y-20 translate-x-10 rounded-full  p-4  shadow-lg'>
