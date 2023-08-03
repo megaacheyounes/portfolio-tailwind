@@ -1,33 +1,20 @@
-
-import { APPS, WEBSITES } from "@/data/projects";
-import { parseMonthYear } from "@/lib/date";
-import { CERTIFICATES } from "./certificates";
-import { EDUCATION } from "./education";
-import { Experience, EXPERIENCES, PRESENT } from "./experiences";
-import { PersonalInfo, PERSONAL_INFO, SOCIAL_LINKS } from "./info";
-import { INTERESTS } from "./interests";
-import { SKILLS } from "./skills";
+import { PROJECTS } from '@/data/projects';
+import { parseMonthYear } from '@/lib/date';
+import { Project } from '@/models/project';
+import { CERTIFICATES } from './certificates';
+import { EDUCATION } from './education';
+import { Experience, EXPERIENCES, PRESENT } from './experiences';
+import { PersonalInfo, PERSONAL_INFO, SOCIAL_LINKS } from './info';
+import { INTERESTS } from './interests';
+import { SKILLS } from './skills';
 
 class DataProvider {
-  constructor() { }
-
   experiences = EXPERIENCES.map((experience) => {
     experience.duration = this.getDuration(experience);
     return experience;
   });
 
-  projectCollections = [
-    {
-      title: "Android",
-      projects: APPS,
-    },
-    {
-      title: "Web",
-      projects: WEBSITES,
-    },
-  ];
-
-  info: PersonalInfo = PERSONAL_INFO;
+  about: PersonalInfo = PERSONAL_INFO;
 
   get socialLinks() {
     return SOCIAL_LINKS;
@@ -45,12 +32,22 @@ class DataProvider {
     return;
   }
 
-  get websites() {
-    return WEBSITES;
+  get projects() {
+    return PROJECTS;
   }
 
-  get apps() {
-    return APPS;
+  get projectYears() {
+    return PROJECTS.map((p) => p.year)
+      .filter((year, i, years) => years.indexOf(year) == i)
+      .sort((a, b) => b - a);
+  }
+
+  get projectsByYear() {
+    const projectsByYear: { [key: number]: Project[] } = {};
+    this.projectYears.forEach((y: number) => {
+      projectsByYear[y] = PROJECTS.filter((p) => p.year == y);
+    });
+    return projectsByYear;
   }
 
   get certificates() {
@@ -79,17 +76,17 @@ class DataProvider {
       y = Math.floor(m / 12);
       m -= y * 12;
     }
-    const addS = (num: number) => (num > 1 ? "s" : "");
+    const addS = (num: number) => (num > 1 ? 's' : '');
 
     return (
-      (y > 0 ? `${y} yr${addS(y)}` : "") +
-      " " +
-      (m > 0 ? `${m} mo${addS(m)}` : "")
+      (y > 0 ? `${y} yr${addS(y)}` : '') +
+      ' ' +
+      (m > 0 ? `${m} mo${addS(m)}` : '')
     );
   }
 
   mDiff(d1: Date, d2: Date) {
-    var months;
+    let months;
     months = (d2.getFullYear() - d1.getFullYear()) * 12;
     months -= d1.getMonth();
     months += d2.getMonth();

@@ -1,10 +1,10 @@
 /* eslint-disable @next/next/no-img-element */
-import { LockIcon } from 'lucide-react';
+import { EraserIcon, LockIcon } from 'lucide-react';
 
 import Skills from '@/components/Skills';
 import { PROJECTS_HIGHLIGHT } from '@/data/projects';
 import { BrandType } from '@/models/project';
-import { HiOutlineExternalLink } from 'react-icons/Hi';
+import { HiOutlineExternalLink } from 'react-icons/hi';
 
 type Props = {
   project: (typeof PROJECTS_HIGHLIGHT)[0];
@@ -18,7 +18,7 @@ const BrandMapping: { [key in BrandType]: string } = {
   Carrefour: '/brands/carrefour.png',
   'Dubai Police': '/brands/dubai-police.png',
   'Reel Cinemas': '/brands/reel-cinemas.png',
-  'Dubai Sporrts': '/brands/dubai-sports.jpg',
+  'Dubai Sports': '/brands/dubai-sports.jpg',
   Emirates: '/brands/emirates.png',
   Steppi: '/brands/steppi.png',
   'Visit Abudhabi': '/brands/visit-abudhabi.png',
@@ -27,7 +27,9 @@ const BrandMapping: { [key in BrandType]: string } = {
 export default function ProjectCard3(props: Props) {
   const { project } = props;
 
-  const isConfidential = !project.link;
+  const isDiscontinued = !!project.discontinued;
+  const isConfidential = !isDiscontinued && !project.link;
+
   const getDomain = (link: string) => new URL(link).hostname;
   const getImage = (brand: BrandType, img?: string) => {
     return BrandMapping[brand] || img;
@@ -41,12 +43,18 @@ export default function ProjectCard3(props: Props) {
       }
     >
       <div className='flex w-full flex-row  place-items-center  gap-4 '>
-        <img alt='huawei' className='h-8  object-contain' src={project.image} />
+        <img
+          alt={project.name}
+          className='h-8  object-contain'
+          src={project.image}
+        />
         {/* {isAndroid && <Chip type='android' title='Android' />}
         {isWeb && <Chip type='web' title='Web' />} */}
-        <h1 className='m-0 flex-1 p-0 text-xs '>{project.name}</h1>
+        <div className='flex flex-1 flex-col'>
+          <h1 className='m-0 p-0 text-xs sm:text-sm '>{project.name}</h1>
+        </div>
 
-        {!isConfidential && (
+        {!isDiscontinued && !isConfidential && (
           <a
             href={project.link}
             target='_blank'
@@ -59,7 +67,6 @@ export default function ProjectCard3(props: Props) {
             <HiOutlineExternalLink size={24} className='sm:hidden' />
           </a>
         )}
-
         {isConfidential && (
           <a className='group    inline-flex  place-items-center items-center gap-1 text-sm font-medium text-red-700'>
             <span className='hidden sm:inline-flex'>
@@ -69,18 +76,23 @@ export default function ProjectCard3(props: Props) {
             <LockIcon size={20} className='sm:hidden' />
           </a>
         )}
+        {isDiscontinued && (
+          <a className='group    inline-flex  place-items-center items-center gap-1 text-sm font-medium text-gray-400'>
+            <span className='hidden sm:inline-flex'>
+              discontinued
+              <EraserIcon size={14} className='ml-1 inline-flex' />
+            </span>
+            <EraserIcon size={20} className='sm:hidden' />
+          </a>
+        )}
       </div>
-
-      <p className='mt-2 line-clamp-4 text-sm text-gray-300'>
-        {project.description}
-      </p>
+      <p
+        dangerouslySetInnerHTML={{ __html: project.description }}
+        className='mt-2   text-xs text-gray-300 md:text-sm'
+      ></p>
       <div>
         <Skills skills={project.technologies} />
       </div>
-
-      {!props.isLastItem && (
-        <div className='mt-10 h-[1px]    w-full bg-lime-500/20'></div>
-      )}
       {/* <ArrowLink className='text-sm mt-2' title='learn more' href={'/project/' + project.name} /> */}
     </div>
   );

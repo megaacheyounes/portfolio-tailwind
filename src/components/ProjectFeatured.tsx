@@ -16,7 +16,7 @@ export default function ProjectFeatured(props: Props) {
       className='mx-auto my-2'
       transition={{ delay: 1 }}
     >
-      <div className='flex flex-wrap place-items-center   justify-center gap-6'>
+      <div className=' grid   grid-cols-1 place-items-center content-stretch justify-center gap-6 md:grid-cols-2'>
         {PROJECTS_HIGHLIGHT.map((project) => (
           <ProjectCard2 key={project.name} project={project} />
         ))}

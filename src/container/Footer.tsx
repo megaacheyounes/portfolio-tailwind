@@ -1,8 +1,6 @@
 import Section from '@/container/Section';
 
-type Props = any;
-
-export default function Footer(props: Props) {
+export default function Footer() {
   return (
     <Section
       elevated={false}
@@ -32,7 +30,7 @@ export default function Footer(props: Props) {
             >
               VS Code
             </a>{' '}
-            by yours very truly,built using{' '}
+            by yours very truly, built using{' '}
             <a
               className='text-lime-500'
               href='https://nextjs.org/'

@@ -1,7 +1,7 @@
 /* eslint-disable @next/next/no-img-element */
 import {
   LiaLongArrowAltLeftSolid,
-  LiaLongArrowAltRightSolid,
+  LiaLongArrowAltRightSolid
 } from 'react-icons/lia';
 import { Autoplay, Navigation, Pagination } from 'swiper/modules';
 // Import Swiper React components

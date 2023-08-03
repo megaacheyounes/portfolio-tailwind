@@ -8,4 +8,4 @@ export function cn(...inputs: ClassValue[]) {
 export const getDomain = (link: string) => new URL(link).hostname;
 
 export const delay = (millis: number) =>
-  new Promise((r) => setTimeout(r, 2000));
+  new Promise((r) => setTimeout(r, millis));

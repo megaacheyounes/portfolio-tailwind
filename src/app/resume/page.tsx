@@ -6,7 +6,7 @@ import { useEffect } from 'react';
 export default function Page() {
   const router = useRouter();
   useEffect(() => {
-    router.replace('/Younes_Megaache.cv.pdf');
+    router.replace('/resume.pdf');
   }, []);
   return <></>;
 }

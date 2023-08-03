@@ -5,14 +5,11 @@
   "scripts": {
     "dev": "next dev",
     "build": "next build",
-    "start": "next start",
     "lint": "next lint",
-    "lint:fix": "eslint src --fix && yarn format",
-    "lint:strict": "eslint --max-warnings=0 src",
-    "typecheck": "tsc --noEmit --incremental false",
-    "format": "prettier -w .",
-    "format:check": "prettier -c .",
-    "postbuild": "next-sitemap --config next-sitemap.config.js"
+    "export": "next build",
+    "start": "firebase emulators:start  ",
+    "deploy:prod": "firebase deploy --only hosting",
+    "deploy:preview": "firebase hosting:channel:deploy v5"
   },
   "dependencies": {
     "@types/react-icons": "^3.0.0",

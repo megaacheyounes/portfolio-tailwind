@@ -1,8 +1,5 @@
-import * as React from 'react';
-import { HiMail, HiPhone } from 'react-icons/Hi';
-import { SiGithub, SiGoogle, SiLinkedin } from 'react-icons/si';
-
-import IconButton from '@/components/IconButton';
+import { HiMail, HiPhone } from 'react-icons/hi';
+import { SiGithub, SiLinkedin } from 'react-icons/si';
 
 type Props = any;
 
@@ -28,16 +25,13 @@ const LINKS = [
 export default function Brands(props: Props) {
   return (
     <div className='my-4 gap-4 '>
-      <div className="    ">
-
-        <div className="grid grid-cols-2 gap-6 rounded-lg  ">
-
-          <img className='h-20' src="/huawei.png" />
-          <img className='h-20' src="/huawei.png" />
-          <img className='h-20' src="/huawei.png" />
-          <img className='h-20' src="/huawei.png" />
-          <img className='h-20' src="/huawei.png" />
-
+      <div className='    '>
+        <div className='grid grid-cols-2 gap-6 rounded-lg  '>
+          <img className='h-20' src='/huawei.png' />
+          <img className='h-20' src='/huawei.png' />
+          <img className='h-20' src='/huawei.png' />
+          <img className='h-20' src='/huawei.png' />
+          <img className='h-20' src='/huawei.png' />
         </div>
       </div>
     </div>

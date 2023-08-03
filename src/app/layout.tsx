@@ -6,7 +6,7 @@ import '@/styles/globals.css';
 import Footer from '@/container/Footer';
 import Header from '@/container/Header';
 
-import SocialsStatic from '@/components/SocialsStatic';
+import Socials from '@/components/Socials';
 import { siteConfig } from '@/constant/config';
 
 export const metadata: Metadata = {
@@ -99,7 +99,7 @@ export default function RootLayout({
       <body className='bg-b-light     '>
         <div className='   relative min-h-screen'>
           <span className='fixed bottom-2  left-2  z-50 opacity-0 transition-opacity duration-500 sm:opacity-100    '>
-            <SocialsStatic />
+            <Socials static={true} />
           </span>
 
           <div className='pointer-events-none  absolute    h-full w-full overflow-clip '>
@@ -108,7 +108,7 @@ export default function RootLayout({
 
           <Header />
 
-          <div className='relative z-30 mx-auto h-full  max-w-screen-lg place-items-center  '>
+          <div className='relative z-30  mx-auto h-full max-w-screen-lg  place-items-center transition-all  '>
             {children}
           </div>
 

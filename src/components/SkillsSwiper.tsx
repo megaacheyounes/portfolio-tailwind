@@ -4,12 +4,11 @@
 import 'swiper/css';
 
 import ContSwiper from '@/components/ContSwiper';
-type Props = any;
 
 const viewBox = `0 0 256 256`;
 const margin = 0;
 
-export default function SkillsSwiper(props: Props) {
+export default function SkillsSwiper() {
   return (
     <>
       <ContSwiper
@@ -29,9 +28,13 @@ export default function SkillsSwiper(props: Props) {
     </>
   );
 }
-
 export const SKILLS_ICONS = (size: string) => [
-  <g xlinkTitle='Android' style={{ margin }} transform='translate(0, 0)'>
+  <g
+    xlinkTitle='Android'
+    key='Android'
+    style={{ margin }}
+    transform='translate(0, 0)'
+  >
     <svg
       width={size}
       height={size}
@@ -67,7 +70,12 @@ export const SKILLS_ICONS = (size: string) => [
       />
     </svg>
   </g>,
-  <g xlinkTitle='Java' style={{ margin }} transform='translate(600, 0)'>
+  <g
+    xlinkTitle='Java'
+    key='Java'
+    style={{ margin }}
+    transform='translate(600, 0)'
+  >
     <svg
       xmlns='http://www.w3.org/2000/svg'
       width={size}
@@ -87,7 +95,12 @@ export const SKILLS_ICONS = (size: string) => [
     </svg>
   </g>,
 
-  <g xlinkTitle='Firebase' style={{ margin }} transform='translate(900, 0)'>
+  <g
+    xlinkTitle='Firebase'
+    key='Firebase'
+    style={{ margin }}
+    transform='translate(900, 0)'
+  >
     <svg
       xmlns='http://www.w3.org/2000/svg'
       xmlnsXlink='http://www.w3.org/1999/xlink'
@@ -221,7 +234,12 @@ export const SKILLS_ICONS = (size: string) => [
     </svg>
   </g>,
 
-  <g xlinkTitle='CSS' style={{ margin }} transform='translate(1200, 0)'>
+  <g
+    xlinkTitle='CSS'
+    key='CSS'
+    style={{ margin }}
+    transform='translate(1200, 0)'
+  >
     <svg
       width={size}
       height={size}
@@ -249,7 +267,12 @@ export const SKILLS_ICONS = (size: string) => [
     </svg>
   </g>,
 
-  <g xlinkTitle='Html' style={{ margin }} transform='translate(1500, 0)'>
+  <g
+    xlinkTitle='Html'
+    key='Html'
+    style={{ margin }}
+    transform='translate(1500, 0)'
+  >
     <svg
       xmlns='http://www.w3.org/2000/svg'
       width={size}
@@ -273,7 +296,12 @@ export const SKILLS_ICONS = (size: string) => [
     </svg>
   </g>,
 
-  <g xlinkTitle='React' style={{ margin }} transform='translate(1800, 0)'>
+  <g
+    xlinkTitle='React'
+    key='React'
+    style={{ margin }}
+    transform='translate(1800, 0)'
+  >
     <svg
       xmlns='http://www.w3.org/2000/svg'
       width={size}
@@ -310,7 +338,12 @@ export const SKILLS_ICONS = (size: string) => [
     </svg>
   </g>,
 
-  <g xlinkTitle='SCSS' style={{ margin }} transform='translate(2100, 0)'>
+  <g
+    xlinkTitle='SCSS'
+    key='SCSS'
+    style={{ margin }}
+    transform='translate(2100, 0)'
+  >
     <svg
       xmlns='http://www.w3.org/2000/svg'
       width={size}
@@ -339,7 +372,12 @@ export const SKILLS_ICONS = (size: string) => [
     </svg>
   </g>,
 
-  <g xlinkTitle='Angular' style={{ margin }} transform='translate(2400, 0)'>
+  <g
+    xlinkTitle='Angular'
+    key='Angular'
+    style={{ margin }}
+    transform='translate(2400, 0)'
+  >
     <svg
       width={size}
       height={size}
@@ -363,7 +401,12 @@ export const SKILLS_ICONS = (size: string) => [
     </svg>
   </g>,
 
-  <g xlinkTitle='Javascript' style={{ margin }} transform='translate(2700, 0)'>
+  <g
+    xlinkTitle='Javascript'
+    key='Javascript'
+    style={{ margin }}
+    transform='translate(2700, 0)'
+  >
     <svg
       width={size}
       height={size}
@@ -383,7 +426,12 @@ export const SKILLS_ICONS = (size: string) => [
     </svg>
   </g>,
 
-  <g xlinkTitle='Typescript' style={{ margin }} transform='translate(3000, 0)'>
+  <g
+    xlinkTitle='Typescript'
+    key='Typescript'
+    style={{ margin }}
+    transform='translate(3000, 0)'
+  >
     <svg
       xmlns='http://www.w3.org/2000/svg'
       width={size}
@@ -403,7 +451,12 @@ export const SKILLS_ICONS = (size: string) => [
     </svg>
   </g>,
 
-  <g xlinkTitle='Next.js' style={{ margin }} transform='translate(3300, 0)'>
+  <g
+    xlinkTitle='Next.js'
+    key='Next.js'
+    style={{ margin }}
+    transform='translate(3300, 0)'
+  >
     <svg
       xmlns='http://www.w3.org/2000/svg'
       width={size}
@@ -419,7 +472,12 @@ export const SKILLS_ICONS = (size: string) => [
     </svg>
   </g>,
 
-  <g xlinkTitle='React MUI' style={{ margin }} transform='translate(3600, 0)'>
+  <g
+    xlinkTitle='React MUI'
+    key='React MUI'
+    style={{ margin }}
+    transform='translate(3600, 0)'
+  >
     <svg
       xmlns='http://www.w3.org/2000/svg'
       width={size}
@@ -437,7 +495,12 @@ export const SKILLS_ICONS = (size: string) => [
     </svg>
   </g>,
 
-  <g xlinkTitle='Node.js' style={{ margin }} transform='translate(3900, 0)'>
+  <g
+    xlinkTitle='Node.js'
+    key='Node.js'
+    style={{ margin }}
+    transform='translate(3900, 0)'
+  >
     <svg
       xmlns='http://www.w3.org/2000/svg'
       width={size}
@@ -457,7 +520,12 @@ export const SKILLS_ICONS = (size: string) => [
     </svg>
   </g>,
 
-  <g xlinkTitle='express.js' style={{ margin }} transform='translate(0, 300)'>
+  <g
+    xlinkTitle='express.js'
+    key='express.js'
+    style={{ margin }}
+    transform='translate(0, 300)'
+  >
     <svg
       xmlns='http://www.w3.org/2000/svg'
       width={size}
@@ -477,7 +545,12 @@ export const SKILLS_ICONS = (size: string) => [
     </svg>
   </g>,
 
-  <g xlinkTitle='MongoDB' style={{ margin }} transform='translate(300, 300)'>
+  <g
+    xlinkTitle='MongoDB'
+    key='MongoDB'
+    style={{ margin }}
+    transform='translate(300, 300)'
+  >
     <svg
       xmlns='http://www.w3.org/2000/svg'
       width={size}
@@ -501,7 +574,12 @@ export const SKILLS_ICONS = (size: string) => [
     </svg>
   </g>,
 
-  <g xlinkTitle='MySQL' style={{ margin }} transform='translate(600, 300)'>
+  <g
+    xlinkTitle='MySQL'
+    key='MySQL'
+    style={{ margin }}
+    transform='translate(600, 300)'
+  >
     <svg
       xmlns='http://www.w3.org/2000/svg'
       width={size}
@@ -532,7 +610,12 @@ export const SKILLS_ICONS = (size: string) => [
     </svg>
   </g>,
 
-  <g xlinkTitle='PHP' style={{ margin }} transform='translate(900, 300)'>
+  <g
+    xlinkTitle='PHP'
+    key='PHP'
+    style={{ margin }}
+    transform='translate(900, 300)'
+  >
     <svg
       xmlns='http://www.w3.org/2000/svg'
       width={size}
@@ -556,7 +639,12 @@ export const SKILLS_ICONS = (size: string) => [
     </svg>
   </g>,
 
-  <g xlinkTitle='Laravel' style={{ margin }} transform='translate(1200, 300)'>
+  <g
+    xlinkTitle='Laravel'
+    key='Laravel'
+    style={{ margin }}
+    transform='translate(1200, 300)'
+  >
     <svg
       xmlns='http://www.w3.org/2000/svg'
       width={size}
@@ -574,7 +662,12 @@ export const SKILLS_ICONS = (size: string) => [
     </svg>
   </g>,
 
-  <g xlinkTitle='Wordpress' style={{ margin }} transform='translate(1500, 300)'>
+  <g
+    xlinkTitle='Wordpress'
+    key='Wordpress'
+    style={{ margin }}
+    transform='translate(1500, 300)'
+  >
     <svg
       xmlns='http://www.w3.org/2000/svg'
       width={size}
@@ -606,7 +699,12 @@ export const SKILLS_ICONS = (size: string) => [
     </svg>
   </g>,
 
-  <g xlinkTitle='Figma' style={{ margin }} transform='translate(1800, 300)'>
+  <g
+    xlinkTitle='Figma'
+    key='Figma'
+    style={{ margin }}
+    transform='translate(1800, 300)'
+  >
     <svg
       xmlns='http://www.w3.org/2000/svg'
       width={size}
@@ -651,7 +749,12 @@ export const SKILLS_ICONS = (size: string) => [
     </svg>
   </g>,
 
-  <g xlinkTitle='PhotoShop' style={{ margin }} transform='translate(2100, 300)'>
+  <g
+    xlinkTitle='PhotoShop'
+    key='PhotoShop'
+    style={{ margin }}
+    transform='translate(2100, 300)'
+  >
     <svg
       xmlns='http://www.w3.org/2000/svg'
       width={size}
@@ -671,7 +774,12 @@ export const SKILLS_ICONS = (size: string) => [
     </svg>
   </g>,
 
-  <g xlinkTitle='Heroku' style={{ margin }} transform='translate(2400, 300)'>
+  <g
+    xlinkTitle='Heroku'
+    key='Heroku'
+    style={{ margin }}
+    transform='translate(2400, 300)'
+  >
     <svg
       width={size}
       height={size}
@@ -687,7 +795,12 @@ export const SKILLS_ICONS = (size: string) => [
     </svg>
   </g>,
 
-  <g xlinkTitle='Markdown' style={{ margin }} transform='translate(2700, 300)'>
+  <g
+    xlinkTitle='Markdown'
+    key='Markdown'
+    style={{ margin }}
+    transform='translate(2700, 300)'
+  >
     <svg
       xmlns='http://www.w3.org/2000/svg'
       width={size}
@@ -708,7 +821,12 @@ export const SKILLS_ICONS = (size: string) => [
     </svg>
   </g>,
 
-  <g xlinkTitle='Git' style={{ margin }} transform='translate(3000, 300)'>
+  <g
+    xlinkTitle='Git'
+    key='Git'
+    style={{ margin }}
+    transform='translate(3000, 300)'
+  >
     <svg
       xmlns='http://www.w3.org/2000/svg'
       width={size}
@@ -737,7 +855,12 @@ export const SKILLS_ICONS = (size: string) => [
     </svg>
   </g>,
 
-  <g xlinkTitle='Linux' style={{ margin }} transform='translate(3300, 300)'>
+  <g
+    xlinkTitle='Linux'
+    key='Linux'
+    style={{ margin }}
+    transform='translate(3300, 300)'
+  >
     <svg
       xmlns='http://www.w3.org/2000/svg'
       width={size}

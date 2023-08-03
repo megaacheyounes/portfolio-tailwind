@@ -1,14 +1,15 @@
 export type SocialLinks = {
   linkedIn: string;
   github: string;
-  instagram: string;
+  phone: string;
+  email: string;
 };
 
 export const SOCIAL_LINKS: SocialLinks = {
-  linkedIn: "https://www.linkedin.com/in/megaache-younes",
-  github: "https://github.com/megaacheyounes",
-  //instagram is irrelevant and might be a bad idea to have in your online resume/portfolio
-  instagram: "https://www.instagram.com/unis.meg",
+  linkedIn: 'https://www.linkedin.com/in/megaache-younes',
+  github: 'https://github.com/megaacheyounes',
+  phone: 'tel:+971557040589',
+  email: 'mailto:megaache.younes@gmail.com',
 };
 
 export interface Fact {
@@ -34,33 +35,31 @@ export interface PersonalInfo {
 }
 
 export const PERSONAL_INFO: PersonalInfo = {
-  firstName: "Younes",
-  lastName: "Megaache",
-  mainTitle: "Software Developer",
-  titlePrefix: "Full Stack",
-  titles: ["Android Developer", "Web Developer"],
-  email: "megaache.younes$$gmail.com".split("").reverse(),
-  phoneNumber: "+971557040589".split("").reverse(),
-  shortIntroduction: "Younes MEGAACHE is open for new opportunities",
-  introduction: `I'm an android and web developer located in Dubai, the UAE.
-							<br/>
-							I have a serious passion for developing software and
-							mobile apps. Self-motivated, Wel-organized person,
-							problem solver, well versed in multiple programing
-							languages and web technologies.
-              `,
+  firstName: 'Younes',
+  lastName: 'Megaache',
+  mainTitle: 'Software Developer',
+  titlePrefix: 'Full Stack',
+  titles: ['Android Developer', 'Web Developer'],
+  email: 'megaache.younes$$gmail.com'.split('').reverse(),
+  phoneNumber: '+971557040589'.split('').reverse(),
+  shortIntroduction: 'Younes MEGAACHE is open for new opportunities',
+  introduction: `I'm a software engineer specializing in full stack mobile development with a strong background in web development.</br>
+  Proficient in Kotlin, Java, React-Native, and various web frameworks and libraries.</br>
+  Successfully delivered 30+ Mobile and Web projects.</br>
+  Capable of automating processes using Node.js to save time and improve efficiency.</br>
+  Skilled at collaborating with cross-functional teams to deliver high-quality code and applications.`,
   openToWork: true,
   openToRelocating: false,
   facts: [
     {
       quantity: 7,
       quantityPlus: false,
-      caption: "YEARS OF EXPERIENCE",
+      caption: 'YEARS OF EXPERIENCE',
     },
     {
       quantity: 30,
       quantityPlus: true,
-      caption: "APPS AND WEBSITES",
+      caption: 'APPS AND WEBSITES',
     },
   ],
 };

@@ -17,7 +17,7 @@ const BrandMapping: { [key in BrandType]: string } = {
   Carrefour: '/brands/carrefour.png',
   'Dubai Police': '/brands/dubai-police.png',
   'Reel Cinemas': '/brands/reel-cinemas.png',
-  'Dubai Sporrts': '/brands/dubai-sports.jpg',
+  'Dubai Sports': '/brands/dubai-sports.jpg',
   Emirates: '/brands/emirates.png',
   Steppi: '/brands/steppi.png',
   'Visit Abudhabi': '/brands/visit-abudhabi.png',
@@ -40,19 +40,18 @@ export default function ProjectCard2(props: Props) {
       <div
         data-te-ripple-init
         className={cn(
-          'bg-b-dark pattern-2 dark  flex w-full flex-col place-items-start rounded-xl p-6 shadow-md shadow-lime-500/5 lg:w-96   ',
+          'bg-b-dark pattern-2 dark  flex  w-full flex-col place-items-start rounded-xl p-6 shadow-md shadow-lime-500/5   ',
           hover
         )}
       >
         <img
           alt='huawei'
-          className='mb-2 h-6  object-contain'
+          className='mb-2 h-6 object-contain  sm:h-7'
           src={getImage(project.client!, project.image)}
         />
         {/* {isAndroid && <Chip type='android' title='Android' />}
         {isWeb && <Chip type='web' title='Web' />} */}
-
-        <h1 className='mt-1 line-clamp-2 text-sm'>{project.name}</h1>
+        <h1 className='sm:text-md mt-1 line-clamp-2 text-sm'>{project.name}</h1>
         {!isConfidential && (
           <span className='group mt-2 inline-flex items-center gap-1 text-sm font-medium text-blue-500 hover:underline'>
             <Link size={10} />
@@ -60,13 +59,15 @@ export default function ProjectCard2(props: Props) {
           </span>
         )}
 
-        <p className='mt-2 line-clamp-3 text-sm text-gray-300'>
-          {project.description}
-        </p>
+        <p
+          dangerouslySetInnerHTML={{
+            __html: project.description,
+          }}
+          className='mt-2 line-clamp-3 text-sm text-gray-300'
+        ></p>
         <div>
           <Skills skills={project.technologies} />
         </div>
-
         {/* <ArrowLink className='text-sm mt-2' title='learn more' href={'/project/' + project.name} /> */}
       </div>
     </a>

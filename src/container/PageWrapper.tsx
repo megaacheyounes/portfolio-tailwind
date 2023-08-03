@@ -18,15 +18,17 @@ export default function PageWrapper(props: Props) {
 
   return (
     <Suspense fallback={<PageLoader />}>
-      <AnimatePresence mode='sync'>
+      <AnimatePresence mode='wait'>
         <motion.div
           initial={{ y: 80, opacity: 0 }}
           animate={{ y: 0, opacity: 1 }}
-          exit={{ y: 80, opacity: 0 }}
+          // exit={{ y: 80, opacity: 0 }}
           transition={{
             type: 'spring',
             stiffness: 260,
             damping: 20,
+            delayChildren: 1,
+            duration: 0.5,
           }}
         >
           {props.children}

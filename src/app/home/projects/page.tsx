@@ -3,11 +3,15 @@
 import ProjectCard3 from '@/components/ProjectCard3';
 import PageWrapper from '@/container/PageWrapper';
 import Section from '@/container/Section';
-import { APPS, WEBSITES } from '@/data/projects';
+import DataProvider from '@/data/DataProvider';
+import { containerVariants, itemVariants } from '@/lib/animation';
+import { Project } from '@/models/project';
 import { motion } from 'framer-motion';
 
 export default function ProjectsPage() {
-  const items = [...WEBSITES, ...APPS];
+  const data = new DataProvider();
+  const projectsByYear = data.projectsByYear;
+  const projectsYears = data.projectYears;
 
   return (
     <PageWrapper>
@@ -16,31 +20,59 @@ export default function ProjectsPage() {
         title='projects'
         className='pattern-2 md:mx-15 mx-4 mt-10 sm:mx-8 '
       >
-        <h6 className='text-md text-white'>Some of my notable work</h6>
-
-        <div className='mx-auto  my-4'>
-          <div className='flex flex-wrap place-items-center   justify-center gap-4'>
-            <motion.div
-              initial={{ opacity: 0 }}
-              animate={{ opacity: 1 }}
-              transition={{
-                duration: 0.2,
-              }}
+        <div className='mx-auto  '>
+          <div className='flex flex-wrap place-items-center justify-center gap-4'>
+            <motion.ul
+              variants={containerVariants}
+              initial='hidden'
+              animate='show'
             >
-              {items.map((project, index) => {
-                const lastItem = index == items.length - 1;
+              {projectsYears.map((year: number) => {
+                const projects = projectsByYear[year as any];
                 return (
-                  <ProjectCard3
-                    isLastItem={lastItem}
-                    key={project.name}
-                    project={project}
-                  />
+                  <>
+                    <motion.li key={'year_' + year} variants={itemVariants}>
+                      <div className='align-center  text-md my-4 flex place-items-center justify-center '>
+                        <h6 className='  overflow-clip font-mono  text-lime-500/75'>
+                          {'<!'}
+                        </h6>
+                        <div className='h-0 flex-grow border-b border-dashed  border-lime-500 bg-lime-500/20'></div>
+                        <h6 className=' mx-2    text-lime-500/75'>{year}</h6>
+                        <div className='h-0 flex-grow border-b border-dashed  border-lime-500 bg-lime-500/20'></div>
+                        <h6 className='  font-mono    text-lime-500/75'>
+                          {'>'}
+                        </h6>
+                      </div>
+                    </motion.li>
+                    {projects.map((project: Project) => (
+                      <motion.li key={project.name} variants={itemVariants}>
+                        <ProjectCard3 isLastItem={false} project={project} />
+                      </motion.li>
+                    ))}
+                  </>
                 );
               })}
-            </motion.div>
+              <motion.li variants={itemVariants}>
+                <div className='align-center  text-md my-4 flex place-items-center justify-center '>
+                  <div className='h-0 flex-grow border-b  border-lime-500 bg-lime-500/20'></div>
+                  <h6 className=' mx-2    text-lime-500/75'>
+                    {' '}
+                    and many more...
+                  </h6>
+                  <div className='h-0 flex-grow border-b   border-lime-500 bg-lime-500/20'></div>
+                </div>
+              </motion.li>
+            </motion.ul>
           </div>
         </div>
       </Section>
     </PageWrapper>
   );
 }
+
+/**
+ *
+ *
+ *
+ *
+ */

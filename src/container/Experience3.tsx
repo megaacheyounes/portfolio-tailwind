@@ -1,10 +1,10 @@
+import ArrowLink from '@/components/ArrowLink';
 import Skills from '@/components/Skills';
 import Section from '@/container/Section';
 import DataProvider from '@/data/DataProvider';
 
 export default function Experience3() {
   const data = new DataProvider();
-
   return (
     <Section
       elevated={false}
@@ -27,7 +27,7 @@ export default function Experience3() {
               className='transition-all  duration-300 hover:scale-125 '
             >
               <img
-                alt='huawei'
+                alt={exp.title}
                 className='h-8 object-contain'
                 src={exp.company.logo}
               />
@@ -44,11 +44,20 @@ export default function Experience3() {
             </div>
           </div>
           <ul className='mt-2 list-disc pl-5'>
-            {exp.achievements.map((x) => (
+            {exp.achievements.slice(0, 4).map((x) => (
               <li key={x} className='mt-1 text-xs text-lime-500 md:text-sm'>
                 <span className='text-white'> {x}</span>
               </li>
             ))}
+            {exp.achievements.length > 4 && (
+              <li className='mt-1 text-xs text-lime-500 md:text-sm'>
+                <ArrowLink
+                  className='mx-0 px-0'
+                  title='Read more'
+                  href='/resume.pdf'
+                ></ArrowLink>
+              </li>
+            )}
           </ul>
 
           <div className='mt-2'>
