@@ -49,10 +49,10 @@ export default function Footer() {
             , deployed to{' '}
             <a
               className='text-lime-500'
-              href='https://firebase.google.com/products/hosting'
+              href='https://vercel.com/'
               target='_blank'
             >
-              Firebase hosting
+              Vercel
             </a>
             .
             <br />

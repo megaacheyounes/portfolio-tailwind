@@ -47,7 +47,8 @@ export const PERSONAL_INFO: PersonalInfo = {
   Proficient in Kotlin, Java, React-Native, and various web frameworks and libraries.</br>
   Successfully delivered 30+ Mobile and Web projects.</br>
   Capable of automating processes using Node.js to save time and improve efficiency.</br>
-  Skilled at collaborating with cross-functional teams to deliver high-quality code and applications.`,
+  Skilled at collaborating with cross-functional teams to deliver high-quality code and applications.</br>
+  <p class="text-lime-500">#open_to_work</p>`,
   openToWork: true,
   openToRelocating: false,
   facts: [

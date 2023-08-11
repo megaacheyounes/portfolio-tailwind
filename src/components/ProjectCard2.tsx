@@ -63,7 +63,7 @@ export default function ProjectCard2(props: Props) {
           dangerouslySetInnerHTML={{
             __html: project.description,
           }}
-          className='mt-2 line-clamp-3 text-sm text-gray-300'
+          className='mt-2 text-sm text-gray-300'
         ></p>
         <div>
           <Skills skills={project.technologies} />

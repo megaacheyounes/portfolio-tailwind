@@ -23,6 +23,7 @@ export default function About(props: Props) {
           className='text-md mx-auto  text-start '
           dangerouslySetInnerHTML={{ __html: about.introduction }}
         ></h5>
+         
         <ArrowLink
           className='mx-auto mt-5  '
           title='more about me'
