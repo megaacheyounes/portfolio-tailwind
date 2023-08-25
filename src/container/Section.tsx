@@ -10,6 +10,7 @@ type Props = {
   indentation?: boolean;
   contentClassName?: string;
   margin?: string;
+  reveal?: string;
 } & React.PropsWithChildren;
 
 export default function Section(props: Props) {
@@ -19,15 +20,17 @@ export default function Section(props: Props) {
     indentation = true,
     contentClassName,
     margin = '',
+    className,
+    children,
   } = props;
   return (
-    <div className={props.margin}>
+    <div className={margin}>
       <section
         className={twMerge(
           'relative z-30 mx-auto   overflow-x-hidden rounded-xl ',
           elevated &&
             'bg-b-light pattern-2 z-40  shadow-2xl shadow-lime-400/10',
-          props.className
+          className
         )}
       >
         <div className={'container   mx-auto    '}>
@@ -45,7 +48,7 @@ export default function Section(props: Props) {
               contentClassName
             )}
           >
-            {props.children}
+            {children}
           </div>
 
           {title && (

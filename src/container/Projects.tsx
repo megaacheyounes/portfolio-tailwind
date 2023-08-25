@@ -1,4 +1,5 @@
 'use client';
+import RevealWrapper from '@/components/animation/RevealAnimationWrapper';
 import ArrowLink from '@/components/ArrowLink';
 import ProjectFeatured from '@/components/ProjectFeatured';
 import Section from '@/container/Section';

@@ -5,9 +5,12 @@ import '@/styles/globals.css';
 
 import Footer from '@/container/Footer';
 import Header from '@/container/Header';
+import { Analytics } from '@vercel/analytics/react';
 
 import Socials from '@/components/Socials';
 import { siteConfig } from '@/constant/config';
+import Head from 'next/head';
+import Script from 'next/script';
 
 export const metadata: Metadata = {
   title: {
@@ -96,6 +99,12 @@ export default function RootLayout({
 
   return (
     <html>
+      <Script
+        async
+        src='https://portfolio-ackee-analytics.vercel.app/auth.js'
+        data-ackee-server='https://portfolio-ackee-analytics.vercel.app'
+        data-ackee-domain-id='da0db0a3-1855-4a95-ac17-8938db1a6c1e'
+      ></Script>
       <body className='bg-b-light     '>
         <div className='   relative min-h-screen'>
           <span className='fixed bottom-2  left-2  z-50 opacity-0 transition-opacity duration-500 sm:opacity-100    '>
@@ -116,6 +125,7 @@ export default function RootLayout({
             <Footer />
           </div>
         </div>
+        <Analytics />
       </body>
     </html>
   );

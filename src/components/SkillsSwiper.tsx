@@ -1,9 +1,8 @@
 /* eslint-disable @next/next/no-img-element */
 // Import Swiper React components
 // Import Swiper styles
-import 'swiper/css';
-
 import ContSwiper from '@/components/ContSwiper';
+import 'swiper/css';
 
 const viewBox = `0 0 256 256`;
 const margin = 0;
@@ -11,20 +10,11 @@ const margin = 0;
 export default function SkillsSwiper() {
   return (
     <>
-      <ContSwiper
-        className='sm:hidden'
-        reversed
-        duration={1000}
-        items={SKILLS_ICONS('36')}
-        itemWidth={140}
-      ></ContSwiper>
-      <ContSwiper
-        className='hidden sm:block'
-        reversed
-        duration={1000}
-        items={SKILLS_ICONS('50')}
-        itemWidth={120}
-      ></ContSwiper>
+      <ContSwiper>
+        {SKILLS_ICONS('36').map((item) => (
+          <span className='px-4'>{item}</span>
+        ))}
+      </ContSwiper>
     </>
   );
 }

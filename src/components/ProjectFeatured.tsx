@@ -3,7 +3,7 @@
 // Import Swiper styles
 import 'swiper/css';
 
-import ProjectCard2 from '@/components/ProjectCard2';
+import ProjectCardFeatured from '@/components/ProjectCardFeatured';
 import { PROJECTS_HIGHLIGHT } from '@/data/projects';
 import { motion } from 'framer-motion';
 type Props = any;
@@ -16,9 +16,9 @@ export default function ProjectFeatured(props: Props) {
       className='mx-auto my-2'
       transition={{ delay: 1 }}
     >
-      <div className=' grid   grid-cols-1 place-items-center content-stretch justify-center gap-6 md:grid-cols-2'>
+      <div className=' grid   grid-cols-1 place-items-center content-stretch justify-center gap-6 lg:grid-cols-2'>
         {PROJECTS_HIGHLIGHT.map((project) => (
-          <ProjectCard2 key={project.name} project={project} />
+          <ProjectCardFeatured key={project.name} project={project} />
         ))}
       </div>
     </motion.div>

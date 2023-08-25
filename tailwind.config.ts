@@ -65,8 +65,17 @@ export default {
             transform: 'rotate(-4deg)',
           },
         },
+        swiper: {
+          '0%': {
+            transform: 'translateX(0%)',
+          },
+          '100%': {
+            transform: 'translateX(-100%)',
+          },
+        },
       },
       animation: {
+        swiper: 'swiper 3s infinite linear alternate',
         tilt: 'tilt 10s infinite linear',
         flicker: 'flicker 3s linear infinite',
         shimmer: 'shimmer 1.3s linear infinite',

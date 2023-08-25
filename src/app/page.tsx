@@ -1,6 +1,6 @@
 'use client';
+import RevealWrapper from '@/components/animation/RevealAnimationWrapper';
 import BrandsSwiper from '@/components/BrandsSwiper';
-import PageLoader from '@/components/pageLoader/PageLoader';
 import SkillsSwiper from '@/components/SkillsSwiper';
 import About from '@/container/About';
 import Experience3 from '@/container/Experience3';
@@ -8,15 +8,9 @@ import Hero from '@/container/Hero';
 import Projects from '@/container/Projects';
 import Section from '@/container/Section';
 
-import { Suspense, useEffect, useState } from 'react';
+import { Suspense } from 'react';
 
 export default function Page() {
-  const [loading, setLoading] = useState(true);
-  useEffect(() => {
-    setLoading(false);
-  }, []);
-  if (loading) return <PageLoader />;
-
   return (
     <main>
       <Hero />
@@ -38,7 +32,9 @@ export default function Page() {
         </Section>
       </Suspense>
 
-      <Projects />
+      <RevealWrapper delay={250}>
+        <Projects />
+      </RevealWrapper>
 
       <Suspense fallback={<></>}>
         <Section
