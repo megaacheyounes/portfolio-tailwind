@@ -50,22 +50,19 @@ export default function ProjectCard(props: Props) {
 
       <h1 className='mt-1 line-clamp-2 text-sm'>{project.name}</h1>
       {!isConfidential && (
-        <a
+        <Link
           href='https://appgallerymea.com'
           className='text-md group mt-2 inline-flex items-center gap-1 font-medium text-blue-500 hover:underline'
         >
           <Link size={15} />
           {getDomain(project.link!)}
-        </a>
+        </Link>
       )}
       {isConfidential && (
-        <a
-          href='#'
-          className='group mt-2 inline-flex  items-center gap-1 text-sm font-medium text-red-700'
-        >
+        <p className='group mt-2 inline-flex  items-center gap-1 text-sm font-medium text-red-700'>
           <LockIcon size={15} />
           confidential
-        </a>
+        </p>
       )}
 
       <p className='mt-2 line-clamp-3 text-sm text-gray-300'>

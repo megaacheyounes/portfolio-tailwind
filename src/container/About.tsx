@@ -2,6 +2,7 @@ import ArrowLink from '@/components/ArrowLink';
 import Socials from '@/components/Socials';
 import Section from '@/container/Section';
 import DataProvider from '@/data/DataProvider';
+import Link from 'next/link';
 
 type Props = any;
 
@@ -23,7 +24,7 @@ export default function About(props: Props) {
           className='text-md mx-auto  text-start '
           dangerouslySetInnerHTML={{ __html: about.introduction }}
         ></h5>
-         
+
         <ArrowLink
           className='mx-auto mt-5  '
           title='more about me'
@@ -42,8 +43,8 @@ export default function About(props: Props) {
             ))}
           </ul> */}
 
-        <a
-          className='    '
+        <Link
+          className=''
           href='https://www.codewars.com/users/YounesMegaache/'
           target='_blank'
         >
@@ -51,7 +52,7 @@ export default function About(props: Props) {
             className=' mt-5 max-w-xs '
             src='https://www.codewars.com/users/YounesMegaache/badges/large'
           />
-        </a>
+        </Link>
 
         <Socials className='mt-5' large={false} />
       </div>

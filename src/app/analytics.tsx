@@ -1,4 +1,5 @@
 import Head from 'next/head';
+import Link from 'next/link';
 
 const analytics = () => {
   return (
@@ -11,9 +12,9 @@ const analytics = () => {
       </Head>
       <h1>
         Redirecting to{' '}
-        <a href='https://portfolio-ackee-analytics.vercel.app/'>
+        <Link href='https://portfolio-ackee-analytics.vercel.app/'>
           MEOW Analytics ;)
-        </a>
+        </Link>
       </h1>
     </>
   );

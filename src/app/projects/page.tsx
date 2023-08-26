@@ -5,7 +5,6 @@ import PageWrapper from '@/container/PageWrapper';
 import Section from '@/container/Section';
 import DataProvider from '@/data/DataProvider';
 import { containerVariants, itemVariants } from '@/lib/animation';
-import { delay } from '@/lib/utils';
 import { Project } from '@/models/project';
 import { motion } from 'framer-motion';
 import { useEffect } from 'react';
@@ -33,12 +32,15 @@ export default function ProjectsPage() {
               initial='hidden'
               animate='show'
             >
-              {projectsYears.map((year: number) => {
+              {projectsYears.map((year: number, i: number) => {
                 const projects = projectsByYear[year as any];
                 return (
-                  <>
-                    <motion.li key={'year_' + year} variants={itemVariants}>
-                      <div className='align-center  text-md my-4 flex place-items-center justify-center '>
+                  <div key={'year_' + i}>
+                    <motion.li key={'year_' + i} variants={itemVariants}>
+                      <div
+                        key={'year_' + i}
+                        className='align-center  text-md my-4 flex place-items-center justify-center '
+                      >
                         <h6 className='  overflow-clip font-mono  text-lime-500/75'>
                           {'<!'}
                         </h6>
@@ -50,12 +52,16 @@ export default function ProjectsPage() {
                         </h6>
                       </div>
                     </motion.li>
-                    {projects.map((project: Project) => (
-                      <motion.li key={project.name} variants={itemVariants}>
-                        <ProjectCard3 isLastItem={false} project={project} />
+                    {projects.map((project: Project, i: number) => (
+                      <motion.li key={project.name + i} variants={itemVariants}>
+                        <ProjectCard3
+                          key={project.name + i}
+                          isLastItem={false}
+                          project={project}
+                        />
                       </motion.li>
                     ))}
-                  </>
+                  </div>
                 );
               })}
               <motion.li variants={itemVariants}>

@@ -8,11 +8,14 @@ const viewBox = `0 0 256 256`;
 const margin = 0;
 
 export default function SkillsSwiper() {
+  const items = [...SKILLS_ICONS('36'), ...SKILLS_ICONS('36')];
   return (
     <>
       <ContSwiper>
-        {SKILLS_ICONS('36').map((item) => (
-          <span className='px-4'>{item}</span>
+        {items.map((item, i) => (
+          <span key={'skill_' + i} className='px-4'>
+            {item}
+          </span>
         ))}
       </ContSwiper>
     </>

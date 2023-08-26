@@ -22,7 +22,7 @@ export default function BrandsSwiper(props: Props) {
         <ContSwiper>
           {items.map((brand, index) => (
             <img
-              key={'b_' + index}
+              key={'brand_' + index}
               alt={brand}
               className='h-12 w-40 object-contain object-center  px-8 '
               src={brand}

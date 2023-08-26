@@ -26,7 +26,7 @@ export default function ContSwiper(props: Props) {
     <div className={cn(' cont-swiper relative overflow-x-clip', className)}>
       <span
         className={
-          'via-bg-light absolute left-0  top-0  z-50 h-full  w-10 bg-gradient-to-r  from-lime-500 to-transparent  py-1'
+          'via-bg-light from-b-light absolute  left-0  top-0 z-50  h-full w-10  bg-gradient-to-r  to-transparent  py-1'
         }
       />
 
@@ -65,7 +65,7 @@ export default function ContSwiper(props: Props) {
       </FuckSwiper> */}
       <span
         className={
-          'via-bg-light absolute right-0   top-0  z-50   h-full w-10 bg-gradient-to-l from-lime-500 to-transparent   '
+          'via-bg-light from-b-light  absolute   right-0  top-0   z-50 h-full w-10 bg-gradient-to-l to-transparent   '
         }
       />
     </div>

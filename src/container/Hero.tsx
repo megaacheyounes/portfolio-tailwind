@@ -15,6 +15,7 @@ const TYPING_DELAY = 1600;
 
 import { containerVariants, itemVariants } from '@/lib/animation';
 import { motion } from 'framer-motion';
+import Image from 'next/image';
 
 export default function Hero(props: Props) {
   return (
@@ -42,7 +43,10 @@ export default function Hero(props: Props) {
           </h1>
         </div>
         <div className='   max-w-lg '>
-          <img
+          <Image
+            blurDataURL='/me_b.png'
+            height={547}
+            width={511}
             className='rounded object-cover  object-center'
             alt='hero'
             src='/me.png'

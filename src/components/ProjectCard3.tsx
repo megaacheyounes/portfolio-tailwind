@@ -68,22 +68,22 @@ export default function ProjectCard3(props: Props) {
           </a>
         )}
         {isConfidential && (
-          <a className='group    inline-flex  place-items-center items-center gap-1 text-sm font-medium text-red-700'>
+          <p className='group    inline-flex  place-items-center items-center gap-1 text-sm font-medium text-red-700'>
             <span className='hidden sm:inline-flex'>
               confidential
               <LockIcon size={14} className='ml-1 inline-flex' />
             </span>
             <LockIcon size={20} className='sm:hidden' />
-          </a>
+          </p>
         )}
         {isDiscontinued && (
-          <a className='group    inline-flex  place-items-center items-center gap-1 text-sm font-medium text-gray-400'>
+          <p className='group    inline-flex  place-items-center items-center gap-1 text-sm font-medium text-gray-400'>
             <span className='hidden sm:inline-flex'>
               discontinued
               <EraserIcon size={14} className='ml-1 inline-flex' />
             </span>
             <EraserIcon size={20} className='sm:hidden' />
-          </a>
+          </p>
         )}
       </div>
       <p
