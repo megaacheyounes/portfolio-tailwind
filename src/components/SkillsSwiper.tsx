@@ -2,7 +2,6 @@
 // Import Swiper React components
 // Import Swiper styles
 import ContSwiper from '@/components/ContSwiper';
-import 'swiper/css';
 
 const viewBox = `0 0 256 256`;
 const margin = 0;
