@@ -14,7 +14,7 @@
   },
   "dependencies": {
     "@types/react-icons": "^3.0.0",
-    "@types/swiper": "^6.0.0",
+    "@vercel/analytics": "^1.0.2",
     "clsx": "^1.2.1",
     "framer-motion": "^10.15.0",
     "lucide-react": "^0.260.0",
@@ -25,7 +25,7 @@
     "react-icons": "^4.10.1",
     "react-type-animation": "^3.1.0",
     "sass": "^1.64.2",
-    "swiper": "^10.0.4",
+    "scrollreveal": "^4.0.9",
     "tailwind-merge": "^1.13.2",
     "tailwindcss-animate": "^1.0.6"
   },

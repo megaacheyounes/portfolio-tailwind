@@ -1,4 +1,5 @@
 import Section from '@/container/Section';
+import Link from 'next/link';
 
 export default function Footer() {
   return (
@@ -9,61 +10,61 @@ export default function Footer() {
     >
       <div className='  border-t-3 border-dashed border-lime-500'>
         <div className='  flex  flex-col items-center   '>
-          <a href='/' className='title-font cursor-pointer  font-medium    '>
+          <Link href='/' className='title-font cursor-pointer  font-medium    '>
             <img src='/favicon.ico' className='w-12' />
-          </a>
+          </Link>
 
           <p className='max-w-sm text-center text-xs md:max-w-lg '>
             Designed loosely in{' '}
-            <a
+            <Link
               className='text-lime-500'
               href='https://www.figma.com/'
               target='_blank'
             >
               Figma
-            </a>{' '}
+            </Link>{' '}
             and coded in{' '}
-            <a
+            <Link
               className='text-lime-500'
               href='https://code.visualstudio.com/'
               target='_blank'
             >
               VS Code
-            </a>{' '}
+            </Link>{' '}
             by yours very truly, built using{' '}
-            <a
+            <Link
               className='text-lime-500'
               href='https://nextjs.org/'
               target='_blank'
             >
               Next.js
-            </a>{' '}
+            </Link>{' '}
             and{' '}
-            <a
+            <Link
               className='text-lime-500'
               href='https://tailwindcss.com/'
               target='_blank'
             >
               tailwindcss
-            </a>
+            </Link>
             , deployed to{' '}
-            <a
+            <Link
               className='text-lime-500'
               href='https://vercel.com/'
               target='_blank'
             >
               Vercel
-            </a>
+            </Link>
             .
             <br />
             Text is in the{' '}
-            <a
+            <Link
               className='text-lime-500'
               href='https://github.com/tonsky/FiraCode'
               target='_blank'
             >
               FiraCode
-            </a>{' '}
+            </Link>{' '}
             typeface
           </p>
           <p className='mt-4 text-sm font-bold '>

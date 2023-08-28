@@ -1,6 +1,7 @@
 import * as React from 'react';
 
 import { cn } from '@/lib/utils';
+import Link from 'next/link';
 
 type Props = {
   href: string;
@@ -10,7 +11,7 @@ type Props = {
 
 export default function IconButton(props: Props) {
   return (
-    <a
+    <Link
       href={props.href}
       target={props.newTab ? '_blank' : '_self'}
       className={cn(
@@ -19,6 +20,6 @@ export default function IconButton(props: Props) {
       )}
     >
       {props.children}
-    </a>
+    </Link>
   );
 }

@@ -1,6 +1,7 @@
 import Section from '@/container/Section';
 import DataProvider from '@/data/DataProvider';
 import { ChevronDown, ChevronRight } from 'lucide-react';
+import Link from 'next/link';
 
 /**
  *
@@ -29,12 +30,12 @@ export default function Experience2() {
               {'*'}
               <span className='ml-4 text-cyan-300'> @</span>
               <span className='text-pink-300 '>at</span>
-              <a
+              <Link
                 href='https://huawei.com'
                 className='ml-4 inline-flex hover:underline '
               >
                 {`Huawei Technologies`}
-              </a>
+              </Link>
               <br />
               {'*'}
               <p className=' ml-4 hover:underline'>{'jan 2023 - present '}</p>
