@@ -53,7 +53,6 @@ export default function ProjectCard3(props: Props) {
         <div className='flex flex-1 flex-col'>
           <h1 className='m-0 p-0 text-xs sm:text-sm '>{project.name}</h1>
         </div>
-
         {!isDiscontinued && !isConfidential && (
           <a
             href={project.link}

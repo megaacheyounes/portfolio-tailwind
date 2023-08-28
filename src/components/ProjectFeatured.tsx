@@ -1,8 +1,3 @@
-/* eslint-disable @next/next/no-img-element */
-// Import Swiper React components
-// Import Swiper styles
-import 'swiper/css';
-
 import ProjectCardFeatured from '@/components/ProjectCardFeatured';
 import { PROJECTS_HIGHLIGHT } from '@/data/projects';
 import { motion } from 'framer-motion';

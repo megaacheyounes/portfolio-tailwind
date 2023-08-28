@@ -75,7 +75,7 @@ export default {
         },
       },
       animation: {
-        swiper: 'swiper 3s infinite linear alternate',
+        swiper: 'swiper 16s infinite linear alternate',
         tilt: 'tilt 10s infinite linear',
         flicker: 'flicker 3s linear infinite',
         shimmer: 'shimmer 1.3s linear infinite',

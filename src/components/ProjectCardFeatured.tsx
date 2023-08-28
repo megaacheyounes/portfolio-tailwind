@@ -27,8 +27,6 @@ export default function ProjectCardFeatured(props: Props) {
   const hover =
     'transition-all duration-200 ease-out  hover:-translate-y-2 transition-all duration-300 ease-out hover:cursor-pointer hover:shadow-lg hover:shadow-lime-500/5';
   const { project } = props;
-  const isAndroid = project.type == 'mobile';
-  const isWeb = project.type == 'web';
   const isConfidential = !project.link;
 
   const getImage = (brand: BrandType, img?: string) => {
