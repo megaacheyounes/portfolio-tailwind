@@ -1,7 +1,7 @@
 import { HiMail, HiPhone } from 'react-icons/hi';
 import { SiGithub, SiLinkedin } from 'react-icons/si';
 
-import IconButton from '@/components/IconButton';
+import ProtectedIconButton from '@/components/IconButton';
 import DataProvider from '@/data/DataProvider';
 import { twMerge } from 'tailwind-merge';
 
@@ -39,14 +39,14 @@ export default function Socials(props: Props) {
     LINKS.map((link, index) => {
       const Icon = link.icon;
       return (
-        <IconButton
+        <ProtectedIconButton
           className='p-1  shadow-lime-500/50 transition-all duration-300 hover:-translate-y-1   hover:shadow-xl'
-          key={link.href}
           newTab={link.newTab}
+          key={link.href.join('')}
           href={link.href}
         >
           <Icon size={20} />
-        </IconButton>
+        </ProtectedIconButton>
       );
     });
 
