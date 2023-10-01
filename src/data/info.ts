@@ -1,15 +1,15 @@
 export type SocialLinks = {
-  linkedIn: string;
-  github: string;
-  phone: string;
-  email: string;
+  linkedIn: string[];
+  github: string[];
+  phone: string[];
+  email: string[];
 };
 
 export const SOCIAL_LINKS: SocialLinks = {
-  linkedIn: 'https://www.linkedin.com/in/megaache-younes',
-  github: 'https://github.com/megaacheyounes',
-  phone: 'tel:+971557040589',
-  email: 'mailto:megaache.younes@gmail.com',
+  linkedIn: 'https://www.linkedin.com/in/megaache-younes'.split('').reverse(),
+  github: 'https://github.com/megaacheyounes'.split('').reverse(),
+  phone: 'tel:+971557040589'.split('').reverse(),
+  email: 'mailto:megaache.younes@gmail.com'.split('').reverse(),
 };
 
 export interface Fact {
