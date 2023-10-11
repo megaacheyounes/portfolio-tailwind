@@ -1,9 +1,9 @@
 'use client';
 import RevealWrapper from '@/components/animation/RevealAnimationWrapper';
 import BrandsSwiper from '@/components/BrandsSwiper';
-import SkillsSwiper from '@/components/SkillsSwiper';
+import SkillsSwiper from '@/components/TechnologiesSwiper';
 import About from '@/container/About';
-import Experience3 from '@/container/Experience3';
+import ExperienceCard from '@/container/ExperienceCard';
 import Hero from '@/container/Hero';
 import Projects from '@/container/Projects';
 import Section from '@/container/Section';
@@ -51,7 +51,7 @@ export default function Page() {
         </Section>
       </Suspense>
 
-      <Experience3 />
+      <ExperienceCard />
     </main>
   );
 }

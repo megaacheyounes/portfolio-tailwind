@@ -28,15 +28,15 @@ import {
 } from 'react-icons/si';
 import { TbBrandKotlin } from 'react-icons/tb';
 
-import { SkillType } from '@/models/project';
+import { TechnologyType } from '@/models/project';
 import { IconType } from 'react-icons/lib';
 
 type Props = {
-  skills: SkillType[];
+  technologies: TechnologyType[];
   size?: number;
 };
 
-const MAPPING: { [key in SkillType]: IconType } = {
+const MAPPING: { [key in TechnologyType]: IconType } = {
   Android: DiAndroid,
   HarmonyOS: SiHarmonyos,
   Kotlin: TbBrandKotlin,
@@ -67,17 +67,17 @@ const MAPPING: { [key in SkillType]: IconType } = {
   'Tailwind CSS': SiTailwindcss,
 };
 
-export default function Skills(props: Props) {
+export default function TechnologiesChips(props: Props) {
   return (
     <>
       <div className=' flex   flex-wrap text-3xl'>
-        {props.skills.map((skill) => {
+        {props.technologies.map((technology) => {
           return (
             <div
-              key={skill}
+              key={technology}
               className='mr-1 mt-1 rounded-full bg-lime-400/10 px-2 py-1 text-xs text-lime-300 md:mr-2 md:mt-2 md:px-3  md:text-sm '
             >
-              {skill}
+              {technology}
             </div>
           );
         })}

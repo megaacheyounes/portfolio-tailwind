@@ -1,26 +1,26 @@
-/* eslint-disable @next/next/no-img-element */
-// Import Swiper React components
-// Import Swiper styles
-import ContSwiper from '@/components/ContSwiper';
+import InfiniteSwiper from '@/components/_base/InfiniteSwiper';
 
 const viewBox = `0 0 256 256`;
 const margin = 0;
 
-export default function SkillsSwiper() {
-  const items = [...SKILLS_ICONS('36'), ...SKILLS_ICONS('36')];
+export default function TechnologiesSwiper() {
+  const items = [
+    ...TECHNOLOGIES_SVG_ICONS('50'),
+    ...TECHNOLOGIES_SVG_ICONS('50'),
+  ];
   return (
     <>
-      <ContSwiper>
+      <InfiniteSwiper reversed>
         {items.map((item, i) => (
           <span key={'skill_' + i} className='px-4'>
             {item}
           </span>
         ))}
-      </ContSwiper>
+      </InfiniteSwiper>
     </>
   );
 }
-export const SKILLS_ICONS = (size: string) => [
+export const TECHNOLOGIES_SVG_ICONS = (size: string) => [
   <g
     xlinkTitle='Android'
     key='Android'

@@ -7,9 +7,8 @@ import Footer from '@/container/Footer';
 import Header from '@/container/Header';
 import { Analytics } from '@vercel/analytics/react';
 
-import Socials from '@/components/Socials';
+import Socials from '@/components/SocialLinks';
 import { siteConfig } from '@/constant/config';
-import Head from 'next/head';
 import Script from 'next/script';
 
 export const metadata: Metadata = {

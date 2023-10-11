@@ -1,7 +1,6 @@
 'use client';
-import RevealWrapper from '@/components/animation/RevealAnimationWrapper';
-import ArrowLink from '@/components/ArrowLink';
-import ProjectFeatured from '@/components/ProjectFeatured';
+import ProjectFeatured from '@/components/project/FeaturedProjects';
+import ArrowLink from '@/components/_base/ArrowLink';
 import Section from '@/container/Section';
 
 type Props = {

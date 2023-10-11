@@ -1,4 +1,4 @@
-export const Skill = [
+export const Technology = [
   'Android',
   'HarmonyOS',
   'Kotlin',
@@ -28,7 +28,7 @@ export const Skill = [
   'Spring Boot',
   'Tailwind CSS',
 ] as const;
-export type SkillType = (typeof Skill)[number];
+export type TechnologyType = (typeof Technology)[number];
 
 const Brand = [
   'Huawei',
@@ -52,7 +52,7 @@ export interface Project {
   company?: string;
   description: string;
   image?: string;
-  technologies: SkillType[];
+  technologies: TechnologyType[];
   images?: string[];
   client?: BrandType;
   discontinued?: boolean;

@@ -1,7 +1,7 @@
 /* eslint-disable @next/next/no-img-element */
 import { EraserIcon, LockIcon } from 'lucide-react';
 
-import Skills from '@/components/Skills';
+import TechnologiesChips from '@/components/TechnologiesChips';
 import { PROJECTS_HIGHLIGHT } from '@/data/projects';
 import { BrandType } from '@/models/project';
 import { HiOutlineExternalLink } from 'react-icons/hi';
@@ -24,7 +24,7 @@ const BrandMapping: { [key in BrandType]: string } = {
   'Visit Abudhabi': '/brands/visit-abudhabi.png',
 };
 
-export default function ProjectCard3(props: Props) {
+export default function ProjectDetailsCard(props: Props) {
   const { project } = props;
 
   const isDiscontinued = !!project.discontinued;
@@ -90,7 +90,7 @@ export default function ProjectCard3(props: Props) {
         className='mt-2   text-xs text-gray-300 md:text-sm'
       ></p>
       <div>
-        <Skills skills={project.technologies} />
+        <TechnologiesChips technologies={project.technologies} />
       </div>
       {/* <ArrowLink className='text-sm mt-2' title='learn more' href={'/project/' + project.name} /> */}
     </div>

@@ -1,5 +1,5 @@
-import ArrowLink from '@/components/ArrowLink';
-import Socials from '@/components/Socials';
+import Socials from '@/components/SocialLinks';
+import ArrowLink from '@/components/_base/ArrowLink';
 import Link from 'next/link';
 
 type Props = any;

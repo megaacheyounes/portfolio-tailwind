@@ -1,7 +1,7 @@
 import { HiMail, HiPhone } from 'react-icons/hi';
 import { SiGithub, SiLinkedin } from 'react-icons/si';
 
-import ProtectedIconButton from '@/components/IconButton';
+import ProtectedIconButton from '@/components/_base/IconButton';
 import DataProvider from '@/data/DataProvider';
 import { twMerge } from 'tailwind-merge';
 

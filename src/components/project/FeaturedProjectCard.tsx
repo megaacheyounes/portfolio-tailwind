@@ -1,7 +1,6 @@
 /* eslint-disable @next/next/no-img-element */
 import { Link } from 'lucide-react';
 
-import Skills from '@/components/Skills';
 import { PROJECTS_HIGHLIGHT } from '@/data/projects';
 import { cn, getDomain } from '@/lib/utils';
 import { BrandType } from '@/models/project';
@@ -23,7 +22,7 @@ const BrandMapping: { [key in BrandType]: string } = {
   'Visit Abudhabi': '/brands/visit-abudhabi.png',
 };
 
-export default function ProjectCardFeatured(props: Props) {
+export default function FeaturedProjectCard(props: Props) {
   const hover =
     'transition-all duration-200 ease-out  hover:-translate-y-2 transition-all duration-300 ease-out hover:cursor-pointer hover:shadow-lg hover:shadow-lime-500/5';
   const { project } = props;
@@ -63,9 +62,9 @@ export default function ProjectCardFeatured(props: Props) {
           }}
           className='mt-2 text-sm text-gray-300'
         ></p>
-        <div>
+        {/* <div>
           <Skills skills={project.technologies} />
-        </div>
+        </div> */}
         {/* <ArrowLink className='text-sm mt-2' title='learn more' href={'/project/' + project.name} /> */}
       </div>
     </a>

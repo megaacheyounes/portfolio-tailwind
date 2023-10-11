@@ -1,4 +1,4 @@
-import { SkillType } from '@/models/project';
+import { TechnologyType } from '@/models/project';
 
 export const PRESENT = 'present';
 export const EXP_DIVIDER = '●';
@@ -14,7 +14,7 @@ export interface Experience {
   };
   location: string;
   achievements: string[];
-  technologies: SkillType[];
+  technologies: TechnologyType[];
   //will be calculated by DataProvider.tsx
   duration?: string;
 }
