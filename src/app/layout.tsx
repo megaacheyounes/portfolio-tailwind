@@ -18,23 +18,9 @@ export const metadata: Metadata = {
   },
   description: siteConfig.description,
   robots: { index: true, follow: true },
-  //  https://realfavicongenerator.net/
 
-  icons: {
-    icon: '/favicon.ico',
-    // shortcut: '/favicon/favicon-16x16.png',
-    // apple: '/favicon/apple-touch-icon.png',
-  },
-  // manifest: `/favicon/site.webmanifest`,
-  // openGraph: {
-  //   url: siteConfig.url,
-  //   title: siteConfig.title,
-  //   description: siteConfig.description,
-  //   siteName: siteConfig.title,
-  //   images: [`${siteConfig.url}/images/og.jpg`],
-  //   type: 'website',
-  //   locale: 'en_US',
-  // },
+  icons: {},
+
   authors: [
     {
       name: 'Younes Megaache',

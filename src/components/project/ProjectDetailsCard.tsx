@@ -3,7 +3,7 @@ import { EraserIcon, LockIcon } from 'lucide-react';
 
 import TechnologiesChips from '@/components/TechnologiesChips';
 import { PROJECTS_HIGHLIGHT } from '@/data/projects';
-import { BrandType } from '@/models/project';
+import { BrandType } from '@/models/Brand';
 import { HiOutlineExternalLink } from 'react-icons/hi';
 
 type Props = {

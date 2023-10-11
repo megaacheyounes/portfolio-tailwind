@@ -2,7 +2,7 @@
 /* eslint-disable @next/next/no-img-element */
 import * as React from 'react';
 
-import { cn } from '@/lib/utils';
+import { cn } from '@/utils/utils';
 import { twMerge } from 'tailwind-merge';
 type Props = {
   className?: string;

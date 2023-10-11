@@ -1,7 +1,6 @@
-import * as React from 'react';
 import { SiAndroid, SiGooglechrome } from 'react-icons/si';
 
-import { cn } from '@/lib/utils';
+import { cn } from '@/utils/utils';
 
 type Props = {
   title: string;

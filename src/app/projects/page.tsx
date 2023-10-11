@@ -4,8 +4,8 @@ import ProtectDetailsCard from '@/components/project/ProjectDetailsCard';
 import PageWrapper from '@/container/PageWrapper';
 import Section from '@/container/Section';
 import DataProvider from '@/data/DataProvider';
-import { containerVariants, itemVariants } from '@/lib/animation';
 import { Project } from '@/models/project';
+import { containerVariants, itemVariants } from '@/utils/animation';
 import { motion } from 'framer-motion';
 import { useEffect } from 'react';
 

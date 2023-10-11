@@ -2,8 +2,8 @@
 import { Link } from 'lucide-react';
 
 import { PROJECTS_HIGHLIGHT } from '@/data/projects';
-import { cn, getDomain } from '@/lib/utils';
-import { BrandType } from '@/models/project';
+import { cn, getDomain } from '@/utils/utils';
+import { BrandType } from '@/models/Brand';
 
 type Props = {
   project: (typeof PROJECTS_HIGHLIGHT)[0];

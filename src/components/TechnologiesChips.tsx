@@ -28,7 +28,7 @@ import {
 } from 'react-icons/si';
 import { TbBrandKotlin } from 'react-icons/tb';
 
-import { TechnologyType } from '@/models/project';
+import { TechnologyType } from '@/models/Technology';
 import { IconType } from 'react-icons/lib';
 
 type Props = {
