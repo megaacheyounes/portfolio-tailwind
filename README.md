@@ -1,62 +1,35 @@
-# portfolio tailwind
+> **documentation will be added soon**
 
-https://codepen.io/collection/DqLkab
-https://www.sololearn.com/compiler-playground/WpFa2Yz9WP8g
-```
-//Jan 2020 - present
-fun fullStackMobileDeveloper(Huawei: String) {
-    -> lorem ipsum dolor sit amet.
-    -> lorem ipsum dolor sit amet.
-    -> lorem ipsum dolor sit amet.
-    -> lorem ipsum dolor sit amet.
-}
-//Jan 2020 - present
-fun fullStackWebDeveloper(Huawei: String) {
-    -> lorem ipsum dolor sit amet.
-    -> lorem ipsum dolor sit amet.
-    -> lorem ipsum dolor sit amet.
-    -> lorem ipsum dolor sit amet.
-}
-//Jan 2020 - present
-fun AndroidDeveloper(Huawei: String) {...}
-```
+# Younes Megaache's personal website
 
-todo:
+My personal website (and maybe portfolio), designed loosely in Figma and coded in VS Code, built using Next.js and TailwindCSS, deployed to Vercel.
+Text is in the FiraCode typeface
 
-- https://play.tailwindcss.com/fNKKyOG2Yv
-- prefetch home page in /projects 
+👉 https://younes-megaache.com/
 
-## Features
-
-This repository is 🔋 battery packed with:
+## Tech Stack
 
 - ⚡️ Next.js 13 with App Router
 - ⚛️ React 18
 - ✨ TypeScript
-- 💨 Tailwind CSS 3 — Configured with CSS Variables to extend the **primary** color
-- 💎 Pre-built Components — Components that will **automatically adapt** with your brand color, [check here for the demo](https://tsnext-tw.thcl.dev/components)
-- 📈 Absolute Import and Path Alias — Import components using `@/` prefix
-- 📏 ESLint — Find and fix problems in your code, also will **auto sort** your imports
-- 💖 Prettier — Format your code consistently
-- 🔥 Snippets — A collection of useful snippets
-- 👀 Open Graph Helper Function — Awesome open graph generated using [og](https://github.com/theodorusclarence/og), fork it and deploy!
-- 🗺 Site Map — Automatically generate sitemap.xml
-- 📦 Expansion Pack — Easily install common libraries, additional components, and configs.
+- 💨 Tailwind CSS 3 — Configured with CSS Variables to extend the primary colors
+- 📈 Absolute Import and Path Alias — components imported using `@/` prefix
+- 📏 ESLint — to find and fix problems, also auto sort imports
+- 💖 Prettier — code formatting and consistency
 
-You can also check all of the **details and demos** on my blog post:
+## License
 
-- [One-stop Starter to Maximize Efficiency on Next.js & Tailwind CSS Projects](https://younes-megaache.com/blog/one-stop-starter)
+```license
+               DO WHAT YOU WANT TO PUBLIC LICENSE
 
-## Expansion Pack 📦
+ Copyright (C) 2023 Younes Megaache
 
-This starter is now equipped with an [expansion pack](https://github.com/theodorusclarence/expansion-pack).
+ Everyone is permitted to copy and distribute verbatim or modified
+ copies of this license document, and changing it is allowed as long
+ as the name is changed.
 
-You can easily add expansion such as React Hook Form + Components, Storybook, and more just using a single command line.
+                DO WHAT YOU WANT TO PUBLIC LICENSE
+   TERMS AND CONDITIONS FOR COPYING, DISTRIBUTION AND MODIFICATION
 
-https://user-images.githubusercontent.com/55318172/146631994-e1cac137-1664-4cfe-950b-a96decc1eaa6.mp4
-
-Check out the [expansion pack repository](https://github.com/theodorusclarence/expansion-pack) for the commands
-
-### App Router Update
-
-Due to App Router update, the expansion pack is currently **outdated**. It will be updated in the future. You can still use them by copy and pasting the files.
+  0. You just DO WHAT YOU WANT TO.
+```

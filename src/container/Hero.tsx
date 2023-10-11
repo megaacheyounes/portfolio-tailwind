@@ -13,7 +13,7 @@ import { TypeAnimation } from 'react-type-animation';
 type Props = any;
 const TYPING_DELAY = 1600;
 
-import { containerVariants, itemVariants } from '@/lib/animation';
+import { containerVariants, itemVariants } from '@/utils/animation';
 import { motion } from 'framer-motion';
 import Image from 'next/image';
 

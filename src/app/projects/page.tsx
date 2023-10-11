@@ -1,11 +1,11 @@
 'use client';
 
-import ProjectCard3 from '@/components/ProjectCard3';
+import ProtectDetailsCard from '@/components/project/ProjectDetailsCard';
 import PageWrapper from '@/container/PageWrapper';
 import Section from '@/container/Section';
 import DataProvider from '@/data/DataProvider';
-import { containerVariants, itemVariants } from '@/lib/animation';
 import { Project } from '@/models/project';
+import { containerVariants, itemVariants } from '@/utils/animation';
 import { motion } from 'framer-motion';
 import { useEffect } from 'react';
 
@@ -54,7 +54,7 @@ export default function ProjectsPage() {
                     </motion.li>
                     {projects.map((project: Project, i: number) => (
                       <motion.li key={project.name + i} variants={itemVariants}>
-                        <ProjectCard3
+                        <ProtectDetailsCard
                           key={project.name + i}
                           isLastItem={false}
                           project={project}

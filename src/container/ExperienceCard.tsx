@@ -1,9 +1,9 @@
-import ArrowLink from '@/components/ArrowLink';
-import Skills from '@/components/Skills';
+import TechnologiesChips from '@/components/TechnologiesChips';
+import ArrowLink from '@/components/_base/ArrowLink';
 import Section from '@/container/Section';
 import DataProvider from '@/data/DataProvider';
 
-export default function Experience3() {
+export default function ExperienceCard() {
   const data = new DataProvider();
   return (
     <Section
@@ -61,7 +61,7 @@ export default function Experience3() {
           </ul>
 
           <div className='mt-2'>
-            <Skills skills={exp.technologies} />
+            <TechnologiesChips technologies={exp.technologies} />
           </div>
 
           {/* <ArrowLink className='text-sm mt-2' title='learn more' href={'/project/' + project.name} /> */}

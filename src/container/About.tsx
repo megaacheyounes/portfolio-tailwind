@@ -1,5 +1,5 @@
-import ArrowLink from '@/components/ArrowLink';
-import Socials from '@/components/Socials';
+import Socials from '@/components/SocialLinks';
+import ArrowLink from '@/components/_base/ArrowLink';
 import Section from '@/container/Section';
 import DataProvider from '@/data/DataProvider';
 import Link from 'next/link';

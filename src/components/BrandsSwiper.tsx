@@ -1,4 +1,5 @@
-import ContSwiper from '@/components/ContSwiper';
+import InfiniteSwiper from '@/components/_base/InfiniteSwiper';
+
 type Props = any;
 
 const BRANDS = [
@@ -19,16 +20,16 @@ export default function BrandsSwiper(props: Props) {
   return (
     <>
       <div className='relative '>
-        <ContSwiper>
+        <InfiniteSwiper>
           {items.map((brand, index) => (
             <img
               key={'brand_' + index}
               alt={brand}
-              className='h-12 w-40 object-contain object-center  px-8 '
+              className='h-12 w-44 object-contain object-center  px-8 '
               src={brand}
             />
           ))}
-        </ContSwiper>
+        </InfiniteSwiper>
       </div>
     </>
   );

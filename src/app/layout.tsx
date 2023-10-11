@@ -7,9 +7,8 @@ import Footer from '@/container/Footer';
 import Header from '@/container/Header';
 import { Analytics } from '@vercel/analytics/react';
 
-import Socials from '@/components/Socials';
+import Socials from '@/components/SocialLinks';
 import { siteConfig } from '@/constant/config';
-import Head from 'next/head';
 import Script from 'next/script';
 
 export const metadata: Metadata = {
@@ -19,23 +18,9 @@ export const metadata: Metadata = {
   },
   description: siteConfig.description,
   robots: { index: true, follow: true },
-  //  https://realfavicongenerator.net/
 
-  icons: {
-    icon: '/favicon.ico',
-    // shortcut: '/favicon/favicon-16x16.png',
-    // apple: '/favicon/apple-touch-icon.png',
-  },
-  // manifest: `/favicon/site.webmanifest`,
-  // openGraph: {
-  //   url: siteConfig.url,
-  //   title: siteConfig.title,
-  //   description: siteConfig.description,
-  //   siteName: siteConfig.title,
-  //   images: [`${siteConfig.url}/images/og.jpg`],
-  //   type: 'website',
-  //   locale: 'en_US',
-  // },
+  icons: {},
+
   authors: [
     {
       name: 'Younes Megaache',

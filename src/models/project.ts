@@ -1,49 +1,5 @@
-export const Skill = [
-  'Android',
-  'HarmonyOS',
-  'Kotlin',
-  'Java',
-  'React-Native',
-  'Huawei Mobile Services (HMS)',
-  'Firebase',
-  'JavaScript',
-  'CSS',
-  'HTML',
-  'Laravel',
-  'PHP',
-  'Node.js',
-  'Next.js',
-  'Express.js',
-  'Google Play Services',
-  'Photoshop',
-  'Linux',
-  'WordPress',
-  'MUI',
-  'Angular',
-  'WooCommerce',
-  'TypeScript',
-  'MongoDB',
-  'React',
-  'Jetpack Compose',
-  'Spring Boot',
-  'Tailwind CSS',
-] as const;
-export type SkillType = (typeof Skill)[number];
-
-const Brand = [
-  'Huawei',
-  'Algebratec',
-  'Tawasal',
-  'Carrefour',
-  'Dubai Police',
-  'Reel Cinemas',
-  'Dubai Sports',
-  'Emirates',
-  'Steppi',
-  'Visit Abudhabi',
-] as const;
-
-export type BrandType = (typeof Brand)[number];
+import { BrandType } from '@/models/Brand';
+import { TechnologyType } from '@/models/Technology';
 
 export interface Project {
   type: 'mobile' | 'web';
@@ -52,7 +8,7 @@ export interface Project {
   company?: string;
   description: string;
   image?: string;
-  technologies: SkillType[];
+  technologies: TechnologyType[];
   images?: string[];
   client?: BrandType;
   discontinued?: boolean;

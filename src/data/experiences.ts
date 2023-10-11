@@ -1,23 +1,7 @@
-import { SkillType } from '@/models/project';
+import { Experience } from '@/models/Experience';
 
 export const PRESENT = 'present';
 export const EXP_DIVIDER = '●';
-
-export interface Experience {
-  start: string;
-  end: string;
-  title: string;
-  company: {
-    name: string;
-    logo: string;
-    website: string;
-  };
-  location: string;
-  achievements: string[];
-  technologies: SkillType[];
-  //will be calculated by DataProvider.tsx
-  duration?: string;
-}
 
 //todo: update experiences from resume
 export const EXPERIENCES: Experience[] = [

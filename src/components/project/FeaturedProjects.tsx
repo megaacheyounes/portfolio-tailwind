@@ -1,9 +1,9 @@
-import ProjectCardFeatured from '@/components/ProjectCardFeatured';
+import ProjectCardFeatured from '@/components/project/FeaturedProjectCard';
 import { PROJECTS_HIGHLIGHT } from '@/data/projects';
 import { motion } from 'framer-motion';
 type Props = any;
 
-export default function ProjectFeatured(props: Props) {
+export default function FeaturedProjects(props: Props) {
   return (
     <motion.div
       initial={{ opacity: 0 }}

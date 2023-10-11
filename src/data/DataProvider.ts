@@ -1,9 +1,10 @@
 import { PROJECTS } from '@/data/projects';
-import { parseMonthYear } from '@/lib/date';
+import { Experience } from '@/models/Experience';
 import { Project } from '@/models/project';
+import { parseMonthYear } from '@/utils/date';
 import { CERTIFICATES } from './certificates';
 import { EDUCATION } from './education';
-import { Experience, EXPERIENCES, PRESENT } from './experiences';
+import { EXPERIENCES, PRESENT } from './experiences';
 import { PersonalInfo, PERSONAL_INFO, SOCIAL_LINKS } from './info';
 import { INTERESTS } from './interests';
 import { SKILLS } from './skills';

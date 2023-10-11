@@ -1,16 +1,14 @@
 {
   "name": "portfolio-tailwind",
-  "version": "0.0.1",
+  "version": "1.0.0",
   "private": true,
   "scripts": {
     "dev": "next dev",
     "build": "next build",
     "lint": "next lint",
     "export": "next build",
-    "start": "",
-    "deploy:start": "firebase emulators:start  ",
-    "deploy:prod": "firebase deploy --only hosting",
-    "deploy:preview": "firebase hosting:channel:deploy v5"
+    "start": "next start",
+    "postbuild": "next-sitemap --config next-sitemap.config.js"
   },
   "dependencies": {
     "@types/react-icons": "^3.0.0",
@@ -30,8 +28,6 @@
     "tailwindcss-animate": "^1.0.6"
   },
   "devDependencies": {
-    "@commitlint/cli": "^16.3.0",
-    "@commitlint/config-conventional": "^16.2.4",
     "@svgr/webpack": "^8.0.1",
     "@tailwindcss/forms": "^0.5.4",
     "@testing-library/jest-dom": "^5.16.5",
