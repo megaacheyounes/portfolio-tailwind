@@ -7,6 +7,7 @@ import Footer from '@/containers/Footer';
 import Header from '@/containers/Header';
 import { Analytics } from '@vercel/analytics/react';
 
+import BackToTopButton from '@/components/BackToTopButton';
 import GradientBackgroundGodrayThingy from '@/components/GradientBackgroundGodrayThingy';
 import Socials from '@/components/SocialLinks';
 import {
@@ -55,6 +56,7 @@ export default function RootLayout({
         data-ackee-domain-id={ACKEE_DOMAIN_ID}
       ></Script>
       <body className='bg-b-light     '>
+        <BackToTopButton />
         <div className='   relative min-h-screen'>
           <span className='fixed bottom-2  left-2  z-50 opacity-0 transition-opacity duration-500 sm:opacity-100    '>
             <Socials static={true} />
