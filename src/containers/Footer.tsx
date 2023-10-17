@@ -1,7 +1,11 @@
 import Section from '@/containers/Section';
+import DataProvider from '@/data/DataProvider';
 import Link from 'next/link';
 
 export default function Footer() {
+  const dataProvider = new DataProvider();
+  const personalInfo = dataProvider.personalInfo;
+
   return (
     <Section
       elevated={false}
@@ -14,7 +18,7 @@ export default function Footer() {
             <img src='/favicon.ico' className='w-12' />
           </Link>
 
-          <p className='max-w-sm text-center text-xs md:max-w-lg '>
+          <p className='mt-2 max-w-sm text-center text-xs md:max-w-lg lg:mt-4 '>
             Designed loosely in{' '}
             <Link
               className='text-lime-500'
@@ -67,8 +71,9 @@ export default function Footer() {
             </Link>{' '}
             typeface
           </p>
-          <p className='mt-4 text-sm font-bold '>
-            &copy; {new Date().getFullYear()} Younes Megaache
+          <p className='mt-4 text-sm font-bold  lg:mt-8   '>
+            &copy; {new Date().getFullYear()} {personalInfo.firstName}{' '}
+            {personalInfo.lastName}
           </p>
         </div>
       </div>
