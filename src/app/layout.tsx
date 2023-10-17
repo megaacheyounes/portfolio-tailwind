@@ -10,6 +10,7 @@ import { Analytics } from '@vercel/analytics/react';
 import BackToTopButton from '@/components/BackToTopButton';
 import GradientBackgroundGodrayThingy from '@/components/GradientBackgroundGodrayThingy';
 import Socials from '@/components/SocialLinks';
+import { PERSONAL_INFO } from '@/data/info';
 import {
   ACKEE_ANALYTICS_SCRIPT_URL,
   ACKEE_ANALYTICS_URL,
@@ -18,7 +19,7 @@ import {
 import Script from 'next/script';
 
 export const siteConfig = {
-  title: 'Younes Megaache Portfolio',
+  title: `${PERSONAL_INFO.firstName} ${PERSONAL_INFO.lastName} | ${PERSONAL_INFO.mainTitle}`,
   description: 'My notable work and resume',
 
   url: 'https://younes-megaache.com',
@@ -36,7 +37,7 @@ export const metadata: Metadata = {
 
   authors: [
     {
-      name: 'Younes Megaache',
+      name: `${PERSONAL_INFO.firstName} ${PERSONAL_INFO.lastName}`,
       url: siteConfig.url,
     },
   ],
