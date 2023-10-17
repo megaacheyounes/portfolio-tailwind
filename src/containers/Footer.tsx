@@ -1,4 +1,4 @@
-import Section from '@/container/Section';
+import Section from '@/containers/Section';
 import Link from 'next/link';
 
 export default function Footer() {

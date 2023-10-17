@@ -1,6 +1,6 @@
 import Socials from '@/components/SocialLinks';
 import ArrowLink from '@/components/_base/ArrowLink';
-import Section from '@/container/Section';
+import Section from '@/containers/Section';
 import DataProvider from '@/data/DataProvider';
 import Link from 'next/link';
 
@@ -8,7 +8,7 @@ type Props = any;
 
 export default function About(props: Props) {
   const dataProvider = new DataProvider();
-  const about = dataProvider.about;
+  const about = dataProvider.personalInfo;
   return (
     <Section
       indentation={true}
@@ -43,17 +43,14 @@ export default function About(props: Props) {
             ))}
           </ul> */}
 
-        <Link
-          className=''
-          href='https://www.codewars.com/users/YounesMegaache/'
-          target='_blank'
-        >
-          <img
-            className=' mt-5 max-w-xs '
-            src='https://www.codewars.com/users/YounesMegaache/badges/large'
-          />
-        </Link>
-
+        {!!about.codewarsLink && (
+          <Link className='' href={about.codewarsLink} target='_blank'>
+            <img
+              className=' mt-5 max-w-xs '
+              src={`${about.codewarsLink}/badges/large`}
+            />
+          </Link>
+        )}
         <Socials className='mt-5' large={false} />
       </div>
     </Section>

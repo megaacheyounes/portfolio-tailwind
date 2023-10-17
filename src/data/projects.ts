@@ -1,6 +1,5 @@
 import { Project } from '@/models/project';
 
-//todo: add index and shuffle
 export const PROJECTS: Project[] = [
   /***********     2023      ************/
   {
@@ -364,7 +363,7 @@ export const PROJECTS: Project[] = [
   },
 ];
 
-export const PROJECTS_HIGHLIGHT = [
+export const FEATURED_PROJECTS = [
   PROJECTS[0],
   PROJECTS[1],
   PROJECTS[2],

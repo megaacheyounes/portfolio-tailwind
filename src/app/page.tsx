@@ -1,12 +1,13 @@
 'use client';
+import Loading from '@/app/loading';
 import RevealWrapper from '@/components/animation/RevealAnimationWrapper';
 import BrandsSwiper from '@/components/BrandsSwiper';
 import SkillsSwiper from '@/components/TechnologiesSwiper';
-import About from '@/container/About';
-import ExperienceCard from '@/container/ExperienceCard';
-import Hero from '@/container/Hero';
-import Projects from '@/container/Projects';
-import Section from '@/container/Section';
+import About from '@/containers/About';
+import ExperienceCard from '@/containers/ExperienceCard';
+import Hero from '@/containers/Hero';
+import Projects from '@/containers/Projects';
+import Section from '@/containers/Section';
 
 import { Suspense } from 'react';
 
@@ -17,7 +18,7 @@ export default function Page() {
 
       <About />
 
-      <Suspense fallback={<></>}>
+      <Suspense fallback={<Loading></Loading>}>
         <Section
           className='mt-10'
           contentClassName='animate-in fade-in px-0 mx-0 md:px-0 mx-0 md:mx-0'

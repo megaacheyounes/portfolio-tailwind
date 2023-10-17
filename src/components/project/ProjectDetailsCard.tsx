@@ -2,12 +2,12 @@
 import { EraserIcon, LockIcon } from 'lucide-react';
 
 import TechnologiesChips from '@/components/TechnologiesChips';
-import { PROJECTS_HIGHLIGHT } from '@/data/projects';
+import { FEATURED_PROJECTS } from '@/data/projects';
 import { BrandType } from '@/models/Brand';
 import { HiOutlineExternalLink } from 'react-icons/hi';
 
 type Props = {
-  project: (typeof PROJECTS_HIGHLIGHT)[0];
+  project: (typeof FEATURED_PROJECTS)[0];
   isLastItem: boolean;
 };
 

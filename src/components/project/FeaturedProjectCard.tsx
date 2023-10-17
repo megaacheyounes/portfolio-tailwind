@@ -1,12 +1,12 @@
 /* eslint-disable @next/next/no-img-element */
 import { Link } from 'lucide-react';
 
-import { PROJECTS_HIGHLIGHT } from '@/data/projects';
-import { cn, getDomain } from '@/utils/utils';
+import { FEATURED_PROJECTS } from '@/data/projects';
 import { BrandType } from '@/models/Brand';
+import { cn, getDomain } from '@/utils/utils';
 
 type Props = {
-  project: (typeof PROJECTS_HIGHLIGHT)[0];
+  project: (typeof FEATURED_PROJECTS)[0];
 };
 
 const BrandMapping: { [key in BrandType]: string } = {

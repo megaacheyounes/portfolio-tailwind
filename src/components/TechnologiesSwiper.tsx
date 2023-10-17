@@ -20,6 +20,8 @@ export default function TechnologiesSwiper() {
     </>
   );
 }
+
+// TODO: refactor and optimize
 export const TECHNOLOGIES_SVG_ICONS = (size: string) => [
   <g
     xlinkTitle='Android'

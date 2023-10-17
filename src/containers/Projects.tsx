@@ -1,7 +1,7 @@
 'use client';
 import ProjectFeatured from '@/components/project/FeaturedProjects';
 import ArrowLink from '@/components/_base/ArrowLink';
-import Section from '@/container/Section';
+import Section from '@/containers/Section';
 
 type Props = {
   full?: boolean;

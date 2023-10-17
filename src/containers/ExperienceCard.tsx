@@ -1,6 +1,6 @@
 import TechnologiesChips from '@/components/TechnologiesChips';
 import ArrowLink from '@/components/_base/ArrowLink';
-import Section from '@/container/Section';
+import Section from '@/containers/Section';
 import DataProvider from '@/data/DataProvider';
 
 export default function ExperienceCard() {

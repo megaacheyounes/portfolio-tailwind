@@ -1,8 +1,8 @@
 'use client';
 
 import ProtectDetailsCard from '@/components/project/ProjectDetailsCard';
-import PageWrapper from '@/container/PageWrapper';
-import Section from '@/container/Section';
+import PageWrapper from '@/containers/PageWrapper';
+import Section from '@/containers/Section';
 import DataProvider from '@/data/DataProvider';
 import { Project } from '@/models/project';
 import { containerVariants, itemVariants } from '@/utils/animation';

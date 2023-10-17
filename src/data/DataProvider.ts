@@ -6,7 +6,6 @@ import { CERTIFICATES } from './certificates';
 import { EDUCATION } from './education';
 import { EXPERIENCES, PRESENT } from './experiences';
 import { PersonalInfo, PERSONAL_INFO, SOCIAL_LINKS } from './info';
-import { INTERESTS } from './interests';
 import { SKILLS } from './skills';
 
 class DataProvider {
@@ -15,7 +14,9 @@ class DataProvider {
     return experience;
   });
 
-  about: PersonalInfo = PERSONAL_INFO;
+  get personalInfo() {
+    return PERSONAL_INFO;
+  }
 
   get socialLinks() {
     return SOCIAL_LINKS;
@@ -53,10 +54,6 @@ class DataProvider {
 
   get certificates() {
     return CERTIFICATES;
-  }
-
-  get interests() {
-    return INTERESTS;
   }
 
   getDuration(experience: Experience) {
