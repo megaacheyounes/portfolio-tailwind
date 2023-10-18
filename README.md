@@ -2,6 +2,10 @@
 
 # Younes Megaache's personal website
 
+<p align="center">
+<img src="public/screenshot.png" height="400"  >
+</p>
+
 My personal website (and maybe portfolio), designed loosely in Figma and coded in VS Code, built using Next.js and TailwindCSS, deployed to Vercel.
 Text is in the FiraCode typeface
 
