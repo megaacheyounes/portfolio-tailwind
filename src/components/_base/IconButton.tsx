@@ -1,8 +1,8 @@
 'use client';
+import Link from 'next/link';
 import * as React from 'react';
 
 import { cn } from '@/utils/utils';
-import Link from 'next/link';
 
 type Props = {
   href: string[];

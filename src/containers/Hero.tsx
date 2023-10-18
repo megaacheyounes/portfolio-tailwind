@@ -10,17 +10,20 @@ import {
 } from 'react-icons/si';
 import { TypeAnimation } from 'react-type-animation';
 
-type Props = any;
 const TYPING_DELAY = 1600;
 
-import DataProvider from '@/data/DataProvider';
-import { containerVariants, itemVariants } from '@/utils/animation';
 import { motion } from 'framer-motion';
 import Image from 'next/image';
 
-export default function Hero(props: Props) {
+import DataProvider from '@/data/DataProvider';
+
+import { containerVariants, itemVariants } from '@/utils/animation';
+
+export default function Hero() {
   const { titlePrefix, titles, firstName, lastName } = new DataProvider()
     .personalInfo;
+
+  // eslint-disable-next-line
   const sequence = titles.reduce(
     (arr, title) => [...arr, title, TYPING_DELAY, 500],
     [] as any
@@ -42,7 +45,7 @@ export default function Hero(props: Props) {
             />
           </h1>
         </div>
-        <div className='   max-w-lg '>
+        <div className='max-w-lg '>
           <Image
             height={547}
             width={511}
@@ -50,7 +53,7 @@ export default function Hero(props: Props) {
             className='rounded object-cover  object-center'
             alt='hero'
             blurDataURL='me_b.png'
-            placeholder={'blur'}
+            placeholder='blur'
             src='/me.png'
           />
           <motion.ul

@@ -1,5 +1,6 @@
 'use client';
 import { useEffect, useState } from 'react';
+
 import './style.scss';
 
 const MESSAGES = [
@@ -23,12 +24,8 @@ export default function PageLoaderMessage() {
   }, []);
 
   return (
-    <p
-      className={
-        'loading-message mx-2 mt-2 overflow-hidden text-center text-sm  text-lime-500'
-      }
-    >
-      {message || "Let's hope it's worth the wait"} {':)'}
+    <p className='loading-message mx-2 mt-2 overflow-hidden text-center text-sm  text-lime-500'>
+      {message || "Let's hope it's worth the wait"} :)
     </p>
   );
 }

@@ -1,6 +1,8 @@
-import Section from '@/containers/Section';
-import DataProvider from '@/data/DataProvider';
 import Link from 'next/link';
+
+import DataProvider from '@/data/DataProvider';
+
+import Section from '@/containers/Section';
 
 export default function Footer() {
   const dataProvider = new DataProvider();
@@ -9,12 +11,12 @@ export default function Footer() {
   return (
     <Section
       elevated={false}
-      className='   body-font    z-0  
-    flex justify-center   text-white'
+      className='body-font z-0  
+    flex justify-center text-white'
     >
-      <div className='  border-t-3 border-dashed border-lime-500'>
-        <div className='  flex  flex-col items-center   '>
-          <Link href='/' className='title-font cursor-pointer  font-medium    '>
+      <div className='border-t-3 border-dashed border-lime-500'>
+        <div className='flex  flex-col items-center'>
+          <Link href='/' className='title-font cursor-pointer  font-medium'>
             <img src='/favicon.ico' className='w-12' />
           </Link>
 

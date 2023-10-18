@@ -1,8 +1,8 @@
 'use client';
-import PageLoader from '@/components/pageLoader/PageLoader';
 import { AnimatePresence, motion } from 'framer-motion';
-// import { useRouter } from 'next/navigation';
 import React, { Suspense } from 'react';
+
+import PageLoader from '@/components/pageLoader/PageLoader';
 
 type Props = {
   className?: string;

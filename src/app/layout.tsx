@@ -1,22 +1,23 @@
+import { Analytics } from '@vercel/analytics/react';
 import { Metadata } from 'next';
+import Script from 'next/script';
 import React from 'react';
 
 import '@/styles/globals.css';
 
-import Footer from '@/containers/Footer';
-import Header from '@/containers/Header';
-import { Analytics } from '@vercel/analytics/react';
+import { PERSONAL_INFO } from '@/data/info';
 
 import BackToTopButton from '@/components/BackToTopButton';
 import GradientBackgroundGodrayThingy from '@/components/GradientBackgroundGodrayThingy';
 import Socials from '@/components/SocialLinks';
-import { PERSONAL_INFO } from '@/data/info';
+import Footer from '@/containers/Footer';
+import Header from '@/containers/Header';
+
 import {
   ACKEE_ANALYTICS_SCRIPT_URL,
   ACKEE_ANALYTICS_URL,
   ACKEE_DOMAIN_ID,
 } from '@/utils/env';
-import Script from 'next/script';
 
 export const siteConfig = {
   title: `${PERSONAL_INFO.firstName} ${PERSONAL_INFO.lastName} | ${PERSONAL_INFO.mainTitle}`,

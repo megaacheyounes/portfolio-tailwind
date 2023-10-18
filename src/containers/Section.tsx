@@ -1,6 +1,7 @@
-import { cn } from '@/utils/utils';
 import React from 'react';
 import { twMerge } from 'tailwind-merge';
+
+import { cn } from '@/utils/utils';
 
 type Props = {
   title?: string;
@@ -33,10 +34,10 @@ export default function Section(props: Props) {
           className
         )}
       >
-        <div className={'container   mx-auto    '}>
+        <div className='container mx-auto'>
           {title && (
             <h2 className='p-4 text-xl font-medium text-lime-400 md:p-10'>
-              {title} <span className={' text-white'}> {'( ) {'} </span>
+              {title} <span className=' text-white'> {'( ) {'} </span>
             </h2>
           )}
 

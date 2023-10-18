@@ -1,6 +1,7 @@
-import { ACKEE_ANALYTICS_URL } from '@/utils/env';
 import Head from 'next/head';
 import Link from 'next/link';
+
+import { ACKEE_ANALYTICS_URL } from '@/utils/env';
 
 const analytics = () => {
   return (

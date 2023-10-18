@@ -1,12 +1,12 @@
+import Link from 'next/link';
+
+import DataProvider from '@/data/DataProvider';
+
 import Socials from '@/components/SocialLinks';
 import ArrowLink from '@/components/_base/ArrowLink';
 import Section from '@/containers/Section';
-import DataProvider from '@/data/DataProvider';
-import Link from 'next/link';
 
-type Props = any;
-
-export default function About(props: Props) {
+export default function About() {
   const dataProvider = new DataProvider();
   const about = dataProvider.personalInfo;
   return (
@@ -28,7 +28,7 @@ export default function About(props: Props) {
         <ArrowLink
           className='mx-auto mt-5  '
           title='more about me'
-          href={'/resume.pdf'}
+          href='/resume.pdf'
           newTab={true}
         ></ArrowLink>
 
@@ -46,7 +46,7 @@ export default function About(props: Props) {
         {!!about.codewarsLink && (
           <Link className='' href={about.codewarsLink} target='_blank'>
             <img
-              className=' mt-5 max-w-xs '
+              className='mt-5 max-w-xs '
               src={`${about.codewarsLink}/badges/large`}
             />
           </Link>

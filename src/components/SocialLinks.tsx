@@ -1,10 +1,11 @@
 'use clients';
 import { HiMail, HiPhone } from 'react-icons/hi';
 import { SiGithub, SiLinkedin } from 'react-icons/si';
+import { twMerge } from 'tailwind-merge';
+
+import DataProvider from '@/data/DataProvider';
 
 import ProtectedIconButton from '@/components/_base/IconButton';
-import DataProvider from '@/data/DataProvider';
-import { twMerge } from 'tailwind-merge';
 
 type Props = {
   large?: boolean;
@@ -53,11 +54,7 @@ export default function Socials(props: Props) {
 
   if (props.static) {
     return (
-      <div
-        className={
-          ' flex w-10  flex-col place-items-center justify-center gap-1 text-white  '
-        }
-      >
+      <div className='flex w-10 flex-col place-items-center justify-center gap-1 text-white '>
         {getIcons()}
         <span className='h-20 w-[2px] bg-white '></span>
       </div>

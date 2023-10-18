@@ -1,11 +1,13 @@
 import { PROJECTS } from '@/data/projects';
+
 import { Experience } from '@/models/Experience';
 import { Project } from '@/models/project';
 import { parseMonthYear } from '@/utils/date';
+
 import { CERTIFICATES } from './certificates';
 import { EDUCATION } from './education';
 import { EXPERIENCES, PRESENT } from './experiences';
-import { PersonalInfo, PERSONAL_INFO, SOCIAL_LINKS } from './info';
+import { PERSONAL_INFO, SOCIAL_LINKS } from './info';
 import { SKILLS } from './skills';
 
 class DataProvider {

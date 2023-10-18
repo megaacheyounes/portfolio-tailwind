@@ -3,13 +3,7 @@ import ProjectFeatured from '@/components/project/FeaturedProjects';
 import ArrowLink from '@/components/_base/ArrowLink';
 import Section from '@/containers/Section';
 
-type Props = {
-  full?: boolean;
-};
-
-export default function Projects(props: Props) {
-  const { full } = props;
-
+export default function Projects() {
   return (
     <Section
       indentation={true}
@@ -24,7 +18,7 @@ export default function Projects(props: Props) {
       </div>
       <ArrowLink
         className='text-md ml-0 mt-10 pl-0  '
-        title={'View all projects'}
+        title='View all projects'
         href='/projects'
       />
     </Section>

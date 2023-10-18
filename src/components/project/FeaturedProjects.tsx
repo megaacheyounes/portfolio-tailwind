@@ -1,9 +1,10 @@
-import ProjectCardFeatured from '@/components/project/FeaturedProjectCard';
-import { FEATURED_PROJECTS } from '@/data/projects';
 import { motion } from 'framer-motion';
-type Props = any;
 
-export default function FeaturedProjects(props: Props) {
+import { FEATURED_PROJECTS } from '@/data/projects';
+
+import ProjectCardFeatured from '@/components/project/FeaturedProjectCard';
+
+export default function FeaturedProjects() {
   return (
     <motion.div
       initial={{ opacity: 0 }}
@@ -11,7 +12,7 @@ export default function FeaturedProjects(props: Props) {
       className='mx-auto my-2'
       transition={{ delay: 1 }}
     >
-      <div className=' grid   grid-cols-1 place-items-center content-stretch justify-center gap-6 lg:grid-cols-2'>
+      <div className='grid grid-cols-1 place-items-center content-stretch justify-center gap-6 lg:grid-cols-2'>
         {FEATURED_PROJECTS.map((project) => (
           <ProjectCardFeatured key={project.name} project={project} />
         ))}

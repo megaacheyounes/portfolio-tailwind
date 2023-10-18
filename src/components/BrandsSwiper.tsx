@@ -1,7 +1,5 @@
 import InfiniteSwiper from '@/components/_base/InfiniteSwiper';
 
-type Props = any;
-
 const BRANDS = [
   '/brands/huawei.png',
   '/brands/emirates.png',
@@ -15,7 +13,7 @@ const BRANDS = [
   '/brands/dubai-sports.jpg',
 ];
 
-export default function BrandsSwiper(props: Props) {
+export default function BrandsSwiper() {
   const items = [...BRANDS, ...BRANDS];
   return (
     <>

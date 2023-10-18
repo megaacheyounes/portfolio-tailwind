@@ -1,5 +1,6 @@
 'use client';
-import Loading from '@/app/loading';
+import { Suspense } from 'react';
+
 import RevealWrapper from '@/components/animation/RevealAnimationWrapper';
 import BrandsSwiper from '@/components/BrandsSwiper';
 import SkillsSwiper from '@/components/TechnologiesSwiper';
@@ -9,7 +10,7 @@ import Hero from '@/containers/Hero';
 import Projects from '@/containers/Projects';
 import Section from '@/containers/Section';
 
-import { Suspense } from 'react';
+import Loading from '@/app/loading';
 
 export default function Page() {
   return (
