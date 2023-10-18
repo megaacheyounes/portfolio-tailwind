@@ -1,7 +1,8 @@
-import TechnologiesChips from '@/components/TechnologiesChips';
-import ArrowLink from '@/components/_base/ArrowLink';
-import Section from '@/container/Section';
 import DataProvider from '@/data/DataProvider';
+
+import ArrowLink from '@/components/_base/ArrowLink';
+import TechnologiesChips from '@/components/TechnologiesChips';
+import Section from '@/containers/Section';
 
 export default function ExperienceCard() {
   const data = new DataProvider();
@@ -12,17 +13,15 @@ export default function ExperienceCard() {
       indentation={true}
       className=' bg-b-light mb-0 mt-10 pb-0'
     >
-      {data.experiences.map((exp, i) => (
+      {data.experiences.map((exp) => (
         <div
           key={exp.company.name}
           data-te-ripple-init
-          className={
-            'bg-b-dark dark mt-4 flex w-full flex-col place-items-start rounded-xl px-8 py-8  shadow-md shadow-lime-500/5 '
-          }
+          className="bg-b-dark dark mt-4 flex w-full flex-col place-items-start rounded-xl px-8 py-8  shadow-md shadow-lime-500/5 "
         >
           <div className='flex w-full flex-row  place-items-center  gap-4 '>
             <a
-              target={'_blank'}
+              target="_blank"
               href={exp.company.website}
               className='transition-all  duration-300 hover:scale-125 '
             >

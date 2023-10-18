@@ -1,14 +1,14 @@
-import Socials from '@/components/SocialLinks';
-import ArrowLink from '@/components/_base/ArrowLink';
-import Section from '@/container/Section';
-import DataProvider from '@/data/DataProvider';
 import Link from 'next/link';
 
-type Props = any;
+import DataProvider from '@/data/DataProvider';
 
-export default function About(props: Props) {
+import Socials from '@/components/SocialLinks';
+import ArrowLink from '@/components/_base/ArrowLink';
+import Section from '@/containers/Section';
+
+export default function About() {
   const dataProvider = new DataProvider();
-  const about = dataProvider.about;
+  const about = dataProvider.personalInfo;
   return (
     <Section
       indentation={true}
@@ -28,7 +28,7 @@ export default function About(props: Props) {
         <ArrowLink
           className='mx-auto mt-5  '
           title='more about me'
-          href={'/resume.pdf'}
+          href='/resume.pdf'
           newTab={true}
         ></ArrowLink>
 
@@ -43,17 +43,14 @@ export default function About(props: Props) {
             ))}
           </ul> */}
 
-        <Link
-          className=''
-          href='https://www.codewars.com/users/YounesMegaache/'
-          target='_blank'
-        >
-          <img
-            className=' mt-5 max-w-xs '
-            src='https://www.codewars.com/users/YounesMegaache/badges/large'
-          />
-        </Link>
-
+        {!!about.codewarsLink && (
+          <Link className='' href={about.codewarsLink} target='_blank'>
+            <img
+              className='mt-5 max-w-xs '
+              src={`${about.codewarsLink}/badges/large`}
+            />
+          </Link>
+        )}
         <Socials className='mt-5' large={false} />
       </div>
     </Section>

@@ -1,8 +1,8 @@
+import Link from 'next/link';
 import * as React from 'react';
+import { CgArrowLongRight } from 'react-icons/cg';
 
 import { cn } from '@/utils/utils';
-import Link from 'next/link';
-import { CgArrowLongRight } from 'react-icons/cg';
 
 type Props = {
   href: string;

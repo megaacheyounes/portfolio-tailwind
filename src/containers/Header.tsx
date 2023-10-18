@@ -1,10 +1,9 @@
-import Socials from '@/components/SocialLinks';
-import ArrowLink from '@/components/_base/ArrowLink';
 import Link from 'next/link';
 
-type Props = any;
+import ArrowLink from '@/components/_base/ArrowLink';
+import Socials from '@/components/SocialLinks';
 
-export default function Header(props: Props) {
+export default function Header() {
   return (
     <header className='  z-40 text-white'>
       <div className='container relative mx-auto flex flex-row place-items-center justify-between px-10 py-4  '>

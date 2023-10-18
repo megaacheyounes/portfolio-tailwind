@@ -1,12 +1,13 @@
 /* eslint-disable @next/next/no-img-element */
 import { Link } from 'lucide-react';
 
-import { PROJECTS_HIGHLIGHT } from '@/data/projects';
-import { cn, getDomain } from '@/utils/utils';
+import { FEATURED_PROJECTS } from '@/data/projects';
+
 import { BrandType } from '@/models/Brand';
+import { cn, getDomain } from '@/utils/utils';
 
 type Props = {
-  project: (typeof PROJECTS_HIGHLIGHT)[0];
+  project: (typeof FEATURED_PROJECTS)[0];
 };
 
 const BrandMapping: { [key in BrandType]: string } = {
@@ -28,12 +29,12 @@ export default function FeaturedProjectCard(props: Props) {
   const { project } = props;
   const isConfidential = !project.link;
 
-  const getImage = (brand: BrandType, img?: string) => {
-    return BrandMapping[brand] || img;
+  const getImage = (brand?: BrandType, img?: string) => {
+    return (brand && BrandMapping[brand]) || img;
   };
 
   return (
-    <a className='h-full' href={project.link} target={'_blank'}>
+    <a className='h-full' href={project.link} target='_blank'>
       <div
         data-te-ripple-init
         className={cn(
@@ -44,7 +45,7 @@ export default function FeaturedProjectCard(props: Props) {
         <img
           alt='huawei'
           className='mb-2 h-6 object-contain  sm:h-7'
-          src={getImage(project.client!, project.image)}
+          src={getImage(project.client, project.image)}
         />
         {/* {isAndroid && <Chip type='android' title='Android' />}
         {isWeb && <Chip type='web' title='Web' />} */}
@@ -52,7 +53,7 @@ export default function FeaturedProjectCard(props: Props) {
         {!isConfidential && (
           <span className='group mt-2 inline-flex items-center gap-1 text-sm font-medium text-blue-500 hover:underline'>
             <Link size={10} />
-            {getDomain(project.link!)}
+            {getDomain(project.link)}
           </span>
         )}
 

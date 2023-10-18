@@ -1,11 +1,13 @@
 import React, { useEffect, useRef } from 'react';
 import { twMerge } from 'tailwind-merge';
-import { reveal } from './reveal';
+
 import './style.scss';
+
+import { reveal } from './reveal';
 
 type RevealWrapperType = {
   children: React.ReactNode;
-  className?: any;
+  className?: string;
   origin?: string;
   distance?: string;
   duration?: number;
@@ -60,26 +62,25 @@ const RevealWrapper: React.FC<RevealWrapperType> = ({
     viewFactor === undefined || null ? reveal.viewFactor : viewFactor;
   const ViewOffset =
     viewOffset === undefined || null ? reveal.viewOffset : viewOffset;
-
-  const revealOptionProps = {
-    origin: Origin,
-    distance: Distance,
-    duration: Duration,
-    delay: Delay,
-    reset: Reset,
-    easing: Easing,
-    opacity: Opacity,
-    rotate: Rotate,
-    scale: Scale,
-    cleanup: Cleanup,
-    desktop: Desktop,
-    mobile: Mobile,
-    useDelay: UseDelay,
-    viewFactor: ViewFactor,
-    viewOffset: ViewOffset,
-  };
-
   useEffect(() => {
+    const revealOptionProps = {
+      origin: Origin,
+      distance: Distance,
+      duration: Duration,
+      delay: Delay,
+      reset: Reset,
+      easing: Easing,
+      opacity: Opacity,
+      rotate: Rotate,
+      scale: Scale,
+      cleanup: Cleanup,
+      desktop: Desktop,
+      mobile: Mobile,
+      useDelay: UseDelay,
+      viewFactor: ViewFactor,
+      viewOffset: ViewOffset,
+    };
+
     async function revElement() {
       const sr = (await require('scrollreveal')).default(reveal);
 

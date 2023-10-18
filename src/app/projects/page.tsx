@@ -1,13 +1,16 @@
 'use client';
 
-import ProtectDetailsCard from '@/components/project/ProjectDetailsCard';
-import PageWrapper from '@/container/PageWrapper';
-import Section from '@/container/Section';
-import DataProvider from '@/data/DataProvider';
-import { Project } from '@/models/project';
-import { containerVariants, itemVariants } from '@/utils/animation';
 import { motion } from 'framer-motion';
 import { useEffect } from 'react';
+
+import DataProvider from '@/data/DataProvider';
+
+import ProtectDetailsCard from '@/components/project/ProjectDetailsCard';
+import PageWrapper from '@/containers/PageWrapper';
+import Section from '@/containers/Section';
+
+import { Project } from '@/models/project';
+import { containerVariants, itemVariants } from '@/utils/animation';
 
 export default function ProjectsPage() {
   useEffect(() => {
@@ -33,7 +36,7 @@ export default function ProjectsPage() {
               animate='show'
             >
               {projectsYears.map((year: number, i: number) => {
-                const projects = projectsByYear[year as any];
+                const projects = projectsByYear[year];
                 return (
                   <div key={'year_' + i}>
                     <motion.li key={'year_' + i} variants={itemVariants}>

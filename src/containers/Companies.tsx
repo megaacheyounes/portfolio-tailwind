@@ -1,9 +1,7 @@
 import BrandsSwiper from '@/components/BrandsSwiper';
-import Section from '@/container/Section';
+import Section from '@/containers/Section';
 
-type Props = any;
-
-export default function Companies(props: Props) {
+export default function Companies() {
   return (
     <Section
       elevated={true}

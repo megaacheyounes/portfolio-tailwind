@@ -10,45 +10,50 @@ import {
 } from 'react-icons/si';
 import { TypeAnimation } from 'react-type-animation';
 
-type Props = any;
 const TYPING_DELAY = 1600;
 
-import { containerVariants, itemVariants } from '@/utils/animation';
 import { motion } from 'framer-motion';
 import Image from 'next/image';
 
-export default function Hero(props: Props) {
+import DataProvider from '@/data/DataProvider';
+
+import { containerVariants, itemVariants } from '@/utils/animation';
+
+export default function Hero() {
+  const { titlePrefix, titles, firstName, lastName } = new DataProvider()
+    .personalInfo;
+
+  // eslint-disable-next-line
+  const sequence = titles.reduce(
+    (arr, title) => [...arr, title, TYPING_DELAY, 500],
+    [] as any
+  );
   return (
     <section className='min-h-500 relative mx-0  overflow-x-clip px-0 pt-5 text-white'>
       <div className='mt-5 grid grid-cols-1  justify-items-center  '>
         <div className='flex flex-col items-center text-center  '>
           <h1 className='title-font  text-2xl  font-medium'>Hello 👋 I'm</h1>
-          <h1 className=' mt-4 text-4xl  text-lime-400 '>{'<Younes'}</h1>
-          <h1 className=' mt-4 text-4xl text-lime-400 '>{'Megaache/>'}</h1>
+          <h1 className=' mt-4 text-4xl  text-lime-400 '>{`<${firstName}`}</h1>
+          <h1 className=' mt-4 text-4xl text-lime-400 '>{`${lastName}/>`}</h1>
           <h1 className='mt-4  max-w-md  text-xl font-normal sm:text-2xl'>
-            <br /> Full Stack{' '}
+            <br /> {titlePrefix}{' '}
             <TypeAnimation
-              sequence={[
-                'Android Developer',
-                TYPING_DELAY,
-                500,
-                'Web Developer',
-                TYPING_DELAY,
-                500,
-              ]}
+              sequence={sequence}
               wrapper='span'
               cursor={true}
               repeat={Infinity}
             />
           </h1>
         </div>
-        <div className='   max-w-lg '>
+        <div className='max-w-lg '>
           <Image
-            blurDataURL='/me_b.png'
             height={547}
             width={511}
+            quality={80}
             className='rounded object-cover  object-center'
             alt='hero'
+            blurDataURL='me_b.png'
+            placeholder='blur'
             src='/me.png'
           />
           <motion.ul

@@ -3,7 +3,7 @@ import { Experience } from '@/models/Experience';
 export const PRESENT = 'present';
 export const EXP_DIVIDER = '●';
 
-//todo: update experiences from resume
+// TODO: update experiences from resume
 export const EXPERIENCES: Experience[] = [
   {
     start: 'Jan 2020',

@@ -1,11 +1,12 @@
 // 'use client';
-import PageLoaderMessage from '@/components/pageLoader/PageLoaderMessage';
 import './style.scss';
+
+import PageLoaderMessage from '@/components/pageLoader/PageLoaderMessage';
 
 const MAX_CUBE_COUNT = 18;
 
 export default function PageLoader() {
-  const getRect = (maxCount: number): any => {
+  const getRect = (maxCount: number) => {
     const cubes = new Array(maxCount).fill(0);
     return cubes.map((v, i) => (
       <rect
@@ -14,7 +15,7 @@ export default function PageLoader() {
         height='10'
         x={10 * (i + 1) + 2 * i}
         y={6}
-        className={`fill-lime-500   shadow-lime-300    drop-shadow-lg   `}
+        className='fill-lime-500 shadow-lime-300 drop-shadow-lg'
       />
     ));
   };
@@ -40,12 +41,8 @@ export default function PageLoader() {
         </svg>
       </div>
       <PageLoaderMessage />
-      <p
-        className={
-          'ahhh-message mx-2 mt-2 overflow-hidden text-center text-sm  text-lime-500'
-        }
-      >
-        {'AHHHHH (ノಠ益ಠ)ノ彡┻━┻'}
+      <p className='ahhh-message mx-2 mt-2 overflow-hidden text-center text-sm  text-lime-500'>
+        AHHHHH (ノಠ益ಠ)ノ彡┻━┻
       </p>
     </div>
   );

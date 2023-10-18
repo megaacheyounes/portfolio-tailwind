@@ -1,15 +1,30 @@
+import { Analytics } from '@vercel/analytics/react';
 import { Metadata } from 'next';
+import Script from 'next/script';
 import React from 'react';
 
 import '@/styles/globals.css';
 
-import Footer from '@/container/Footer';
-import Header from '@/container/Header';
-import { Analytics } from '@vercel/analytics/react';
+import { PERSONAL_INFO } from '@/data/info';
 
+import BackToTopButton from '@/components/BackToTopButton';
+import GradientBackgroundGodrayThingy from '@/components/GradientBackgroundGodrayThingy';
 import Socials from '@/components/SocialLinks';
-import { siteConfig } from '@/constant/config';
-import Script from 'next/script';
+import Footer from '@/containers/Footer';
+import Header from '@/containers/Header';
+
+import {
+  ACKEE_ANALYTICS_SCRIPT_URL,
+  ACKEE_ANALYTICS_URL,
+  ACKEE_DOMAIN_ID,
+} from '@/utils/env';
+
+export const siteConfig = {
+  title: `${PERSONAL_INFO.firstName} ${PERSONAL_INFO.lastName} | ${PERSONAL_INFO.mainTitle}`,
+  description: 'My notable work and resume',
+
+  url: 'https://younes-megaache.com',
+};
 
 export const metadata: Metadata = {
   title: {
@@ -23,8 +38,8 @@ export const metadata: Metadata = {
 
   authors: [
     {
-      name: 'Younes Megaache',
-      url: 'https://younes-megaache.com',
+      name: `${PERSONAL_INFO.firstName} ${PERSONAL_INFO.lastName}`,
+      url: siteConfig.url,
     },
   ],
 };
@@ -34,70 +49,23 @@ export default function RootLayout({
 }: {
   children: React.ReactNode;
 }) {
-  const getBg = () => {
-    return (
-      <svg
-        height={1000}
-        xmlns='http://www.w3.org/2000/svg'
-        version='1.1'
-        xmlnsXlink='http://www.w3.org/1999/xlink'
-        viewBox='0 0 800 800'
-        opacity='0.5'
-      >
-        <defs>
-          <filter
-            id='blurry-filter'
-            x='-100%'
-            y='-100%'
-            width='300%'
-            height='600%'
-            filterUnits='objectBoundingBox'
-            primitiveUnits='userSpaceOnUse'
-            colorInterpolationFilters='sRGB'
-          >
-            <feGaussianBlur
-              stdDeviation='40'
-              x='0%'
-              y='0%'
-              width='100%'
-              height='100%'
-              in='SourceGraphic'
-              edgeMode='none'
-              result='blur'
-            ></feGaussianBlur>
-          </filter>
-        </defs>
-        <g className=' ' filter='url(#blurry-filter)'>
-          <ellipse
-            transform='rotate(-40)'
-            opacity={0.3}
-            rx='84.5'
-            ry='577.5'
-            cx='70.5037638878946'
-            cy='85.13481004325507'
-            fill='hsla(89, 73%, 48%, 1.00)'
-          ></ellipse>
-        </g>
-      </svg>
-    );
-  };
-
   return (
     <html>
       <Script
         async
-        src='https://portfolio-ackee-analytics.vercel.app/auth.js'
-        data-ackee-server='https://portfolio-ackee-analytics.vercel.app'
-        data-ackee-domain-id='da0db0a3-1855-4a95-ac17-8938db1a6c1e'
+        src={ACKEE_ANALYTICS_SCRIPT_URL}
+        data-ackee-server={ACKEE_ANALYTICS_URL}
+        data-ackee-domain-id={ACKEE_DOMAIN_ID}
       ></Script>
       <body className='bg-b-light     '>
+        <BackToTopButton />
         <div className='   relative min-h-screen'>
           <span className='fixed bottom-2  left-2  z-50 opacity-0 transition-opacity duration-500 sm:opacity-100    '>
             <Socials static={true} />
           </span>
 
           <div className='pointer-events-none  absolute    h-full w-full overflow-clip '>
-            {getBg()}
+            <GradientBackgroundGodrayThingy />
           </div>
 
           <Header />

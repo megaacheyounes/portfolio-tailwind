@@ -8,8 +8,8 @@ export type SocialLinks = {
 export const SOCIAL_LINKS: SocialLinks = {
   linkedIn: 'https://www.linkedin.com/in/megaache-younes'.split(''),
   github: 'https://github.com/megaacheyounes'.split(''),
-  phone: 'tel:+971557040589'.split(''),
-  email: 'mailto:megaache.younes@gmail.com'.split(''),
+  phone: ['+971', '557040589'],
+  email: ['megaache.younes', 'gmail.com'],
 };
 
 export interface Fact {
@@ -32,6 +32,7 @@ export interface PersonalInfo {
   openToRelocating: boolean;
   //two facts max
   facts: Fact[];
+  codewarsLink?: string;
 }
 
 export const PERSONAL_INFO: PersonalInfo = {
@@ -40,8 +41,8 @@ export const PERSONAL_INFO: PersonalInfo = {
   mainTitle: 'Software Developer',
   titlePrefix: 'Full Stack',
   titles: ['Android Developer', 'Web Developer'],
-  email: 'megaache.younes$$gmail.com'.split('').reverse(),
-  phoneNumber: '+971557040589'.split('').reverse(),
+  email: SOCIAL_LINKS.email,
+  phoneNumber: SOCIAL_LINKS.phone,
   shortIntroduction: 'Younes MEGAACHE is open for new opportunities',
   introduction: `I'm a software engineer specializing in full stack mobile development with a strong background in web development.</br>
   Proficient in Kotlin, Java, React-Native, and various web frameworks and libraries.</br>
@@ -51,6 +52,7 @@ export const PERSONAL_INFO: PersonalInfo = {
   <p class="text-lime-500">#open_to_work</p>`,
   openToWork: true,
   openToRelocating: false,
+  codewarsLink: 'https://www.codewars.com/users/YounesMegaache/',
   facts: [
     {
       quantity: 7,

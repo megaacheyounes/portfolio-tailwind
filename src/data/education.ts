@@ -1,7 +1,7 @@
 export const EDUCATION = [
   {
     date: '2015-2018',
-    title: 'Bachelore degree in computer science',
+    title: 'Bachelors degree in computer science',
     institute: 'University of Constantine 2',
     isDropout: false,
     projects: [

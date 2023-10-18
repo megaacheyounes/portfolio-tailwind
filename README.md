@@ -2,6 +2,10 @@
 
 # Younes Megaache's personal website
 
+<p align="center">
+<img src="public/screenshot.png" height="400"  >
+</p>
+
 My personal website (and maybe portfolio), designed loosely in Figma and coded in VS Code, built using Next.js and TailwindCSS, deployed to Vercel.
 Text is in the FiraCode typeface
 
@@ -16,6 +20,19 @@ Text is in the FiraCode typeface
 - 📈 Absolute Import and Path Alias — components imported using `@/` prefix
 - 📏 ESLint — to find and fix problems, also auto sort imports
 - 💖 Prettier — code formatting and consistency
+- 📈 Analytics - supports Ackee self hosted Analytics, setup your server https://github.com/electerious/Ackee , then update .env
+
+## Get started
+
+> coming soon
+
+## Todo
+
+- [ ] update all npm packages
+- [ ] add documentation
+- [ ] add tests
+- [ ] add contact form
+- [ ] improve animations
 
 ## License
 
