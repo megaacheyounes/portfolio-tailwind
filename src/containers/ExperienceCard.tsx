@@ -3,6 +3,7 @@ import DataProvider from '@/data/DataProvider';
 import ArrowLink from '@/components/_base/ArrowLink';
 import TechnologiesChips from '@/components/TechnologiesChips';
 import Section from '@/containers/Section';
+import { RESUME_PATH } from '@/utils/env';
 
 export default function ExperienceCard() {
   const data = new DataProvider();
@@ -17,11 +18,11 @@ export default function ExperienceCard() {
         <div
           key={exp.company.name}
           data-te-ripple-init
-          className="bg-b-dark dark mt-4 flex w-full flex-col place-items-start rounded-xl px-8 py-8  shadow-md shadow-lime-500/5 "
+          className='bg-b-dark dark mt-4 flex w-full flex-col place-items-start rounded-xl px-8 py-8  shadow-md shadow-lime-500/5 '
         >
           <div className='flex w-full flex-row  place-items-center  gap-4 '>
             <a
-              target="_blank"
+              target='_blank'
               href={exp.company.website}
               className='transition-all  duration-300 hover:scale-125 '
             >
@@ -53,7 +54,7 @@ export default function ExperienceCard() {
                 <ArrowLink
                   className='mx-0 px-0'
                   title='Read more'
-                  href='/resume.pdf'
+                  href={RESUME_PATH}
                 ></ArrowLink>
               </li>
             )}

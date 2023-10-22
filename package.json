@@ -6,7 +6,6 @@
     "dev": "next dev",
     "build": "next build",
     "lint": "next lint",
-    "export": "next build",
     "start": "next start",
     "postbuild": "next-sitemap --config next-sitemap.config.js"
   },

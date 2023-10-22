@@ -1,7 +1,8 @@
 import Link from 'next/link';
 
-import ArrowLink from '@/components/_base/ArrowLink';
 import Socials from '@/components/SocialLinks';
+import ArrowLink from '@/components/_base/ArrowLink';
+import { RESUME_PATH } from '@/utils/env';
 
 export default function Header() {
   return (
@@ -16,7 +17,7 @@ export default function Header() {
         <div className='flex-1' />
         <Socials />
 
-        <ArrowLink newTab className='text-md' title='Resume' href='/resume.pdf'>
+        <ArrowLink newTab className='text-md' title='Resume' href={RESUME_PATH}>
           Résumé
         </ArrowLink>
       </div>
