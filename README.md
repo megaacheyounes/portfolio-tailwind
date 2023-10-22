@@ -34,7 +34,7 @@ If you wish to add analytics, but do not want extensions or browsers to block it
 
 1. follow Ackee instructions to deploy your analytics platform, for deploying to Vercel see: [Ackee with vercel](https://github.com/electerious/Ackee/blob/master/docs/Get%20started.md#with-vercel)
 1. create a domain in your Ackee tool
-1. update `src/tools/env.ts` with your Ackee analytics base URL, Ackee script URL and domain ID
+1. update `src/utils/env.ts` with your Ackee analytics base URL, Ackee script URL and domain ID
 
 **If you do <ins>NOT</ins> which to add Analytics, then set the flag `ENABLE_ANALYTICS` to false, in `src/tools/env.ts`**
 
