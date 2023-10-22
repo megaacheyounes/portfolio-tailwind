@@ -5,6 +5,7 @@ import DataProvider from '@/data/DataProvider';
 import Socials from '@/components/SocialLinks';
 import ArrowLink from '@/components/_base/ArrowLink';
 import Section from '@/containers/Section';
+import { RESUME_PATH } from '@/utils/env';
 
 export default function About() {
   const dataProvider = new DataProvider();
@@ -28,7 +29,7 @@ export default function About() {
         <ArrowLink
           className='mx-auto mt-5  '
           title='more about me'
-          href='/resume.pdf'
+          href={RESUME_PATH}
           newTab={true}
         ></ArrowLink>
 

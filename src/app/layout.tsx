@@ -17,6 +17,7 @@ import {
   ACKEE_ANALYTICS_SCRIPT_URL,
   ACKEE_ANALYTICS_URL,
   ACKEE_DOMAIN_ID,
+  ENABLE_ANALYTICS,
 } from '@/utils/env';
 
 export const siteConfig = {
@@ -51,12 +52,15 @@ export default function RootLayout({
 }) {
   return (
     <html>
-      <Script
-        async
-        src={ACKEE_ANALYTICS_SCRIPT_URL}
-        data-ackee-server={ACKEE_ANALYTICS_URL}
-        data-ackee-domain-id={ACKEE_DOMAIN_ID}
-      ></Script>
+      {ENABLE_ANALYTICS && (
+        <Script
+          async
+          src={ACKEE_ANALYTICS_SCRIPT_URL}
+          data-ackee-server={ACKEE_ANALYTICS_URL}
+          data-ackee-domain-id={ACKEE_DOMAIN_ID}
+        ></Script>
+      )}
+
       <body className='bg-b-light     '>
         <BackToTopButton />
         <div className='   relative min-h-screen'>
