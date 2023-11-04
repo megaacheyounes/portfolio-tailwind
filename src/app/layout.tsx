@@ -18,10 +18,7 @@ import {
   ACKEE_ANALYTICS_SCRIPT_URL,
   ACKEE_ANALYTICS_URL,
   ACKEE_DOMAIN_ID,
-  ENABLE_ANALYTICS,
-  ENABLE_SESSION_TRACKING,
-  HOTJAR_SITE_ID,
-  HOTJAR_VERSION,
+  ENABLE_ANALYTICS, 
 } from '@/utils/env';
 
 export const siteConfig = {
@@ -54,9 +51,7 @@ export default function RootLayout({
 }: {
   children: React.ReactNode;
 }) {
-  {
-    ENABLE_SESSION_TRACKING && Hotjar.init(HOTJAR_SITE_ID, HOTJAR_VERSION);
-  }
+  
   return (
     <html>
       {ENABLE_ANALYTICS && (

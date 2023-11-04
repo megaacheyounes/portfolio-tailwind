@@ -7,7 +7,8 @@
     "build": "next build",
     "lint": "next lint",
     "start": "next start",
-    "postbuild": "next-sitemap --config next-sitemap.config.js"
+    "postbuild": "next-sitemap --config next-sitemap.config.js",
+    "start:https": "node server.https.js"
   },
   "dependencies": {
     "@hotjar/browser": "^1.0.9",
