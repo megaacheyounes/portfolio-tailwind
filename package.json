@@ -10,6 +10,7 @@
     "postbuild": "next-sitemap --config next-sitemap.config.js"
   },
   "dependencies": {
+    "@hotjar/browser": "^1.0.9",
     "@types/react-icons": "^3.0.0",
     "@vercel/analytics": "^1.0.2",
     "clsx": "^1.2.1",

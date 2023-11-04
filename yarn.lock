@@ -1094,6 +1094,11 @@
   resolved "https://registry.yarnpkg.com/@eslint/js/-/js-8.44.0.tgz#961a5903c74139390478bdc808bcde3fc45ab7af"
   integrity sha512-Ag+9YM4ocKQx9AarydN0KY2j0ErMHNIocPDrVo8zAE44xLTjEtz81OdR68/cydGtk6m6jDb5Za3r2useMzYmSw==
 
+"@hotjar/browser@^1.0.9":
+  version "1.0.9"
+  resolved "https://registry.yarnpkg.com/@hotjar/browser/-/browser-1.0.9.tgz#769b4ded3fa7b9557b785c107f0cd76d3f83789a"
+  integrity sha512-n9akDMod8BLGpYEQCrHwlYWWd63c1HlhUSXNIDfClZtKYXbUjIUOFlNZNNcUxgHTCsi4l2i+SWKsGsO0t93S8w==
+
 "@humanwhocodes/config-array@^0.11.10":
   version "0.11.10"
   resolved "https://registry.yarnpkg.com/@humanwhocodes/config-array/-/config-array-0.11.10.tgz#5a3ffe32cc9306365fb3fd572596cd602d5e12d2"

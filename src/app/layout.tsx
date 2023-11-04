@@ -6,6 +6,7 @@ import React from 'react';
 import '@/styles/globals.css';
 
 import { PERSONAL_INFO } from '@/data/info';
+import Hotjar from '@hotjar/browser';
 
 import BackToTopButton from '@/components/BackToTopButton';
 import GradientBackgroundGodrayThingy from '@/components/GradientBackgroundGodrayThingy';
@@ -18,6 +19,9 @@ import {
   ACKEE_ANALYTICS_URL,
   ACKEE_DOMAIN_ID,
   ENABLE_ANALYTICS,
+  ENABLE_SESSION_TRACKING,
+  HOTJAR_SITE_ID,
+  HOTJAR_VERSION,
 } from '@/utils/env';
 
 export const siteConfig = {
@@ -50,6 +54,9 @@ export default function RootLayout({
 }: {
   children: React.ReactNode;
 }) {
+  {
+    ENABLE_SESSION_TRACKING && Hotjar.init(HOTJAR_SITE_ID, HOTJAR_VERSION);
+  }
   return (
     <html>
       {ENABLE_ANALYTICS && (
