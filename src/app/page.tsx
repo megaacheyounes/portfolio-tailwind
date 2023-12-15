@@ -1,5 +1,5 @@
 'use client';
-import { Suspense } from 'react';
+import { Suspense, useEffect } from 'react';
 
 import RevealWrapper from '@/components/animation/RevealAnimationWrapper';
 import BrandsSwiper from '@/components/BrandsSwiper';
@@ -11,8 +11,18 @@ import Projects from '@/containers/Projects';
 import Section from '@/containers/Section';
 
 import Loading from '@/app/loading';
+import {
+  ENABLE_SESSION_TRACKING,
+  HOTJAR_SITE_ID,
+  HOTJAR_VERSION,
+} from '@/utils/env';
+import Hotjar from '@hotjar/browser';
 
 export default function Page() {
+  useEffect(() => {
+    if (ENABLE_SESSION_TRACKING) Hotjar.init(HOTJAR_SITE_ID, HOTJAR_VERSION);
+  });
+
   return (
     <main>
       <Hero />

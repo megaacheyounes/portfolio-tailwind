@@ -6,6 +6,7 @@ import React from 'react';
 import '@/styles/globals.css';
 
 import { PERSONAL_INFO } from '@/data/info';
+import Hotjar from '@hotjar/browser';
 
 import BackToTopButton from '@/components/BackToTopButton';
 import GradientBackgroundGodrayThingy from '@/components/GradientBackgroundGodrayThingy';
@@ -17,7 +18,7 @@ import {
   ACKEE_ANALYTICS_SCRIPT_URL,
   ACKEE_ANALYTICS_URL,
   ACKEE_DOMAIN_ID,
-  ENABLE_ANALYTICS,
+  ENABLE_ANALYTICS, 
 } from '@/utils/env';
 
 export const siteConfig = {
@@ -50,6 +51,7 @@ export default function RootLayout({
 }: {
   children: React.ReactNode;
 }) {
+  
   return (
     <html>
       {ENABLE_ANALYTICS && (
