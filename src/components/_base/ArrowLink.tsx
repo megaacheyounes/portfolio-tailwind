@@ -9,6 +9,7 @@ type Props = {
   title: string;
   className?: string;
   newTab?: boolean;
+  type?: string;
 } & React.PropsWithChildren;
 
 export default function ArrowLink(props: Props) {
@@ -17,6 +18,7 @@ export default function ArrowLink(props: Props) {
       scroll={true}
       href={props.href}
       target={props.newTab ? '_blank' : '_self'}
+      type={props.type}
       className={cn(
         'text-md group relative ml-2 inline-flex items-center font-medium text-lime-500 hover:text-lime-400 ',
         props.className

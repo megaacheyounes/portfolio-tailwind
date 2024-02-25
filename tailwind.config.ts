@@ -73,12 +73,21 @@ export default {
             transform: 'translateX(-100%)',
           },
         },
+        linearLoading: {
+          '0%': {
+            transform: 'translateX(-100%)',
+          },
+          '100%': {
+            transform: 'translateX(200%)',
+          },
+        },
       },
       animation: {
         swiper: 'swiper 16s infinite linear alternate',
         tilt: 'tilt 10s infinite linear',
         flicker: 'flicker 3s linear infinite',
         shimmer: 'shimmer 1.3s linear infinite',
+        linearLoading: 'linearLoading 1.3s ease-in-out infinite ',
       },
     },
   },

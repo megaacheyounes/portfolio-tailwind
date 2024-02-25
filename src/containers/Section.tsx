@@ -1,6 +1,7 @@
 import React from 'react';
 import { twMerge } from 'tailwind-merge';
 
+import LinearLoading from '@/components/_base/LinearLoading';
 import { cn } from '@/utils/utils';
 
 type Props = {
@@ -12,6 +13,7 @@ type Props = {
   contentClassName?: string;
   margin?: string;
   reveal?: string;
+  isLoading?: boolean;
 } & React.PropsWithChildren;
 
 export default function Section(props: Props) {
@@ -34,6 +36,7 @@ export default function Section(props: Props) {
           className
         )}
       >
+        {props.isLoading ? <LinearLoading /> : <div className='h-2'></div>}
         <div className='container mx-auto'>
           {title && (
             <h2 className='p-4 text-xl font-medium text-lime-400 md:p-10'>

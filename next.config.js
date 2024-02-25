@@ -6,6 +6,7 @@ const nextConfig = {
 
   reactStrictMode: true,
   swcMinify: true,
+  experimental: {},
 
   webpack(config) {
     // Grab the existing rule that handles SVG imports
