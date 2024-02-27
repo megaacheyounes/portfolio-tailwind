@@ -2,6 +2,7 @@
 
 import PageWrapper from '@/containers/PageWrapper';
 import Section from '@/containers/Section';
+import { useEffect, useState } from 'react';
 
 const methods: (() => boolean)[] = [
   () => {
@@ -49,30 +50,37 @@ const methods: (() => boolean)[] = [
 ];
 
 export default function ProjectsPage() {
+  const [render, setRender] = useState(false);
+  useEffect(() => {
+    setRender(true);
+  });
+
   return (
     <PageWrapper>
-      <Section
-        elevated={true}
-        title='Detect Huawei device using User Agent'
-        className='pattern-2 md:mx-15 mx-4 mt-10 sm:mx-8 '
-      >
-        <p>
-          user agent: <strong>{navigator.userAgent}</strong>
-        </p>
-        <br />
-        <div className='max-w-full'>
-          {methods.map((func, i) => (
-            <div className='' key={'m' + i}>
-              <h6>method {i + 1}</h6>
-              <pre className='  whitespace-pre-wrap rounded-md bg-green-900/25 p-4'>
-                {func.toString()}
-              </pre>
-              <h6>result: {func() ? 'true' : 'false'}</h6>
-              <hr className='my-4' />
-            </div>
-          ))}
-        </div>
-      </Section>
+      {render && (
+        <Section
+          elevated={true}
+          title='Detect Huawei device using User Agent'
+          className='pattern-2 md:mx-15 mx-4 mt-10 sm:mx-8 '
+        >
+          <p>
+            user agent: <strong>{navigator.userAgent}</strong>
+          </p>
+          <br />
+          <div className='max-w-full'>
+            {methods.map((func, i) => (
+              <div className='' key={'m' + i}>
+                <h6>method {i + 1}</h6>
+                <pre className='  whitespace-pre-wrap rounded-md bg-green-900/25 p-4'>
+                  {func.toString()}
+                </pre>
+                <h6>result: {func() ? 'true' : 'false'}</h6>
+                <hr className='my-4' />
+              </div>
+            ))}
+          </div>
+        </Section>
+      )}
     </PageWrapper>
   );
 }
