@@ -80,7 +80,7 @@ this project is static, therefor you can deploy it to any web hosting (e.g. Fire
 ```license
                DO WHAT YOU WANT TO PUBLIC LICENSE
 
- Copyright (C) 2023 Younes Megaache
+ Copyright (C) 2024 Younes Megaache
 
  Everyone is permitted to copy and distribute verbatim or modified
  copies of this license document, and changing it is allowed as long
