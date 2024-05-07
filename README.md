@@ -46,7 +46,7 @@ Vercel is a free and very convenient platform to publish Next.js projects (Next.
 1. publish the project to your repo: `git push origin master`
 1. import your repo in Vercel: [vercel.com/new](https://vercel.com/new)
 
-Vercel will automatically run the build script every time you push to master branch (as well as dev branch)
+Vercel will automatically run the build script every time you merge into master branch, as well as generating previews when you push to dev branch
 
 ## General deployment steps
 
