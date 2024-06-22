@@ -89,5 +89,5 @@ this project is static, therefor you can deploy it to any web hosting (e.g. Fire
                 DO WHAT YOU WANT TO PUBLIC LICENSE
    TERMS AND CONDITIONS FOR COPYING, DISTRIBUTION AND MODIFICATION
 
-  0. You just DO WHAT YOU WANT TO.
+  1. You just DO WHAT YOU WANT TO.
 ```
