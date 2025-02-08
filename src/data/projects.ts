@@ -1,11 +1,77 @@
 import { Project } from '@/models/project';
 
+export const PROJECTS_LAST_UPDATED = 'August 2024';
+
 export const PROJECTS: Project[] = [
+  /***********     2024      ************/
+  {
+    type: 'mobile',
+    name: 'HUAWEI DSIC project',
+    description: `DSIC app is an internal android app that helps Huawei's retail team to gather device and customer data post-sale, to improve customer service.</br>I Developed the app using Android with Kotlin and Jetpack Compose, complemented with backend built with Next.js and MongoDB.`,
+    image: '/web/huawei.png',
+    technologies: [
+      'Android',
+      'Kotlin',
+      'Jetpack Compose',
+      'Next.js',
+      'MongoDB',
+    ],
+    company: 'Huawei Technologies',
+    client: 'Huawei',
+    year: 2024,
+  },
+  {
+    type: 'web',
+    name: 'HUAWEI Project ORION',
+    description: `Project ORION is an automation platform designed to streamline daily tasks for HUAWEI employees, boosting efficiency and productivity.</br>I designed and developed the app using Android SDK, Kotlin, Jetpack compose, and developed a backend using Next.js and MongoDB.`,
+    image: '/web/huawei.png',
+    link: 'https://meadtse.com:7779',
+    technologies: [
+      'Android',
+      'Kotlin',
+      'HarmonyOS',
+      'JavaScript',
+      'HTML',
+      'CSS',
+    ],
+    company: 'Huawei Technologies',
+    client: 'Tawasal',
+    year: 2024,
+  },
+  {
+    type: 'mobile',
+    name: ' Prayer Now watch app',
+    description: `Prayer Now is a very popular religious app in the middle east.</br>I Collaborated with Prayer Now team to develop Prayer Now app for Huawei sports and smart watches.`,
+    image: '/mobile/prayer_now.png',
+    link: 'https://appgallery.huawei.com/app/C101467469',
+    technologies: ['HarmonyOS', 'JavaScript', 'HTML', 'CSS'],
+    company: 'Huawei Technologies',
+    client: 'Tawasal',
+    year: 2024,
+  },
+  {
+    type: 'mobile',
+    name: 'USeePay',
+    description: `USeePay is an NFC payment app designed specifically for Huawei devices.</br>I contributed to the development of both android and smartwatch apps.`,
+    image: '/mobile/useepay.png',
+    link: 'https://appgallery.huawei.com/app/C101467469',
+    technologies: [
+      'Android',
+      'Kotlin',
+      'HarmonyOS',
+      'JavaScript',
+      'HTML',
+      'CSS',
+    ],
+    company: 'Huawei Technologies',
+    client: 'Tawasal',
+    year: 2024,
+  },
   /***********     2023      ************/
   {
     type: 'mobile',
     name: 'Tawasal watch app',
-    description: `Tawasal is a new multi-purpose messenger app that's gaining rapid popularity.</br>I worked closely with Tawasal designers and developers to deliver the most feature-rich messaging app on Huawei app store.`,
+    description: `Tawasal is a new multi-purpose messenger app that's gaining rapid popularity.</br>I worked closely with Tawasal designers and developers to deliver the most feature-rich smartwatch messaging app on Huawei app store.`,
     image: '/mobile/tawasal.png',
     link: 'https://appgallery.huawei.com/app/C105867571',
     technologies: ['Java', 'HarmonyOS'],
@@ -40,7 +106,7 @@ export const PROJECTS: Project[] = [
     type: 'web',
     name: 'Personal website',
     description:
-      'My personal website and portfolio.</br>I designed it in Figma and developed it using Next.js and TailwindCSS, and deployed it to Firebase hosting.',
+      'My personal website and portfolio.</br>I designed the UI in Figma, then developed it using Next.js and TailwindCSS. I then deployed it to Vercel.',
     image: '/favicon.ico',
     link: 'https://younes-megaache.com',
     technologies: ['Next.js', 'React', 'Tailwind CSS', 'Firebase'],

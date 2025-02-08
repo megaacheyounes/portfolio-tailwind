@@ -10,3 +10,6 @@ export const getDomain = (link?: string) =>
 
 export const delay = (millis: number) =>
   new Promise((r) => setTimeout(r, millis));
+
+export const randomDelay = () =>
+  Math.floor(Math.random() * (2000 - 500 + 1)) + 500;
