@@ -35,7 +35,7 @@ export const PROJECTS: Project[] = [
       'CSS',
     ],
     company: 'Huawei Technologies',
-    client: 'Tawasal',
+    client: 'Huawei',
     year: 2024,
   },
   {
@@ -46,15 +46,14 @@ export const PROJECTS: Project[] = [
     link: 'https://appgallery.huawei.com/app/C101467469',
     technologies: ['HarmonyOS', 'JavaScript', 'HTML', 'CSS'],
     company: 'Huawei Technologies',
-    client: 'Tawasal',
+    client: 'Approcks',
     year: 2024,
   },
   {
     type: 'mobile',
-    name: 'USeePay',
+    name: 'USeePay (Cancelled)',
     description: `USeePay is an NFC payment app designed specifically for Huawei devices.</br>I contributed to the development of both android and smartwatch apps.`,
     image: '/mobile/useepay.png',
-    link: 'https://appgallery.huawei.com/app/C101467469',
     technologies: [
       'Android',
       'Kotlin',
@@ -64,7 +63,7 @@ export const PROJECTS: Project[] = [
       'CSS',
     ],
     company: 'Huawei Technologies',
-    client: 'Tawasal',
+    client: 'USeePay',
     year: 2024,
   },
   /***********     2023      ************/
