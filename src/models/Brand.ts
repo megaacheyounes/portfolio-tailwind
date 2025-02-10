@@ -9,6 +9,8 @@ const Brand = [
   'Emirates',
   'Steppi',
   'Visit Abudhabi',
+  'Approcks',
+  'USeePay'
 ] as const;
 
 export type BrandType = (typeof Brand)[number];
