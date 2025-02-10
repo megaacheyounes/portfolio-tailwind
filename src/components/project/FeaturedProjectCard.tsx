@@ -10,7 +10,7 @@ type Props = {
   project: (typeof FEATURED_PROJECTS)[0];
 };
 
-const BrandMapping: { [key in BrandType]: string } = {
+const BrandMapping: { [key in BrandType]: string | undefined } = {
   Huawei: '/brands/huawei.png',
   Algebratec: '/brands/algebratec.png',
   Tawasal: '/brands/tawasal.png',
@@ -21,6 +21,8 @@ const BrandMapping: { [key in BrandType]: string } = {
   Emirates: '/brands/emirates.png',
   Steppi: '/brands/steppi.png',
   'Visit Abudhabi': '/brands/visit-abudhabi.png',
+  Approcks: undefined,
+  USeePay: undefined,
 };
 
 export default function FeaturedProjectCard(props: Props) {
