@@ -23,21 +23,15 @@ export const PROJECTS: Project[] = [
   {
     type: 'web',
     name: 'HUAWEI Project ORION',
-    description: `Project ORION is an automation platform designed to streamline daily tasks for HUAWEI employees, boosting efficiency and productivity.</br>I designed and developed the app using Android SDK, Kotlin, Jetpack compose, and developed a backend using Next.js and MongoDB.`,
+    description: `Project ORION is an automation platform designed to streamline daily tasks for HUAWEI employees, boosting efficiency and productivity.</br>I developed the platform using Next.js with MUI and MongoDB, and I wrote a collection of Node.js scripts for data scrapping and processing.`,
     image: '/web/huawei.png',
     link: 'https://meadtse.com:7779',
-    technologies: [
-      'Android',
-      'Kotlin',
-      'HarmonyOS',
-      'JavaScript',
-      'HTML',
-      'CSS',
-    ],
+    technologies: ['Next.js', 'Node.js', 'React', 'MUI', 'MongoDB'],
     company: 'Huawei Technologies',
-    client: 'Tawasal',
+    client: 'Huawei',
     year: 2024,
   },
+
   {
     type: 'mobile',
     name: ' Prayer Now watch app',
@@ -46,15 +40,14 @@ export const PROJECTS: Project[] = [
     link: 'https://appgallery.huawei.com/app/C101467469',
     technologies: ['HarmonyOS', 'JavaScript', 'HTML', 'CSS'],
     company: 'Huawei Technologies',
-    client: 'Tawasal',
+    client: 'Approcks',
     year: 2024,
   },
   {
     type: 'mobile',
-    name: 'USeePay',
+    name: 'USeePay (Cancelled)',
     description: `USeePay is an NFC payment app designed specifically for Huawei devices.</br>I contributed to the development of both android and smartwatch apps.`,
     image: '/mobile/useepay.png',
-    link: 'https://appgallery.huawei.com/app/C101467469',
     technologies: [
       'Android',
       'Kotlin',
@@ -64,7 +57,7 @@ export const PROJECTS: Project[] = [
       'CSS',
     ],
     company: 'Huawei Technologies',
-    client: 'Tawasal',
+    client: 'USeePay',
     year: 2024,
   },
   /***********     2023      ************/
@@ -127,18 +120,6 @@ export const PROJECTS: Project[] = [
 
   /***********     2022      ************/
 
-  {
-    type: 'web',
-    name: 'Project ORION',
-    description: `Project ORION is a private platform which provides many tools to automate internal tasks.</br>
-      I built this project with Next.js and MUI, along with multiple node.js scripts for data scrapping and processing.`,
-    image: '/web/huawei.png',
-    link: 'http://meadtse.com:7779',
-    technologies: ['Node.js', 'Next.js', 'React', 'MUI'],
-    company: 'Huawei Technologies',
-    client: 'Huawei',
-    year: 2022,
-  },
   {
     type: 'web',
     name: 'Server monitoring app',
@@ -430,8 +411,8 @@ export const PROJECTS: Project[] = [
 ];
 
 export const FEATURED_PROJECTS = [
-  PROJECTS[0],
+  PROJECTS[5],
+  PROJECTS[4],
   PROJECTS[1],
-  PROJECTS[2],
-  PROJECTS[14],
+  PROJECTS[6],
 ];
