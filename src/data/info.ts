@@ -44,12 +44,23 @@ export const PERSONAL_INFO: PersonalInfo = {
   email: SOCIAL_LINKS.email,
   phoneNumber: SOCIAL_LINKS.phone,
   shortIntroduction: 'Younes MEGAACHE is open for new opportunities',
-  introduction: `I'm a software engineer specializing in full stack mobile development with a strong background in web development.</br>
-  Proficient in Kotlin, Java, React-Native, and various web frameworks and libraries.</br>
-  Successfully delivered 30+ Mobile and Web projects.</br>
-  Capable of automating processes using Node.js to save time and improve efficiency.</br>
-  Skilled at collaborating with cross-functional teams to deliver high-quality code and applications.</br>
-  <p class="text-lime-500">#open_to_work</p>`,
+  introduction: `
+   Results-driven Software Engineer specializing in full-stack mobile and web development.<br>
+  Successfully delivered 30+ Mobile and Web projects.
+  <br>
+  Proficient in Kotlin, Java, React-Native, and a wide range of web technologies and frameworks.
+  <br>
+  Automated development processes with Node.js, reducing manual effort and improving productivity.
+  <br>
+  Skilled in mobile app reverse engineering and static analysis for troubleshooting and enhancing security.
+  <br>
+  Passionate about building scalable solutions that solve real-world problems.
+  <br>
+  Collaborative team player dedicated to delivering high-quality applications.
+  <br>
+  
+  <br><p class="text-lime-500">#open_to_work #open_to_relocation</p>  
+  `,
   openToWork: true,
   openToRelocating: false,
   codewarsLink: 'https://www.codewars.com/users/YounesMegaache/',
