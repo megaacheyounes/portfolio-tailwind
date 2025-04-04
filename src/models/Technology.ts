@@ -27,5 +27,8 @@ export const Technology = [
   'Jetpack Compose',
   'Spring Boot',
   'Tailwind CSS',
+  'Swift',
+  'ApkTool',
+  'JADX',
 ] as const;
 export type TechnologyType = (typeof Technology)[number];
