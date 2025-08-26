@@ -10,6 +10,7 @@ type Props = {
   project: (typeof FEATURED_PROJECTS)[0];
 };
 
+//todo: add missing brand logos
 const BrandMapping: { [key in BrandType]: string | undefined } = {
   Huawei: '/brands/huawei.png',
   Algebratec: '/brands/algebratec.png',
@@ -23,6 +24,12 @@ const BrandMapping: { [key in BrandType]: string | undefined } = {
   'Visit Abudhabi': '/brands/visit-abudhabi.png',
   Approcks: undefined,
   USeePay: undefined,
+  Anghami: '/brands/anghami.png',
+  'Islamic Affairs and Charitable Activities Department': undefined,
+  ADCB: undefined,
+  MegTech: undefined,
+  'Road and Transport Authority': undefined,
+  'Dasman Diabetes Institute': undefined,
 };
 
 export default function FeaturedProjectCard(props: Props) {
