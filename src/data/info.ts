@@ -48,7 +48,7 @@ export const PERSONAL_INFO: PersonalInfo = {
    Results-driven Software Engineer specializing in full-stack mobile and web development.<br>
   Successfully delivered 30+ Mobile and Web projects.
   <br>
-  Proficient in Kotlin, Java, React-Native, and a wide range of web technologies and frameworks.
+  Proficient in Kotlin, Java, React-Native, HarmonyOS and a wide range of web technologies and frameworks.
   <br>
   Automated development processes with Node.js, reducing manual effort and improving productivity.
   <br>
