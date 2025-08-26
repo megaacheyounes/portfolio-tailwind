@@ -3,6 +3,62 @@ import { Project } from '@/models/project';
 export const PROJECTS_LAST_UPDATED = 'August 2024';
 
 export const PROJECTS: Project[] = [
+  /*********** 2025 **************/
+  {
+    type: 'mobile',
+    name: 'Emirates Airlines',
+    description: `Emirates watch app lets users stay up to date with their flight status and use their digital boarding pass.</br> I developed it in collaboration with Emirates team and delivered it within 2 months deadline.`,
+    image: '/mobile/emirates.png',
+    link: 'https://appgallery.huawei.com/app/C101772055',
+    technologies: ['HarmonyOS', 'JavaScript', 'HTML', 'CSS'],
+    company: 'Huawei Technologies',
+    client: 'Emirates',
+    year: 2025,
+  },
+  {
+    type: 'mobile',
+    name: 'MAF Carrefour',
+    description: `Carrefour watch app lets users track their online orders, access their loyalty card and find nearby Carrefour branches.</br> I developed the app in collaboration with MAF Carrefour team including contribution to their Android app.`,
+    image: '/mobile/carrefour.png',
+    link: 'https://appgallery.huawei.com/app/C101288903',
+    technologies: ['HarmonyOS', 'JavaScript', 'HTML', 'CSS', 'Kotlin'],
+    company: 'Huawei Technologies',
+    client: 'Carrefour',
+    year: 2025,
+  },
+  {
+    type: 'mobile',
+    name: 'Dulook DXB',
+    description: `Dulook DXB watch app lets users access accurate prayer times and determine accurate Qibla direction.</br> I developed it in collaboration with Islamic Affairs And Charitable Activities Dubai team for Huawei watch using ArkTS and ArkUI.`,
+    image: '/mobile/dulook.png',
+    link: 'https://appgallery.huawei.com/app/C106511135',
+    technologies: ['HarmonyOS', 'ArkTS', 'ArkUI'],
+    company: 'Huawei Technologies',
+    client: 'Islamic Affairs and Charitable Activities Department',
+    year: 2025,
+  },
+  {
+    type: 'mobile',
+    name: 'Anghami',
+    description: `Anghami watch app lets users stream music, control playback, and access personalized playlists on the go.</br>I developed it in collaboration with Anghami team for Huawei watch using ArkTS and ArkUI.`,
+    image: '/mobile/anghami.png',
+    link: 'https://appgallery.huawei.com/app/C101467469',
+    technologies: ['HarmonyOS', 'ArkTS', 'ArkUI'],
+    company: 'Huawei Technologies',
+    client: 'Anghami',
+    year: 2025,
+  },
+  {
+    type: 'mobile',
+    name: 'Prayer Now',
+    description: `Prayer Now is a very popular religious app in the middle east.</br>I Collaborated with Prayer Now team to develop Prayer Now app for Huawei sports and smart watches, and contributed both to their Android and iOS apps.`,
+    image: '/mobile/prayer_now.png',
+    link: 'https://appgallery.huawei.com/app/C101467469',
+    technologies: ['HarmonyOS', 'JavaScript', 'HTML', 'CSS', 'Java', 'SwiftUI'],
+    company: 'Huawei Technologies',
+    client: 'Approcks',
+    year: 2025,
+  },
   /***********     2024      ************/
   {
     type: 'mobile',
@@ -34,17 +90,6 @@ export const PROJECTS: Project[] = [
 
   {
     type: 'mobile',
-    name: ' Prayer Now watch app',
-    description: `Prayer Now is a very popular religious app in the middle east.</br>I Collaborated with Prayer Now team to develop Prayer Now app for Huawei sports and smart watches.`,
-    image: '/mobile/prayer_now.png',
-    link: 'https://appgallery.huawei.com/app/C101467469',
-    technologies: ['HarmonyOS', 'JavaScript', 'HTML', 'CSS'],
-    company: 'Huawei Technologies',
-    client: 'Approcks',
-    year: 2024,
-  },
-  {
-    type: 'mobile',
     name: 'USeePay (Cancelled)',
     description: `USeePay is an NFC payment app designed specifically for Huawei devices.</br>I contributed to the development of both android and smartwatch apps.`,
     image: '/mobile/useepay.png',
@@ -72,17 +117,7 @@ export const PROJECTS: Project[] = [
     client: 'Tawasal',
     year: 2023,
   },
-  {
-    type: 'mobile',
-    name: 'Emirates watch app',
-    description: `Emirates watch app lets users stay up to date with their flight status and use their digital boarding pass.</br> I developed it in collaboration with Emirates team and delivered it within 2 months deadline.`,
-    image: '/mobile/emirates.png',
-    link: 'https://appgallery.huawei.com/app/C101772055',
-    technologies: ['Java', 'HarmonyOS'],
-    company: 'Huawei Technologies',
-    client: 'Emirates',
-    year: 2023,
-  },
+
   {
     type: 'web',
     name: 'Bananalyzer',
@@ -411,8 +446,8 @@ export const PROJECTS: Project[] = [
 ];
 
 export const FEATURED_PROJECTS = [
-  PROJECTS[5],
-  PROJECTS[4],
+  PROJECTS[0],
   PROJECTS[1],
-  PROJECTS[6],
+  PROJECTS[4],
+  PROJECTS[5],
 ];

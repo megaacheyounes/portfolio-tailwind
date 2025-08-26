@@ -10,7 +10,13 @@ const Brand = [
   'Steppi',
   'Visit Abudhabi',
   'Approcks',
-  'USeePay'
+  'USeePay',
+  'Anghami',
+  'Road and Transport Authority',
+  'Dasman Diabetes Institute',
+  'Islamic Affairs and Charitable Activities Department',
+  'ADCB',
+  'MegTech',
 ] as const;
 
 export type BrandType = (typeof Brand)[number];

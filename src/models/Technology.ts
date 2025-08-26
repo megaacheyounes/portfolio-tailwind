@@ -30,5 +30,8 @@ export const Technology = [
   'Swift',
   'ApkTool',
   'JADX',
+  'SwiftUI',
+  'ArkTS',
+  'ArkUI',
 ] as const;
 export type TechnologyType = (typeof Technology)[number];
