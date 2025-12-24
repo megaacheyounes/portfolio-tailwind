@@ -6,11 +6,8 @@ import React from 'react';
 import '@/styles/globals.css';
 
 import { PERSONAL_INFO } from '@/data/info';
-import Hotjar from '@hotjar/browser';
 
 import BackToTopButton from '@/components/BackToTopButton';
-import GradientBackgroundGodrayThingy from '@/components/GradientBackgroundGodrayThingy';
-import Socials from '@/components/SocialLinks';
 import Footer from '@/containers/Footer';
 import Header from '@/containers/Header';
 
@@ -18,13 +15,12 @@ import {
   ACKEE_ANALYTICS_SCRIPT_URL,
   ACKEE_ANALYTICS_URL,
   ACKEE_DOMAIN_ID,
-  ENABLE_ANALYTICS, 
+  ENABLE_ANALYTICS,
 } from '@/utils/env';
 
 export const siteConfig = {
   title: `${PERSONAL_INFO.firstName} ${PERSONAL_INFO.lastName} | ${PERSONAL_INFO.mainTitle}`,
   description: 'My notable work and resume',
-
   url: 'https://younes-megaache.com',
 };
 
@@ -35,9 +31,7 @@ export const metadata: Metadata = {
   },
   description: siteConfig.description,
   robots: { index: true, follow: true },
-
   icons: {},
-
   authors: [
     {
       name: `${PERSONAL_INFO.firstName} ${PERSONAL_INFO.lastName}`,
@@ -51,7 +45,6 @@ export default function RootLayout({
 }: {
   children: React.ReactNode;
 }) {
-  
   return (
     <html>
       {ENABLE_ANALYTICS && (
@@ -63,27 +56,13 @@ export default function RootLayout({
         ></Script>
       )}
 
-      <body className='bg-b-light     '>
+      <body className="bg-dark text-gray-light">
         <BackToTopButton />
-        <div className='   relative min-h-screen'>
-          <span className='fixed bottom-2  left-2  z-50 opacity-0 transition-opacity duration-500 sm:opacity-100    '>
-            <Socials static={true} />
-          </span>
-
-          <div className='pointer-events-none  absolute    h-full w-full overflow-clip '>
-            <GradientBackgroundGodrayThingy />
-          </div>
-
-          <Header />
-
-          <div className='relative z-30  mx-auto h-full max-w-screen-lg  place-items-center transition-all  '>
-            {children}
-          </div>
-
-          <div className=' z-10 mx-auto mt-5  px-1 lg:px-20 '>
-            <Footer />
-          </div>
-        </div>
+        <Header />
+        <main className="relative z-10 mx-auto min-h-screen max-w-screen-lg px-4 sm:px-6 lg:px-8">
+          {children}
+        </main>
+        <Footer />
         <Analytics />
       </body>
     </html>

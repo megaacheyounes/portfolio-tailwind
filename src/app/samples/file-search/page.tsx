@@ -1,13 +1,15 @@
 'use client';
 
+import { FormEvent, useEffect, useRef, useState } from 'react';
+import { twMerge } from 'tailwind-merge';
+
+import PageWrapper from '@/containers/PageWrapper';
+import Section from '@/containers/Section';
+
 import {
   SearchFileResult,
   SearchResult,
 } from '@/app/samples/file-search/searchInFile.worker';
-import PageWrapper from '@/containers/PageWrapper';
-import Section from '@/containers/Section';
-import { FormEvent, useEffect, useRef, useState } from 'react';
-import { twMerge } from 'tailwind-merge';
 
 export default function ProjectsPage() {
   const [query, setQuery] = useState('');

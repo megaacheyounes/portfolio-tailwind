@@ -1,7 +1,8 @@
 import Link from 'next/link';
 
-import Socials from '@/components/SocialLinks';
 import ArrowLink from '@/components/_base/ArrowLink';
+import Socials from '@/components/SocialLinks';
+
 import { RESUME_PATH } from '@/utils/env';
 
 export default function Header() {

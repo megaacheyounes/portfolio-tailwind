@@ -1,103 +1,53 @@
 'use client';
-/* eslint-disable @next/next/no-img-element */
-
-import {
-  SiAndroid,
-  SiHarmonyos,
-  SiKotlin,
-  SiNodedotjs,
-  SiReact,
-} from 'react-icons/si';
-import { TypeAnimation } from 'react-type-animation';
-
-const TYPING_DELAY = 1600;
-
 import { motion } from 'framer-motion';
-import Image from 'next/image';
+import { TypeAnimation } from 'react-type-animation';
 
 import DataProvider from '@/data/DataProvider';
 
-import { containerVariants, itemVariants } from '@/utils/animation';
+const TYPING_DELAY = 1600;
 
 export default function Hero() {
-  const { titlePrefix, titles, firstName, lastName } = new DataProvider()
-    .personalInfo;
+  const { titlePrefix, titles } = new DataProvider().personalInfo;
 
-  // eslint-disable-next-line
   const sequence = titles.reduce(
     (arr, title) => [...arr, title, TYPING_DELAY, 500],
     [] as any
   );
+
   return (
-    <section className='min-h-500 relative mx-0  overflow-x-clip px-0 pt-5 text-white'>
-      <div className='mt-5 grid grid-cols-1  justify-items-center  '>
-        <div className='flex flex-col items-center text-center  '>
-          <h1 className='title-font  text-2xl  font-medium'>Hello 👋 I'm</h1>
-          <h1 className=' mt-4 text-4xl  text-lime-400 '>{`<${firstName}`}</h1>
-          <h1 className=' mt-4 text-4xl text-lime-400 '>{`${lastName}/>`}</h1>
-          <h1 className='mt-4  max-w-md  text-xl font-normal sm:text-2xl'>
-            <br /> {titlePrefix}{' '}
-            <TypeAnimation
-              sequence={sequence}
-              wrapper='span'
-              cursor={true}
-              repeat={Infinity}
-            />
-          </h1>
-        </div>
-        <div className='max-w-lg '>
-          <Image
-            height={547}
-            width={511}
-            quality={80}
-            className='rounded object-cover  object-center'
-            alt='hero'
-            blurDataURL='me_b.png'
-            placeholder='blur'
-            src='/me.png'
+    <section className="py-24 text-center">
+      <motion.div
+        initial={{ opacity: 0, y: 20 }}
+        animate={{ opacity: 1, y: 0 }}
+        transition={{ duration: 0.5 }}
+      >
+        <h1 className="text-4xl font-bold tracking-tight text-white sm:text-6xl">
+          A Full-Stack Developer
+        </h1>
+        <h2 className="mt-4 text-lg text-gray-300">
+          {titlePrefix}{' '}
+          <TypeAnimation
+            sequence={sequence}
+            wrapper="span"
+            cursor={true}
+            repeat={Infinity}
           />
-          <motion.ul
-            variants={containerVariants(0)}
-            initial='hidden'
-            animate='show'
-            transition={{ delay: 0.3 }}
+        </h2>
+        <p className="mx-auto mt-6 max-w-2xl text-lg leading-8 text-gray-400">
+          I build beautiful, functional, and accessible web experiences.
+        </p>
+        <div className="mt-10 flex items-center justify-center gap-x-6">
+          <a
+            href="#projects"
+            className="rounded-md bg-primary-600 px-3.5 py-2.5 text-sm font-semibold text-white shadow-sm hover:bg-primary-500 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-primary-600"
           >
-            <motion.li variants={itemVariants}>
-              <div className=' bg-b-dark text-dark absolute inline-flex -translate-y-20 translate-x-10 rounded-full  p-4  shadow-lg'>
-                <SiHarmonyos size={30} />
-              </div>
-            </motion.li>
-
-            <motion.li variants={itemVariants}>
-              <div className=' bg-b-dark  absolute   inline-flex  -translate-y-72  translate-x-72 rounded-full p-6 text-purple-600 shadow-2xl  md:-translate-y-96 md:translate-x-96 md:p-6'>
-                <SiKotlin className='md:w-18 md:h-18 h-10 w-10' />
-              </div>
-            </motion.li>
-
-            <motion.li variants={itemVariants}>
-              <div className=' bg-b-dark absolute inline-flex -translate-y-80 translate-x-16 rounded-full p-4 text-green-600 shadow-xl  md:p-6'>
-                <SiAndroid className='md:w-18 md:h-18 h-10 w-10' />
-              </div>
-            </motion.li>
-
-            <motion.li variants={itemVariants}>
-              <div className=' bg-b-dark absolute inline-flex -translate-y-48 translate-x-0 rounded-full  p-6  text-blue-600'>
-                <SiReact size={40} />
-              </div>
-            </motion.li>
-
-            <motion.li variants={itemVariants}>
-              <div className=' bg-b-dark  absolute  inline-flex -translate-y-44 translate-x-80     rounded-full p-4 text-green-600  shadow-xl  md:translate-x-96'>
-                <SiNodedotjs size={50} />
-              </div>
-            </motion.li>
-          </motion.ul>
-
-          {/* <div className=" absolute  shadow-xl  -translate-y-52 -translate-x-96 rounded-full bg-b-dark inline-flex  p-4  text-green-600" >
-            <SiJavascript size={20} />
-          </div> */}
+            View My Work
+          </a>
+          <a href="#contact" className="text-sm font-semibold leading-6 text-white">
+            Get in Touch <span aria-hidden="true">→</span>
+          </a>
         </div>
-      </div>
+      </motion.div>
     </section>
   );
 }

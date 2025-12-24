@@ -2,58 +2,34 @@ import Link from 'next/link';
 
 import DataProvider from '@/data/DataProvider';
 
-import Socials from '@/components/SocialLinks';
-import ArrowLink from '@/components/_base/ArrowLink';
-import Section from '@/containers/Section';
 import { RESUME_PATH } from '@/utils/env';
 
 export default function About() {
   const dataProvider = new DataProvider();
   const about = dataProvider.personalInfo;
   return (
-    <Section
-      indentation={true}
-      elevated={true}
-      margin='mx-0 sm:mx-5 md:mx-10 lg:mx-20'
-      title='About'
-      className='bg-b-dark fade-in mx-4 sm:container sm:mx-auto  '
-      contentClassName='  pt-0 '
-      hideOverflowX={false}
-    >
-      <div className=' flex w-full flex-col  place-items-center     '>
-        <h5
-          className='text-md mx-auto  text-start '
-          dangerouslySetInnerHTML={{ __html: about.introduction }}
-        ></h5>
-
-        <ArrowLink
-          className='mx-auto mt-5  '
-          title='more about me'
-          href={RESUME_PATH}
-          newTab={true}
-        ></ArrowLink>
-
-        {/* <h6 className=' '>
-            Here are a few technologies I’ve been working with recently:
-          </h6>
-          <ul className='mt-2  grid   list-disc   grid-cols-2   gap-1 pl-4 '>
-            {recentTech.map((t) => (
-              <li className='max-w-30 text-lime-500'>
-                <span className='text-white'>{t}</span>
-              </li>
-            ))}
-          </ul> */}
-
-        {!!about.codewarsLink && (
-          <Link className='' href={about.codewarsLink} target='_blank'>
-            <img
-              className='mt-5 max-w-xs '
-              src={`${about.codewarsLink}/badges/large`}
-            />
+    <section id="about" className="py-24 sm:py-32">
+      <div className="mx-auto max-w-7xl px-6 lg:px-8">
+        <div className="mx-auto max-w-2xl lg:mx-0">
+          <h2 className="text-3xl font-bold tracking-tight text-white sm:text-4xl">
+            About Me
+          </h2>
+          <p
+            className="mt-6 text-lg leading-8 text-gray-300"
+            dangerouslySetInnerHTML={{ __html: about.introduction }}
+          ></p>
+        </div>
+        <div className="mt-10">
+          <Link
+            href={RESUME_PATH}
+            target="_blank"
+            rel="noopener noreferrer"
+            className="text-base font-semibold leading-7 text-primary-500"
+          >
+            View my resume <span aria-hidden="true">→</span>
           </Link>
-        )}
-        <Socials className='mt-5' large={false} />
+        </div>
       </div>
-    </Section>
+    </section>
   );
 }

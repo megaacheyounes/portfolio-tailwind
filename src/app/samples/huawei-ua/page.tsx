@@ -1,8 +1,9 @@
 'use client';
 
+import { useEffect, useState } from 'react';
+
 import PageWrapper from '@/containers/PageWrapper';
 import Section from '@/containers/Section';
-import { useEffect, useState } from 'react';
 
 const methods: (() => boolean)[] = [
   () => {

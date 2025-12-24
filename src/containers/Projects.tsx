@@ -1,6 +1,6 @@
 'use client';
-import ProjectFeatured from '@/components/project/FeaturedProjects';
 import ArrowLink from '@/components/_base/ArrowLink';
+import ProjectFeatured from '@/components/project/FeaturedProjects';
 import Section from '@/containers/Section';
 
 export default function Projects() {

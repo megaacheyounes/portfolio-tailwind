@@ -2,58 +2,16 @@
 @tailwind components;
 @tailwind utilities;
 
-.pattern-1 {
-  background-image: url("data:image/svg+xml,%3Csvg width='52' height='26' viewBox='0 0 52 26' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='none' fill-rule='evenodd'%3E%3Cg fill='%2384cc16' fill-opacity='0.4'%3E%3Cpath d='M10 10c0-2.21-1.79-4-4-4-3.314 0-6-2.686-6-6h2c0 2.21 1.79 4 4 4 3.314 0 6 2.686 6 6 0 2.21 1.79 4 4 4 3.314 0 6 2.686 6 6 0 2.21 1.79 4 4 4v2c-3.314 0-6-2.686-6-6 0-2.21-1.79-4-4-4-3.314 0-6-2.686-6-6zm25.464-1.95l8.486 8.486-1.414 1.414-8.486-8.486 1.414-1.414z' /%3E%3C/g%3E%3C/g%3E%3C/svg%3E");
-}
-
-.pattern-2 {
-  background-image: url("data:image/svg+xml,%3Csvg width='52' height='26' viewBox='0 0 52 26' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='none' fill-rule='evenodd'%3E%3Cg fill='%2384cc16' fill-opacity='0.01'%3E%3Cpath d='M10 10c0-2.21-1.79-4-4-4-3.314 0-6-2.686-6-6h2c0 2.21 1.79 4 4 4 3.314 0 6 2.686 6 6 0 2.21 1.79 4 4 4 3.314 0 6 2.686 6 6 0 2.21 1.79 4 4 4v2c-3.314 0-6-2.686-6-6 0-2.21-1.79-4-4-4-3.314 0-6-2.686-6-6zm25.464-1.95l8.486 8.486-1.414 1.414-8.486-8.486 1.414-1.414z' /%3E%3C/g%3E%3C/g%3E%3C/svg%3E");
-}
-
-:root {
-  --tw-color-primary-50: 247 254 231;
-  --tw-color-primary-100: 236 252 203;
-  --tw-color-primary-200: 217 249 157;
-  --tw-color-primary-300: 190 242 100;
-  --tw-color-primary-400: 163 230 53;
-  --tw-color-primary-500: 132 204 22;
-  --tw-color-primary-600: 101 163 13;
-  --tw-color-primary-700: 77 124 15;
-  --tw-color-primary-800: 63 98 18;
-  --tw-color-primary-900: 54 83 20;
-  --tw-color-primary-950: 26 46 5;
-  --color-primary-50: rgb(var(--tw-color-primary-50)); /* #f7fee7 */
-  --color-primary-100: rgb(var(--tw-color-primary-100)); /* #ecfccb */
-  --color-primary-200: rgb(var(--tw-color-primary-200)); /* #d9f99d */
-  --color-primary-300: rgb(var(--tw-color-primary-300)); /* #bef264 */
-  --color-primary-400: rgb(var(--tw-color-primary-400)); /* #a3e635 */
-  --color-primary-500: rgb(var(--tw-color-primary-500)); /* #84cc16 */
-  --color-primary-600: rgb(var(--tw-color-primary-600)); /* #65a30d */
-  --color-primary-700: rgb(var(--tw-color-primary-700)); /* #4d7c0f */
-  --color-primary-800: rgb(var(--tw-color-primary-800)); /* #3f6212 */
-  --color-primary-900: rgb(var(--tw-color-primary-900)); /* #365314 */
-  --color-primary-950: rgb(var(--tw-color-primary-950)); /* #1a2e05 */
-  /* #endregion  /**======== Primary Color =========== */
-}
-
 @layer base {
-  /* main font */
   @font-face {
     font-family: 'FiraCode';
     src: url('/fonts/FiraCode.ttf') format('truetype');
   }
 
-  /* used for loading screen */
-  @font-face {
-    font-family: 'Minecraft';
-    src: url('/fonts/Minecraft.ttf') format('truetype');
+  body {
+    @apply bg-dark text-gray-light;
   }
 
-  .cont-swiper .swiper-wrapper {
-    transition-timing-function: linear;
-  }
-
-  /* #region  /**=========== Typography =========== */
   .h0 {
     @apply font-primary text-3xl font-bold md:text-5xl;
   }
@@ -82,45 +40,13 @@
   .p {
     @apply font-primary text-sm md:text-base;
   }
-  /* #endregion  /**======== Typography =========== */
 
   .layout {
-    /* 1100px */
     max-width: 68.75rem;
     @apply mx-auto w-11/12;
   }
 
-  .bg-dark a.custom-link {
-    @apply border-gray-200 hover:border-gray-200/0;
-  }
-
-  /* Class to adjust with sticky footer */
   .min-h-main {
     @apply min-h-[calc(100vh-56px)];
-  }
-}
-
-@layer utilities {
-  .animated-underline {
-    background-image: linear-gradient(#33333300, #33333300),
-      linear-gradient(
-        to right,
-        var(--color-primary-400),
-        var(--color-primary-500)
-      );
-    background-size: 100% 2px, 0 2px;
-    background-position: 100% 100%, 0 100%;
-    background-repeat: no-repeat;
-  }
-  @media (prefers-reduced-motion: no-preference) {
-    .animated-underline {
-      transition: 0.3s ease;
-      transition-property: background-size, color, background-color,
-        border-color;
-    }
-  }
-  .animated-underline:hover,
-  .animated-underline:focus-visible {
-    background-size: 0 2px, 100% 2px;
   }
 }
