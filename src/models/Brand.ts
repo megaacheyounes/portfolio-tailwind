@@ -17,6 +17,12 @@ const Brand = [
   'Islamic Affairs and Charitable Activities Department',
   'ADCB',
   'MegTech',
+  'UAE Ministry of Interior',
+  'CNBC Arabia',
+  'Arab News',
+  'Nusuk',
+  'Saudi Research and Media Group',
+  'Lovin Dubai',
 ] as const;
 
 export type BrandType = (typeof Brand)[number];

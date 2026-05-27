@@ -1,9 +1,117 @@
 import { Project } from '@/models/project';
 
-export const PROJECTS_LAST_UPDATED = 'August 2024';
+export const PROJECTS_LAST_UPDATED = 'May 2026';
 
 export const PROJECTS: Project[] = [
+  /*********** 2026 **************/
+  {
+    type: 'mobile',
+    name: 'Arab News Watch App',
+    description: `Arab News delivers regional and international news on Huawei smartwatches.</br>I independently developed and released the HarmonyOS wearable app using ArkTS and ArkUI.`,
+    image: '/mobile/arab_news.png',
+    link: 'https://appgallery.huawei.com/app/C101222709',
+    technologies: ['HarmonyOS', 'ArkTS', 'ArkUI'],
+    company: 'Huawei Technologies',
+    client: 'Arab News',
+    year: 2026,
+  },
+  {
+    type: 'mobile',
+    name: 'Nusuk Watch App',
+    description: `Nusuk extends its digital services to Huawei smartwatch users.</br>I developed and released the HarmonyOS wearable app using ArkTS, ArkUI, and the HarmonyOS SDK.`,
+    image: '/mobile/nusuk.png',
+    link: 'https://appgallery.huawei.com/app/C109925603',
+    technologies: ['HarmonyOS', 'ArkTS', 'ArkUI'],
+    company: 'Huawei Technologies',
+    client: 'Nusuk',
+    year: 2026,
+  },
   /*********** 2025 **************/
+  {
+    type: 'mobile',
+    name: 'Huawei Sales Tracking & Lead Capture Platform',
+    description: `An internal sales tracking and lead capture platform used by 400+ Huawei employees to capture device and customer information.</br>I built the Kotlin and Jetpack Compose Android app with a Next.js and MongoDB dashboard, improving Huawei customer service workflow efficiency.`,
+    image: '/web/huawei.png',
+    technologies: [
+      'Android',
+      'Kotlin',
+      'Jetpack Compose',
+      'Next.js',
+      'MongoDB',
+    ],
+    company: 'Huawei Technologies',
+    client: 'Huawei',
+    year: 2025,
+  },
+  {
+    type: 'mobile',
+    name: 'UAE Ministry of Interior Watch App',
+    description: `A Huawei smartwatch app for the UAE Ministry of Interior.</br>I developed the HarmonyOS wearable app using ArkTS and ArkUI, and collaborated with the MOI developer to integrate Huawei Wear Engine into the Android app using Kotlin.`,
+    image: '/mobile/moi_uae.png',
+    link: 'https://appgallery.huawei.com/app/C101555781',
+    technologies: [
+      'HarmonyOS',
+      'ArkTS',
+      'ArkUI',
+      'Android',
+      'Kotlin',
+      'Huawei Wear Engine',
+    ],
+    company: 'Huawei Technologies',
+    client: 'UAE Ministry of Interior',
+    year: 2025,
+  },
+  {
+    type: 'mobile',
+    name: "RTA S'hail Watch App",
+    description: `A Huawei smartwatch experience for RTA S'hail.</br>I developed the HarmonyOS wearable app using ArkTS and ArkUI, and supported the Android developer with Huawei Wear Engine integration in Kotlin.`,
+    image: '/mobile/shail.png',
+    link: 'https://appgallery.huawei.com/app/C111052843',
+    technologies: [
+      'HarmonyOS',
+      'ArkTS',
+      'ArkUI',
+      'Android',
+      'Kotlin',
+      'Huawei Wear Engine',
+    ],
+    company: 'Huawei Technologies',
+    client: 'Road and Transport Authority',
+    year: 2025,
+  },
+  {
+    type: 'mobile',
+    name: 'Lovin Dubai Watch App',
+    description: `Lovin Dubai brings local media and live radio streaming to Huawei smartwatches.</br>I developed the HarmonyOS wearable app using ArkTS and ArkUI, including live radio streaming functionality.`,
+    image: '/mobile/lovin.png',
+    technologies: ['HarmonyOS', 'ArkTS', 'ArkUI'],
+    company: 'Huawei Technologies',
+    client: 'Lovin Dubai',
+    publicRelease: true,
+    year: 2025,
+  },
+  {
+    type: 'mobile',
+    name: 'CNBC Arabia Watch App',
+    description: `A wearable news app for CNBC Arabia on Huawei smartwatches.</br>I independently designed, developed, and released the HarmonyOS app on behalf of CNBC Arabia using ArkTS and ArkUI.`,
+    image: '/mobile/cnbc_arabia.png',
+    link: 'https://appgallery.huawei.com/app/C108309207',
+    technologies: ['HarmonyOS', 'ArkTS', 'ArkUI'],
+    company: 'Huawei Technologies',
+    client: 'CNBC Arabia',
+    year: 2025,
+  },
+  {
+    type: 'mobile',
+    name: 'Independent Arabia & Asharq Al-Awsat Watch Apps',
+    description: `Independent Arabia and Asharq Al-Awsat are news brands from Saudi Research and Media Group (SRMG).</br>I independently developed and released their Huawei smartwatch apps using ArkTS, ArkUI, and the HarmonyOS SDK.`,
+    image: '/mobile/srmg_group.png',
+    technologies: ['HarmonyOS', 'ArkTS', 'ArkUI'],
+    company: 'Huawei Technologies',
+    client: 'Saudi Research and Media Group',
+    publicRelease: true,
+    year: 2025,
+  },
   {
     type: 'mobile',
     name: 'Emirates Airlines',
@@ -61,27 +169,11 @@ export const PROJECTS: Project[] = [
   },
   /***********     2024      ************/
   {
-    type: 'mobile',
-    name: 'HUAWEI DSIC project',
-    description: `DSIC app is an internal android app that helps Huawei's retail team to gather device and customer data post-sale, to improve customer service.</br>I Developed the app using Android with Kotlin and Jetpack Compose, complemented with backend built with Next.js and MongoDB.`,
-    image: '/web/huawei.png',
-    technologies: [
-      'Android',
-      'Kotlin',
-      'Jetpack Compose',
-      'Next.js',
-      'MongoDB',
-    ],
-    company: 'Huawei Technologies',
-    client: 'Huawei',
-    year: 2024,
-  },
-  {
     type: 'web',
     name: 'HUAWEI Project ORION',
     description: `Project ORION is an automation platform designed to streamline daily tasks for HUAWEI employees, boosting efficiency and productivity.</br>I developed the platform using Next.js with MUI and MongoDB, and I wrote a collection of Node.js scripts for data scrapping and processing.`,
     image: '/web/huawei.png',
-    link: 'https://meadtse.com:7779',
+    link: 'https://meadtse.com/',
     technologies: ['Next.js', 'Node.js', 'React', 'MUI', 'MongoDB'],
     company: 'Huawei Technologies',
     client: 'Huawei',
@@ -445,9 +537,13 @@ export const PROJECTS: Project[] = [
   },
 ];
 
-export const FEATURED_PROJECTS = [
-  PROJECTS[0],
-  PROJECTS[1],
-  PROJECTS[4],
-  PROJECTS[5],
-];
+const featuredProjectNames = [
+  'Emirates Airlines',
+  'MAF Carrefour',
+  'Prayer Now',
+  'Huawei Sales Tracking & Lead Capture Platform',
+] as const;
+
+export const FEATURED_PROJECTS = featuredProjectNames.flatMap((name) =>
+  PROJECTS.filter((project) => project.name === name)
+);

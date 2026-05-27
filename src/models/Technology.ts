@@ -33,5 +33,6 @@ export const Technology = [
   'SwiftUI',
   'ArkTS',
   'ArkUI',
+  'Huawei Wear Engine',
 ] as const;
 export type TechnologyType = (typeof Technology)[number];

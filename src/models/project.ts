@@ -12,6 +12,7 @@ export interface Project {
   images?: string[];
   client?: BrandType;
   discontinued?: boolean;
+  publicRelease?: boolean;
   year: number;
 }
 

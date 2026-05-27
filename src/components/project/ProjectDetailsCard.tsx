@@ -15,7 +15,8 @@ export default function ProjectDetailsCard(props: Props) {
   const { project } = props;
 
   const isDiscontinued = !!project.discontinued;
-  const isConfidential = !isDiscontinued && !project.link;
+  const isConfidential =
+    !isDiscontinued && !project.publicRelease && !project.link;
 
   const getDomain = (link?: string) => (link && new URL(link).hostname) || '';
 
@@ -35,7 +36,7 @@ export default function ProjectDetailsCard(props: Props) {
         <div className='flex flex-1 flex-col'>
           <h1 className='m-0 p-0 text-xs sm:text-sm '>{project.name}</h1>
         </div>
-        {!isDiscontinued && !isConfidential && (
+        {!isDiscontinued && !isConfidential && project.link && (
           <a
             href={project.link}
             target='_blank'

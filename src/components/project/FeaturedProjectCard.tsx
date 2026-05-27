@@ -30,6 +30,12 @@ const BrandMapping: { [key in BrandType]: string | undefined } = {
   MegTech: undefined,
   'Road and Transport Authority': undefined,
   'Dasman Diabetes Institute': undefined,
+  'UAE Ministry of Interior': undefined,
+  'CNBC Arabia': undefined,
+  'Arab News': undefined,
+  Nusuk: undefined,
+  'Saudi Research and Media Group': undefined,
+  'Lovin Dubai': undefined,
 };
 
 export default function FeaturedProjectCard(props: Props) {
