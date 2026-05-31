@@ -182,7 +182,7 @@ export const PROJECTS: Project[] = [
 
   {
     type: 'mobile',
-    name: 'USeePay (Cancelled)',
+    name: 'USeePay',
     description: `USeePay is an NFC payment app designed specifically for Huawei devices.</br>I contributed to the development of both android and smartwatch apps.`,
     image: '/mobile/useepay.png',
     technologies: [
