@@ -34,5 +34,14 @@ export const Technology = [
   'ArkTS',
   'ArkUI',
   'Huawei Wear Engine',
+  'Wearables',
+  'Figma',
+  'SDK Integration',
+  'Android-to-Watch Sync',
+  'Partner Delivery',
+  'HMS',
+  'React Native',
+  'GMS Compatibility',
+  'Apktool',
 ] as const;
 export type TechnologyType = (typeof Technology)[number];
